@@ -7,9 +7,11 @@ For the individual research projects please navigate to the folder of each team.
 
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
+![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
+
 # State Your Project Title Here With Capitalised Letters as Shown
 
-*Provide a description of your project including* 
+***Provide a description of your project including*** 
 
 1. motivating your research question
 2. stating your research question
@@ -17,9 +19,9 @@ For the individual research projects please navigate to the folder of each team.
 4. Briefly mention and discuss your results
 5. Draw your conclusions
 6. State what future investigations 
-6. State your references
+7. State your references 
 
-**Further Guidance: Formating**
+### Further Guidance: Formating
 - Structure this readme using subsections
 - Your job is to 
     - keep it clear
