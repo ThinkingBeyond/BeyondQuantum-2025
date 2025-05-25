@@ -1,6 +1,43 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Quantum Machine Learning to Model Credit Portfolio Losses
+
+## Research Question
+
+To what extent can **Quantum Boltzmann Machines** surpass their classical counterparts at modelling **credit portfolio losses**?
+
+Quantum Boltzmann Machines are the Quantum version of the classical Boltzmann machines, aiming to include quantum entanglement and coherences in the modelled probability distribution. However, there are many computational issues when implementing the theoretical model, therefore I focussed on a classical-quantum Hybrid  
+
+## Motivation
+
+Explain your motivation for your chosen research question here.
+## Methods and Implementation
+
+## Results
+
+## Conclusions
+
+## Future Work
+
+State and explain what follow-up research could be conducted based on your work.
+
+## References
+
+List all your references here. Remember to put links into markdown. For example:
+
+1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+
+**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
+1. Create/copy a list into ChatGPT
+2. Ask it to turn it into an unsorted list in markdown
+
+## Your next subsection
+
+Continue working through the points listed above with the help of sensibly named subsections. 
+
+If you want to see some good examples of README files check out:
+- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
+- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
 
 ***Provide a description of your project including*** 
 
@@ -28,37 +65,7 @@
 
 **Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
-## Research Question
-
-State your research question here and elaborate on it.
-
-## Motivation
-
-Explain your motivation for your chosen research question here.
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
 [ ... ]
-
-## Future Work
-
-State and explain what follow-up research could be conducted based on your work.
-
-## References
-
-List all your references here. Remember to put links into markdown. For example:
-
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
 
 ---
 
