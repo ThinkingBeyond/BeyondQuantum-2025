@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Solving the Travelling Salesman Problem using the Quantum Approximate Optimisation Algorithm
 
 ***Provide a description of your project including*** 
 
@@ -52,7 +52,7 @@ State and explain what follow-up research could be conducted based on your work.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+List all your references here. Remember to put links into markdown. For example
 
 1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
 
