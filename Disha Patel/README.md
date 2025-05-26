@@ -1,6 +1,9 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Hybrid Secure Messaging using BB84 Quantum Key Distribution and Post-Quantum Cryptography
+
+# Research Question
+Can a hybrid cryptographic model combining Quantum Key Distribution (QKD) and Post-Quantum Cryptography (PQC) provide enhanced security against both classical and quantum adversaries?
 
 ***Provide a description of your project including*** 
 
