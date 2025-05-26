@@ -3,9 +3,10 @@
 # Leveraging Quantum Entanglement for Fluid Dynamics Simulations
 
 
-***Provide a description of your project including*** 
-#MOTIVATION
+
+## MOTIVATION
 We aimed to explore whether quantum computing—especially the use of quantum entanglement and superposition—could provide a scalable alternative. By encoding fluid properties into quantum states and constructing a lattice grid through qubit interactions, we hypothesized that quantum simulations could reproduce realistic flow patterns with fewer computational resources.where this motivated us by the increasing computational cost and complexity of classical fluid dynamics simulations, particularly when modeling flow around obstacles or within irregular geometries. Traditional methods require solving complex partial differential equations and often become inefficient as spatial resolution increases.
+***Provide a description of your project including*** 
 1. motivating your research question
 2. stating your research question
 3. explaining your method and implementation
