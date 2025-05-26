@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{quantikz}
+
+\begin{document}
+
+\begin{center}
+\begin{quantikz}
+    \lstick{}
+    & \qw
+    & \ctrl{1}
+    & \gate{F_{2^L}^{A\dagger}}
+    & \ctrl{1}
+    & \gate{H}
+    & \swap{1}
+    & \qw
+    & \ctrl{1}
+    & \gate{F_{2^L}}
+    & \ctrl{1}
+    & \gate{H}
+    & \swap{1}
+    & \qw
+    \\
+    \lstick{}
+    & \gate{S}
+    & \gate{V_A^\dagger}
+    & \qw
+    & \gate{W \cdots W^{2^L-1}}
+    & \qw
+    & \swap{-1}
+    & \gate{S}
+    & \gate{V_1}
+    & \qw
+    & \gate{W^\dagger \cdots W^{2^L-1\,\dagger}}
+    & \qw
+    & \swap{-1}
+    & \qw
+\end{quantikz}
+\end{center}
+
+\end{document}
