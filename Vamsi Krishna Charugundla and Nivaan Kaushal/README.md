@@ -13,11 +13,22 @@ We aimed to explore whether quantum computing especially the use of quantum enta
 ## Research Question 
 Classical fluid dynamics simulations are computationally intensive, especially when modeling complex interactions near obstacles. This project explores a quantum circuit based framework to simulate simplified fluid behavior using quantum entanglement and superposition on a 2D lattice grid.
 
+## Implementation
+
+## Results 
+
+## Conclusions
+
+## Future Improvements
 ## References
 1. Meng, Z., et al. (2024)."Simulating unsteady fluid flows on a superconducting quantum processor."[click here ](https://arxiv.org/abs/2404.15878)
 2. Sanavio, C., & Succi, S. (2024)."Quantum Computing for Simulation of Fluid Dynamics."[click here ]((https://arxiv.org/abs/2404.01302)
 3. Qiskit Tutorials .[click here ](https://qiskit.github.io/qiskit-aer/tutorials/index.html)
 4. Sauro Succi et al . (2024). ‘Classical and quantum computational methods for fluid flow simulation: A comparative study.’[click here](https://www.sciencedirect.com/science/article/abs/pii/S0045793023003730)
+
+
+
+
 ***Provide a description of your project including*** 
 1. motivating your research question
 2. stating your research question
