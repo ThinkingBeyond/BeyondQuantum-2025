@@ -17,17 +17,23 @@ To what extent can **Quantum Boltzmann Machines** surpass their classical counte
 
 Modelling **credit portfolio losses** is an important stage for **risk analysts** at any company, aiming to **invest** or take out **loans**. A **default** is what occurs when an obligor is unable to meet the **legal requirements** of the loan, and **default rates** across sectors are highly correlated and provide substantial information about the current **economic environment**. Therefore, any improvement in our ability to model the default distributions would substantially improve how we manage risk within a **credit portfolio**.
 
-More specifically, our **Hybrid Boltzmann Machine**, if successful, would provide better approximations for default rates, and could help with stress testing, through the addition of macroeconomic variables into the hidden layer, such as the **GDP**, **Inflation**, **Unemployment**, to predict future defaults
+More specifically, our **Hybrid Boltzmann Machine**, if successful, would provide better approximations for default rates, and could help with stress testing, through the addition of macroeconomic variables into the hidden layer, such as the **GDP**, **Inflation**, **Unemployment**, to predict future defaults under various economic scenarios. Therefore, any improvement to a classical model would have significant uses and implications within industry.
 
 ## Methods and Implementation
 
 ## Results
 
+![name](your_graphic.png)
+
 ## Conclusions
+
+
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Due to **limitations** in the project timeline, the simplified **classical-quantum hybrid** could most certainly be **improved** to a full or restricted **Quantum Boltzmann Machine**. This would be significantly more complicated than the current model, however in Amin's "Quantum Boltzmann Machine" he proposed a method known as a **Bound-Based** QBM. This is a computationally-efficient method which places a trainable **upper-bound** on the accuracy and lowers this throughout the iterations, succesfully achieving the benefits of a fully quantum distribution
+
+Another different area for **future research** involves analysing how well the models performs when modelling **distributions** with a varying number of companies. This hasn't been possible within our research project due to the **proprietary** nature of the dataset with more companies. Furthermore, the results within our code could be improved by utilising the **Persistent Contrastive Divergence** routine other the regular CD training. This routine keeps the value of the visible nodes **across parameter updates** to improve the training protocol as it provides a **better approximation** of the sampled distribution. Furthermore, we achieve multiple parameter updates with each training sample, decreasing the quantity of required data for successful training
 
 ## References
 
