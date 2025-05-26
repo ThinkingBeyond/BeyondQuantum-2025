@@ -23,7 +23,7 @@ More specifically, our **Hybrid Boltzmann Machine**, if successful, would provid
 
 ## Results
 
-[Classical vs Quantum (5 Nodes)](Harvey Gregg/Graphs/5 Nodes Comparison.png)
+![5 Nodes](./Graphs/5 Nodes Comparison.png)
 
 ## Conclusions
 
