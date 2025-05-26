@@ -2,8 +2,6 @@
 
 # Hybrid Secure Messaging using BB84 Quantum Key Distribution and Post-Quantum Cryptography
 
-# Research Question
-Can a hybrid cryptographic model combining Quantum Key Distribution (QKD) and Post-Quantum Cryptography (PQC) provide enhanced security against both classical and quantum adversaries?
 
 ***Provide a description of your project including*** 
 
@@ -33,11 +31,18 @@ Can a hybrid cryptographic model combining Quantum Key Distribution (QKD) and Po
 
 ## Research Question
 
-State your research question here and elaborate on it.
+Can a hybrid cryptographic model combining Quantum Key Distribution (QKD) and Post-Quantum Cryptography (PQC) provide enhanced security against both classical and quantum adversaries?
+
+The research question investigates the potential of a hybrid cryptographic framework that integrates Quantum Key Distribution (QKD) with Post-Quantum Cryptography (PQC) to create a robust security model capable of defending against both classical adversaries and quantum adversaries. This question addresses the need to protect system against the evolving threat where quantum computers could potentially break widely used classical cryptographic algorithms like RSA, ECC, etc.
 
 ## Motivation
+1. Implementation: Develop a prototype that combines QKD (BB84) for generating a shared secret key and PQC (Kyber512) for quantum-resistant key encapsulation, resulting in a hybrid AES key for secure encryption and authentication.
+2. Security Analysis: a. Verify QKD’s unconditional security for key distribution, ensuring protection against eavesdropping through quantum principles.
+                      b. Confirm PQC’s resistance to quantum attacks, such as those enabled by Shor’s or Grover’s algorithms.
+                      c. Evaluate the hybrid model’s resilience to classical attacks, including brute-force, side-channel, and cryptanalytic threats.
+3. Performance Evaluation: Assess the efficiency of key generation, computational overhead, and compatibility with existing cryptographic systems.
+4. Validation: Ensure the hybrid system supports secure encryption, decryption, and message authentication, as demonstrated through successful HMAC verification.
 
-Explain your motivation for your chosen research question here.
 
 ## Your next subsection
 
