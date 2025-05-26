@@ -2,10 +2,22 @@
 
 # Leveraging Quantum Entanglement for Fluid Dynamics Simulations
 
-
+## Project Description 
+This project presents a comparative study between quantum and classical fluid dynamics simulations by modeling fluid flow around a circular obstacle on a 2D spatial grid. The quantum simulation leverages quantum entanglement and superposition to encode fluid behavior using qubits, with each fluid cell represented as a quantum state. The classical counterpart employs conventional numerical methods to simulate flow and velocity fields.
+Both simulations are executed on an N×N grid, incorporating identical domain boundaries, obstacle masking, and flow source placement. The quantum simulation uses gates like Hadamard, CNOT, and Ry(π/6) to simulate directionally biased fluid movement and entanglement between neighboring qubits. Post-processing involves collecting measurements from 4096 quantum circuit executions, normalizing the velocity data, and applying Gaussian filters to smooth the result.
+The outcome demonstrates that quantum circuits can successfully capture key fluid dynamics characteristics such as flow diversion around obstacles, symmetry in the velocity field, and smoothed gradients. Comparative centerline velocity profiles show qualitative agreement between the quantum and classical results, validating the quantum approach’s effectiveness in simplified fluid flow modeling
 
 ## MOTIVATION
-We aimed to explore whether quantum computing—especially the use of quantum entanglement and superposition—could provide a scalable alternative. By encoding fluid properties into quantum states and constructing a lattice grid through qubit interactions, we hypothesized that quantum simulations could reproduce realistic flow patterns with fewer computational resources.where this motivated us by the increasing computational cost and complexity of classical fluid dynamics simulations, particularly when modeling flow around obstacles or within irregular geometries. Traditional methods require solving complex partial differential equations and often become inefficient as spatial resolution increases.
+We aimed to explore whether quantum computing especially the use of quantum entanglement and superposition could provide a scalable alternative. By encoding fluid properties into quantum states and constructing a lattice grid through qubit interactions, we hypothesized that quantum simulations could reproduce realistic flow patterns with fewer computational resources.where this motivated us by the increasing computational cost and complexity of classical fluid dynamics simulations, particularly when modeling flow around obstacles or within irregular geometries. Traditional methods require solving complex partial differential equations and often become inefficient as spatial resolution increases.
+
+## Research Question 
+Classical fluid dynamics simulations are computationally intensive, especially when modeling complex interactions near obstacles. This project explores a quantum circuit based framework to simulate simplified fluid behavior using quantum entanglement and superposition on a 2D lattice grid.
+
+## References
+Meng, Z., et al. (2024)."Simulating unsteady fluid flows on a superconducting quantum processor."[click here ](https://arxiv.org/abs/2404.15878)
+Sanavio, C., & Succi, S. (2024)."Quantum Computing for Simulation of Fluid Dynamics."[click here ]((https://arxiv.org/abs/2404.01302)
+Qiskit Tutorials .[click here ](https://qiskit.github.io/qiskit-aer/tutorials/index.html)
+Sauro Succi et al . (2024). ‘Classical and quantum computational methods for fluid flow simulation: A comparative study.’[click here](https://www.sciencedirect.com/science/article/abs/pii/S0045793023003730)
 ***Provide a description of your project including*** 
 1. motivating your research question
 2. stating your research question
