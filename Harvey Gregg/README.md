@@ -23,8 +23,13 @@ More specifically, our **Hybrid Boltzmann Machine**, if successful, would provid
 
 ## Results
 
-![5 Nodes](./Graphs/5 Nodes Comparison.png)
-
+![5 Nodes](./Graphs/5%20Nodes%20Comparison.png)
+![10 Nodes](./Graphs/10%20Nodes%20Comparison.png)
+![15 Nodes](./Graphs/15%20Nodes%20Comparison.png)
+![20 Nodes](./Graphs/20%20Nodes%20Comparison.png)
+![25 Nodes](./Graphs/25%20Nodes%20Comparison.png)
+![Quantum Nodes](./Graphs/Quantum%20Nodes%20Comparison.png)
+![Classical Nodes](./Graphs/Classical%20Nodes%20Comparison.png)
 ## Conclusions
 
 
