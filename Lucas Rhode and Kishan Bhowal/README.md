@@ -1,8 +1,8 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# QUANTUM INFORMATION THEORY AND COMPLEXEITY
 
-***Provide a description of your project including*** 
+***Our Project is about finding a checking Entanglement in Grover's Algorithm*** 
 
 1. motivating your research question
 2. stating your research question
