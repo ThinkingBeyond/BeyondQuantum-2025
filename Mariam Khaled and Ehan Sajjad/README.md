@@ -29,8 +29,13 @@
 **Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
 ## Research Question
-
-State your research question here and elaborate on it.
+How to solve travelling salesman problem using Quantum Approximate Optimisation Algorithm?
+**Problem Statement**: A traveler needs to
+visit all the cities from a list, where distances between all the cities are known and each city should be visited just once. What is the shortest possible route that he visits each city exactly once and returns to the origin city? [1]
+### **Method and Implementation**
+1. **QUBO Formulation**:
+2. **Ising Model Conversion**:
+3. **QAOA Implementation**:
 
 ## Motivation
 
@@ -51,7 +56,11 @@ If you want to see some good examples of README files check out:
 State and explain what follow-up research could be conducted based on your work.
 
 ## References
+1. Kishore Premkumar. Traveling Salesman Problem:Dynamic programming.July 2020.
 
+
+
+Notes:
 List all your references here. Remember to put links into markdown. For example
 
 1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
