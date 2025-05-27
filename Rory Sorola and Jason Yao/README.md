@@ -41,7 +41,7 @@ Outline:
   - For more general vectors (not necessarily normalized)
   - For systems of arbitrary size
 
-The second notebook runs the algorithm many times for each ansatze and examines only the final outputs for each trial. For each of the tested ansatz, the algorithm is run 100 times normally and 100 times with a constant noise model. The final fidelities, total iterations until convergence, and total time taken were recorded for each trial and plotted. The ansatze tested were: EfficientSU2, PauliTwoDesign (with 2 reps), PauliTwoDesign (with 5 reps), TwoLocal, and RealAmplitudes. Two-qubit systems were tested for all trials. The plots made were scatter plots for final fidelity vs. number of iterations and time taken vs. number of iterations for each ansatz, both for no-noise and noisy trials.
+The second notebook, titled "vqls_experiment2.ipynb" runs the algorithm many times for each ansatze and examines only the final outputs for each trial. For each of the tested ansatz, the algorithm is run 100 times normally and 100 times with a constant noise model. The final fidelities, total iterations until convergence, and total time taken were recorded for each trial and plotted. The ansatze tested were: EfficientSU2, PauliTwoDesign (with 2 reps), PauliTwoDesign (with 5 reps), TwoLocal, and RealAmplitudes. Two-qubit systems were tested for all trials. The plots made were scatter plots for final fidelity vs. number of iterations and time taken vs. number of iterations for each ansatz, both for no-noise and noisy trials.
 
 
 ## Future Work
