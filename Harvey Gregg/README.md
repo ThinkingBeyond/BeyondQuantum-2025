@@ -32,58 +32,23 @@ More specifically, our **Hybrid Boltzmann Machine**, if successful, would provid
 ![Classical Nodes](./Graphs/Classical%20Model%20Comparison.png)
 ## Conclusions
 
-For both **classical** and **hybrid** models, there performance on our dataset converges after **25** 
+For both **classical** and **hybrid** models, the performances on our dataset converges after **25** hidden nodes, suggesting that is a sufficient number for approximating how well each distribution can approximate losses in a credit portfolio. Furthermore, as shown by the graphs, the hybrid models with **10, 15, 20** and **25** outperform their respective classical models when considering the **reconstruction error**. This provides some evidence to form the conclusion that the hybrid model is more effective than the classical one, and could therefore help to benefit the industry in methods detailed above.
+
+However, it is important to note that **inefficiencies** will exist in both the implementations of the **classical** and **quantum** model, and I have only tracked one **benchmark** throughout training, which may measure some specific strength of the hybrid model, whilst covering up its **worser performances** on other models.
 
 ## Future Work
 
 Due to **limitations** in the project timeline, the simplified **classical-quantum hybrid** could most certainly be **improved** to a full or restricted **Quantum Boltzmann Machine**. This would be significantly more complicated than the current model, however in Amin's "Quantum Boltzmann Machine" he proposed a method known as a **Bound-Based** QBM. This is a computationally-efficient method which places a trainable **upper-bound** on the accuracy and lowers this throughout the iterations, succesfully achieving the benefits of a fully quantum distribution
 
-Another different area for **future research** involves analysing how well the models performs when modelling **distributions** with a varying number of companies. This hasn't been possible within our research project due to the **proprietary** nature of the dataset with more companies. Furthermore, the results within our code could be improved by utilising the **Persistent Contrastive Divergence** routine other the regular CD training. This routine keeps the value of the visible nodes **across parameter updates** to improve the training protocol as it provides a **better approximation** of the sampled distribution. Furthermore, we achieve multiple parameter updates with each training sample, decreasing the quantity of required data for successful training
+Another different area for **future research** involves analysing how well the models performs when modelling **distributions** with a varying number of companies. This hasn't been possible within our research project due to the **proprietary** nature of the dataset with more companies. Furthermore, the results within our code could be improved by utilising the **Persistent Contrastive Divergence** routine other the regular CD training. This routine keeps the value of the visible nodes **across parameter updates** to improve the training protocol as it provides a **better approximation** of the sampled distribution. Furthermore, we achieve multiple parameter updates with each training sample, decreasing the quantity of required data for successful training.
 
 ## References
 
 List all your references here. Remember to put links into markdown. For example:
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
+1.  Genovese, G., Nikeghbali, A., Serra, N., & Visentin, G. (2022). Universal approximation of credit portfolio losses using Restricted Boltzmann Machines. arXiv preprint arXiv:2202.11060. Internet Archive [https://arxiv.org/abs/2202.11060]
+2.  Amin, M. H., Andriyash, E., Rolfe, J., Kulchytskyy, B., & Melko, R. (2016). Quantum Boltzmann Machine. arXiv preprint arXiv:1601.02036. Internet Archive [https://arxiv.org/abs/1601.02036]
+3.  Lyakhova, Ya. S., Polyakov, E. A., & Rubtsov, A. N. (2021). Effectively Trainable Semi-Quantum Restricted Boltzmann Machine. arXiv preprint arXiv:2001.08997v4. Internet Archive [https://arxiv.org/abs/2001.08997]
 [ ... ]
 
 ---
