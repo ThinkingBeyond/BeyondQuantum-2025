@@ -38,8 +38,7 @@ visit all the cities from a list, where distances between all the cities are kno
 3. **QAOA Implementation**:
 
 ## Motivation
-
-Explain your motivation for your chosen research question here.
+The Travelling Salesman Problem (TSP) is a well-known NP-hard combinatorial optimisation problem. Classical algorithms struggle to solve large instances of TSP efficiently due to its computational complexity. Quantum computing, particularly variational algorithms like the Quantum Approximate Optimisation Algorithm (QAOA), offers a promising alternative by potentially providing speedup over classical methods for certain problem sizes.
 
 ## Your next subsection
 
