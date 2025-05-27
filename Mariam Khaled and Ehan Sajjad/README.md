@@ -2,73 +2,59 @@
 
 # Solving the Travelling Salesman Problem using the Quantum Approximate Optimisation Algorithm
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
-## Research Question
-How to solve travelling salesman problem using Quantum Approximate Optimisation Algorithm?
-**Problem Statement**: A traveler needs to
-visit all the cities from a list, where distances between all the cities are known and each city should be visited just once. What is the shortest possible route that he visits each city exactly once and returns to the origin city? [1]
-### **Method and Implementation**
-1. **QUBO Formulation**:
-2. **Ising Model Conversion**:
-3. **QAOA Implementation**:
+## Project Description
+The Travelling Salesman Problem (TSP) is an NP-hard combinatorial optimisation problem which asks, "Given a set of cities and the paths connecting different cities together, what is the shortest possible tour that visits each city exactly once and returns to the starting city?" It was found that approximate solutions to this problem can be obtained using the Quantum Approximate Optimisation Algorithm (QAOA), a specific case of the Variational Quantum Eigensolver. For our research project, we applied the QAOA to a case of the TSP to see if it is able
 
 ## Motivation
-The Travelling Salesman Problem (TSP) is a well-known NP-hard combinatorial optimisation problem. Classical algorithms struggle to solve large instances of TSP efficiently due to its computational complexity. Quantum computing, particularly variational algorithms like the Quantum Approximate Optimisation Algorithm (QAOA), offers a promising alternative by potentially providing speedup over classical methods for certain problem sizes.
+The Travelling Salesman Problem (TSP) is a well-known NP-hard combinatorial optimisation problem. Classical algorithms struggle to solve large instances of TSP efficiently due to its computational complexity. Quantum computing, particularly variational algorithms like the Quantum Approximate Optimisation Algorithm (QAOA), offers a promising alternative by potentially providing speedup over classical methods for certain problem sizes. This is very important as the TSP has many real-world uses, which makes the ability to solve this problem quickly and give optimal solutions very important. The TSP is commonly used in route planning, manufacturing and even DNA sequencing.
 
-## Your next subsection
+## Method and Implementation
+Before using QAOA to solve the TSP, we needed to learn how to convert the TSP into a Quadratic Unconstrained Binary Optimisation (QUBO) problem. We learnt about the QUBO formulation, converted the TSP into binary variables and used penalty terms to factor in the constraints, each city must be visited exactly once and each position in the tour must be filled by exactly one city. Then, we used the Ising model to convert our QUBO cost function into a cost Hamiltonian which can be applied to a quantum circuit as a unitary operator. After learning about how QAOA works and the quantum circuit structure, we used the QAOA to solve an asymmetric case of the TSP with 3 cities.
 
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
+## Results and Conclusion
+In the end, the QAOA outputted the optimal solution to the TSP, which was confirmed when we gave a classical algorithm the same problem to solve and they both had identical solutions. So, we can conclude that the QAOA can solve the TSP effectively and give accurate approximate solutions to it.
 
 ## Future Work
+We only tested the QAOA on one specific case of the TSP so a future idea would be to apply it to more cases and see how the performance changes as the number of cities increases. Also, in the QAOA strucutre itself there are many different possible parameters you could change and investigate the effect of that on the accuracy of the solutions. For example, the number of iterations of the cost and mixer layers you apply, changing the initial state of the qubits or comparing different classical optimisation algorithms which are used to change the parameters for the cost and mixer layers.
 
-State and explain what follow-up research could be conducted based on your work.
+## Credits
+**Student Researchers**: Mariam Khaled, Ehan Sajjad
+**Mentor**: Vanessa Dehn
 
 ## References
-1. Kishore Premkumar. Traveling Salesman Problem:Dynamic programming.July 2020.
 
+- Albornoz, C., Alonso, G., Andrenkov, M., Angara, P., Asadi, A., et al. (2024). *Variational Quantum Eigensolver*. In *Pennylane Codebook*. [https://pennylane.ai/codebook/variational-quantum-algorithms/variational-quantum-eigensolver](https://pennylane.ai/codebook/variational-quantum-algorithms/variational-quantum-eigensolver)
 
+- Ceroni, J. (2020). *Intro to QAOA*. PennyLane Demos. [https://pennylane.ai/qml/demos/tutorial_qaoa_intro/](https://pennylane.ai/qml/demos/tutorial_qaoa_intro/)
 
-Notes:
-List all your references here. Remember to put links into markdown. For example
+- Glover, F., Kochenberger, G., & Du, Y. (2019). *A Tutorial on Formulating and Using QUBO Models*. arXiv. [https://arxiv.org/abs/1811.11538](https://arxiv.org/abs/1811.11538)
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+- Hadfield, S., Wang, Z., O'Gorman, B., Rieffel, E. G., Venturelli, D., & Biswas, R. (2019). *From the Quantum Approximate Optimization Algorithm to a Quantum Alternating Operator Ansatz*. *Algorithms, 12*(2), 34. [https://www.mdpi.com/1999-4893/12/2/34](https://www.mdpi.com/1999-4893/12/2/34)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+- Johnson, D. S., & Lovász, L. A. (2001). *The Traveling Salesman Problem*. In *Combinatorial Optimization* (p. 527). Springer. [https://link.springer.com/chapter/10.1007/978-3-540-71844-4_21](https://link.springer.com/chapter/10.1007/978-3-540-71844-4_21)
 
----
+- Kim, T., & Kim, S. (2024). *Quantum Algorithm for Dynamic Programming and its Application to the Traveling Salesman Problem*. arXiv. [https://arxiv.org/abs/2402.14036](https://arxiv.org/abs/2402.14036)
+
+- Kumar, A. (2021). *Complexity Classes Simplified*. Medium. [https://anujk2901.medium.com/complexity-classes-simplified-4afb8504cb2a](https://anujk2901.medium.com/complexity-classes-simplified-4afb8504cb2a)
+
+- Lehigh University, Department of Industrial and Systems Engineering. (2023). *QUBO Formulations of Combinatorial Optimization
+Problems for Quantum Computing Devices* (No. 23T-016). [https://engineering.lehigh.edu/sites/engineering.lehigh.edu/files/_DEPARTMENTS/ise/pdf/tech-papers/23/23T_016.pdf](https://engineering.lehigh.edu/sites/engineering.lehigh.edu/files/_DEPARTMENTS/ise/pdf/tech-papers/23/23T_016.pdf)
+
+- Premkumar, K. (2020, July 8). *Traveling Salesman Problem: Dynamic programming*. IVYMobility TechBytes. [https://medium.com/ivymobility-developers/traveling-salesman-problem-9ab623c88fab](https://medium.com/ivymobility-developers/traveling-salesman-problem-9ab623c88fab)
+
+- Qian, W., Basili, R. A. M., Eshaghian-Wilner, M., Khokhar, A., Luecke, G., & Vary, J. P. (2023). *Comparative study of variations in quantum approximate optimization algorithms for the Traveling Salesman Problem*. arXiv. [https://arxiv.org/abs/2307.07243](https://arxiv.org/abs/2307.07243)
+
+- Qian, W., Basili, R. A. M., Eshaghian-Wilner, M. M., Khokhar, A., Luecke, G., & Vary, J. P. (2023). *Comparative Study of Variations in Quantum Approximate Optimization Algorithms for the Traveling Salesman Problem*. *Entropy, 25*(8), 1238. [https://doi.org/10.3390/e25081238](https://doi.org/10.3390/e25081238)
+
+- Qiskit. (2021, October 5). *Lecture 5.2 - Introduction to the Quantum Approximate Optimization Algorithm and Applications* [Video]. YouTube. [https://www.youtube.com/watch?v=YpLzSQPrgSc](https://www.youtube.com/watch?v=YpLzSQPrgSc)
+
+- QuEra. (2025). *Hamiltonian*. [https://www.quera.com/glossary/hamiltonian](https://www.quera.com/glossary/hamiltonian)
+
+- Quantum Inspire. (2025). *Rotation Operators*. [https://www.quantum-inspire.com/kbase/rotation-operators/](https://www.quantum-inspire.com/kbase/rotation-operators/)
+
+- ScienceDirect Topics. (2025). *Pauli Operator*. [https://www.sciencedirect.com/topics/computer-science/pauli-operator](https://www.sciencedirect.com/topics/computer-science/pauli-operator)
+
+- The Quantastic Journal. (2023, June). *Traveling Salesman Problem Using Quantum Computing*. Medium. [https://medium.com/the-quantastic-journal/traveling-salesman-problem-using-quantum-computing-02ae6356544b](https://medium.com/the-quantastic-journal/traveling-salesman-problem-using-quantum-computing-02ae6356544b)
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
 
