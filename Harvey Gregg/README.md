@@ -30,22 +30,24 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 - Number of Visible Nodes: **30**
 - Number of Hidden Nodes: **5, 10, 15, 20, 25**
 - Training Routine: **Persistent CD**
-- Learning Rate: **0.007**
+- Learning Rate: **7e-3**
 - Learning Rate Scheduler: **Linear**
 - Batch Size: **1000**
 - Number of Epochs: **10000**
 - Benchmark: **Reconstruction Error**
+- Number of Gibbs Sampling Steps: **2**
 
 ### Quantum Hyperparameters
 
 - Number of Visible Nodes: **30**
 - Number of Hidden Nodes: **5, 10, 15, 20, 25**
 - Training Routine: **CD**
-- Learning Rate: **0.007**
-- Learning Rate Scheduler: **Linear**
+- Learning Rate: **1e-3 --> 1e-6**
+- Learning Rate Scheduler: **Logarithmic**
 - Batch Size: **1000**
-- Number of Epochs: **10000**
+- Number of Epochs: **50000**
 - Benchmark: **Reconstruction Error**
+- Number of Gibbs Sampling Steps: **5**
 
 ## Results 
 
