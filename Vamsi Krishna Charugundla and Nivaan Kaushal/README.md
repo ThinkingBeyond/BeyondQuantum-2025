@@ -1,12 +1,12 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# Leveraging Quantum Entanglement for Fluid Dynamics Simulations
+# Utilizing Quantum Entanglement for Fluid Dynamics Simulations
 
 ## Project Description 
 our project presents a  study on quantum fluid dynamics simulations by modeling fluid flow around a circular obstacle on a 2D spatial grid. The quantum simulation leverages quantum entanglement and superposition to encode fluid behavior using qubits, with each fluid cell represented as a quantum state. The classical counterpart employs conventional numerical methods to simulate flow and velocity fields.
 Both simulations are executed on an N×N grid, incorporating identical domain boundaries, obstacle masking, and flow source placement. The quantum simulation uses gates like Hadamard, CNOT, and Ry(π/6) to simulate directionally biased fluid movement and entanglement between neighboring qubits. Post-processing involves collecting measurements from 4096 quantum circuit executions, normalizing the velocity data, and applying Gaussian filters to smooth the result.
 The outcome demonstrates that quantum circuits can successfully capture key fluid dynamics characteristics such as flow diversion around obstacles, symmetry in the velocity field, and smoothed gradients. Comparative centerline velocity profiles show qualitative agreement between the quantum and classical results, validating the quantum approach’s effectiveness in simplified fluid flow modeling.
-we had done a compartive on quantum fluid dynamics simulation and classical fulid dynamics simulation.
+we had done a compartive on quantum fluid dynamics simulation and classical fluid dynamics simulation by using line plot graph.
 
 ## MOTIVATION
 We aimed to explore whether quantum computing especially the use of quantum entanglement and superposition could provide a scalable alternative. By encoding fluid properties into quantum states and constructing a lattice grid through qubit interactions, we hypothesized that quantum simulations could reproduce realistic flow patterns with fewer computational resources.where this motivated us by the increasing computational cost and complexity of classical fluid dynamics simulations, particularly when modeling flow around obstacles or within irregular geometries. Traditional methods require solving complex partial differential equations and often become inefficient as spatial resolution increases.
@@ -15,17 +15,20 @@ We aimed to explore whether quantum computing especially the use of quantum enta
 Classical fluid dynamics simulations are computationally intensive, especially when modeling complex interactions near obstacles. This project explores a quantum circuit based framework to simulate simplified fluid behavior using quantum entanglement and superposition on a 2D lattice grid.
 
 ## Implementation
-***Quantum computational fulid dynamics***
+***Quantum computational fluid dynamics***
 - To implementing code we need to  all required packages .here below is the package file to install all packages at once .
 - packages file :[requriment.txt]()
     - After above step completed then implementing this below colab notebook for Quantum CFD
     - In this notebook we did all setup to quantum circuit framework for quantum cfd
 - Notebook: [`QCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
+   ***classical computational fluid dynamics***
      - Next we implement this  below classical CFD colab notebook
      - In this below notebook we setup a framework for  classical cfd .
 - Notebook: [`CCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
 ## Results 
+This below results are of Quantum CFD for adjacent Neighbours in the grid .
+
 
 
 ## Conclusions
