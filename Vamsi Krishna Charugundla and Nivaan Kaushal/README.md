@@ -38,7 +38,7 @@ This is a comparative result on Quantum CFD and classical CFD on one factor i.e 
 
 
 ## Conclusions
-In this project we demonstrate a quantum circuit-based approach for simulating fluid flow on a 2D grid. Each fluid cell is represented by a qubit, with superposition and entanglement modeling local interactions. Obstacle regions are excluded using binary masks, allowing realistic simulation of flow constraints. Quantum measurements are processed using normalization and Gaussian smoothing, revealing velocity patterns that closely match classical simulations. The results discussed above above confirm that quantum circuits can effectively capture essential features of fluid dynamics, offering a promising alternative for future simulation tasks.
+In this project, we developed and compared quantum and classical circuit-based frameworks for simulating fluid flow on a 2D grid. The quantum approach successfully replicated general flow behavior and demonstrated the feasibility of simulating fluid interactions using quantum states. However, while the quantum model showed potential for scalability in representing complex interactions, it incurred significantly longer computation times than the classical method. These results suggest that although quantum CFD holds theoretical promise, practical implementation will require improvements in quantum hardware and optimization techniques to achieve competitive performance.
 
 ## Future Improvements
     1. Extending the simulation to 3 dimensions.
