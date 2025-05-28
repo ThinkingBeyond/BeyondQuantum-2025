@@ -4,7 +4,17 @@ THE MEASUREMENT PROBLEM
 
 ***Provide a description of your project including*** 
 
-The measurement problem is on of the biggest 
+### Motivation
+The measurement problem is one of the biggest foundational issues in Quantum Mechanics. The question of how and when we transition from a quantum to a classical state in the presence
+of a measurement has been present since Quantum Mechanics inception. The many attempts to solve this problem has led to many different schools of thought. One of the most popular of these
+groups is the many worlds interpretation which is what we focused on in our project.
+The preferred basis problem is present in many interpretations however is particularly apparent in the MWI. The question of why, during the branching, we split in the position basis or any particular
+basis is vitally important for describing the reality we experience. Following this, we searched for potential solutions and found decoherence as a natural option. However, upon a literature review of this
+we found disagreement leading us to our research question.
+
+### Research Question
+## Does decoherence as a mechanism solve the preferred basis problem in the many worlds interpretation?
+
 
 1. motivating your research question
 2. stating your research question
