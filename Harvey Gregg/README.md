@@ -76,9 +76,7 @@ List all your references here. Remember to put links into markdown. For example:
 
 1.  Genovese G., Nikeghbali A., Serra N., & Visentin G. (2022). Universal approximation of credit portfolio losses using Restricted Boltzmann Machines. arXiv preprint arXiv:2202.11060. Internet Archive [https://arxiv.org/abs/2202.11060]
 2.  Amin, M. H., Andriyash, E., Rolfe, J., Kulchytskyy, B., & Melko, R. (2016). Quantum Boltzmann Machine. arXiv preprint arXiv:1601.02036. Internet Archive [https://arxiv.org/abs/1601.02036]
-3.  Lyakhova Ya. S., Polyakov E. A., & Rubtsov A. N. (2021). Effectively Trainable Semi-Quantum Restricted Boltzmann Machine. arXiv preprint arXiv:2001.08997v4. Internet Archive [https://arxiv.org/abs/2001.08997]
-[ ... ]
-
+3.  Lyakhova Ya. S., Polyakov E. A., & Rubtsov A. N. (2021). Effectively Trainable Semi-Quantum Restricted Boltzmann Machine. arXiv preprint arXiv:2001.08997v4. Internet Archive [https://arxiv.org/abs/2001.08997] 
 ---
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
