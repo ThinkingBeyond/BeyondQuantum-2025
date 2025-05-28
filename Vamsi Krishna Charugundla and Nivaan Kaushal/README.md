@@ -14,15 +14,9 @@ We aimed to explore whether quantum computing especially through the use of quan
 Classical fluid dynamics simulations are computationally intensive, especially when modeling complex interactions near obstacles. This project explores a quantum circuit based framework to simulate simplified fluid behavior using quantum entanglement and superposition on a 2D lattice grid.
 
 ## Implementation
-***Quantum computational fluid dynamics***
-- To implement code we need to install all required packages. Below is the package file to install all packages at once .
-- Package file: :[requriment.txt]()
-    - After above step completed then implementing this below colab notebook for Quantum CFD
-    - In this notebook we did all setup to quantum circuit framework for quantum cfd
+***Quantum Computational Fluid Dynamics Implementation***
 - Notebook: [`QCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
-   ***classical computational fluid dynamics***
-     - Next we implement this  below classical CFD colab notebook
-     - In this below notebook we setup a framework for classical cfd .
+***Classic Computational Fluid Dynamics Implementation***
 - Notebook: [`CCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
 ## Results
@@ -37,18 +31,18 @@ For ***Adjacent neighbours and Diagonal Neighbours***
 
 
 
-This is comparitive result on Quantum CFD and classical CFD on one factor i.e velocity
+This is a comparative result on Quantum CFD and classical CFD on one factor i.e velocity
 
 ![comparison Q and C ](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/4a398fda03b3c2b2ffa646478347565fbb2794b9/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/comparison.png)
 
 
 ## Conclusions
-In this  project we demonstrates a quantum circuit-based approach for simulating fluid flow on a 2D grid. Each fluid cell is represented by a qubit, with superposition and entanglement modeling local interactions. Obstacle regions are excluded using binary masks, allowing realistic simulation of flow constraints. Quantum measurements are processed using normalization and Gaussian smoothing, revealing velocity patterns that closely match classical simulations. The results which are discussed above confirm that quantum circuits can effectively capture essential features of fluid dynamics, offering a promising alternative for future simulation tasks.
+In this project we demonstrate a quantum circuit-based approach for simulating fluid flow on a 2D grid. Each fluid cell is represented by a qubit, with superposition and entanglement modeling local interactions. Obstacle regions are excluded using binary masks, allowing realistic simulation of flow constraints. Quantum measurements are processed using normalization and Gaussian smoothing, revealing velocity patterns that closely match classical simulations. The results discussed above above confirm that quantum circuits can effectively capture essential features of fluid dynamics, offering a promising alternative for future simulation tasks.
 
 ## Future Improvements
     1. Extending the simulation to 3 dimensions.
     2. Including more mesh types like shapes and airfoils.
-    3. Displaying time step evolution or animations .
+    3. Displaying time step evolution or animations.
     4. Implementing more quantities such as pressure, density to provide more complete results.
     5. Increasing the gridsize for more accurate and insightful results, currently limited by compute power of Quantum Computing.
     
