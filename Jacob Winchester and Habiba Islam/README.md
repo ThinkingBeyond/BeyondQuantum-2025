@@ -12,8 +12,7 @@ we found disagreement leading us to our research question.
 
 ## Research Question
 ### Does decoherence as a mechanism solve the preferred basis problem in the many worlds interpretation?
-To research this question we selected two papers with opposite opinions on the subject. We then compared them in a theoretical context pointing out flaws in the arguments and reasoning. To solidify our
-comparison we then applied the comparisons to concrete experiments.
+To research this question we selected two papers with opposite opinions on the subject. For our paper supporting decoherence we selected Wallaces paper[1] because it was the general point of reference for people who viewed that the preferred basis problem was solved in the MWI. We selected Inamori's paper[2] as against due to the fact it made some strong claims and presented its ideas in a very logical way .We then compared them in a theoretical context pointing out flaws in the arguments and reasoning. To solidify our comparison we then applied the comparisons to concrete experiments.
 
 ## Conclusions
 After our review we found that the paper in favour of decoherence relied on unjustified assumptions about the system and used flawed reasoning in deducing the system environment split when applying
@@ -27,63 +26,4 @@ potentially discuss other proposed solutions to the preferred basis problem and 
 1. David Wallace (2024), “Decoherence and Ontology (or: How I learned to stop worrying and love FAPP).” [arXiv:1111.2189](https://arxiv.org/abs/1111.2189)
 2. Hitoshi Inamori (2018), “No quantum process can explain the existence of the preferred basis: decoherence is not universal.” [arXiv:1609.07984](https://arxiv.org/abs/1609.07984)
 
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
-## Research Question
-
-State your research question here and elaborate on it.
-
-## Motivation
-
-Explain your motivation for your chosen research question here.
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
-
-## Future Work
-
-State and explain what follow-up research could be conducted based on your work.
-
-## References
-
-List all your references here. Remember to put links into markdown. For example:
-
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
-
----
-
-> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
 
