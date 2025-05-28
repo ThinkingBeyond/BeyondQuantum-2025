@@ -49,16 +49,16 @@ However, the big issue we face in the BB84 protocol is that the key relies upon 
 
 The ultimate goal for implementation was to ensure that we considered all the 3 main types of quantum key distribution protocols (which are BB84, B92 and E91) as well as the MDI-QKD protocol, and develop a noise simulation for all of them. With the help of Qiskit on Google Colab, we successfully implemented the prototype and simulation for all of these protocols for easier visualization on the data.
 
-BB84 Protocol and Noise Simulation
+###BB84 Protocol and Noise Simulation
 In the BB84 protocol, Alice prepares qubits in one of two conjugate bases (Z or X) and sends them to Bob, who independently chooses a measurement basis. Only measurements where the sender's and receiver's bases match are retained for the final shared key.
 We implemented BB84 using Qiskit's AerSimulator and created quantum circuits that encoded and measured qubits based on randomly chosen bit values and bases. To simulate real-world imperfections, we added a depolarizing noise model, which introduces random Pauli errors (X, Y, Z) with a configurable probability.
 To evaluate performance under noise, we ran the simulation across a range of depolarization intensities and calculated the QBER for each. QBER was computed as the proportion of mismatched bits in the sifted key (where Alice’s and Bob’s bases matched). The results were visualized by plotting QBER against noise intensity, revealing a clear trend of increasing error with higher noise levels.
 
-E91 Protocol and Noise Simulation
+###E91 Protocol and Noise Simulation
 The E91 protocol relies on quantum entanglement and Bell inequality violations to establish secure correlations between two parties. Alice and Bob each measure their half of a shared entangled qubit pair using randomly chosen bases defined by specific rotation angles (e.g., 0°, 45°, 90° for Alice and 22.5°, 67.5°, –22.5° for Bob). When their bases are compatible, they use the correlated outcomes to generate a key.
 We created entangled Bell states and applied measurement rotations corresponding to each party’s chosen angle. To simulate noise, both single  and two qubit depolarizing errors were introduced to the quantum circuit. The simulation then computed the QBER across varying noise levels, again highlighting how increasing decoherence impairs key generation accuracy.
 
-MDI-QKD Protocol and Noise Simulation
+###MDI-QKD Protocol and Noise Simulation
 For the implementation of the MDI-QKD protocol, we simulated a three party scenario where Alice and Bob independently prepared qubits based on randomly selected bits and bases (X or Z). These qubits were then measured via a simulated Bell state measurement, performed by an untrusted third party (Charlie), using a circuit that applied a CNOT gate followed by a Hadamard and measurement in the computational basis. The code structure used Qiskit’s QuantumCircuit, and each simulation round output a two bit string (e.g., '00', '11') indicating the Bell measurement result. Only instances where Alice and Bob used matching bases and bit values were retained in the sifted key.
 Depolarizing noise was introduced as a configurable parameter in extended versions of the circuit, although not shown explicitly in the provided code snippet. To model the noise realistically, a noise model applying single qubit depolarizing errors was applied to both Alice’s and Bob’s qubits before they reached Charlie’s Bell measurement. The noise level was varied across different runs using a parameter noise, allowing us to measure the effect of increasing noise on the protocol’s quantum bit error rate (QBER). The function run_qber_vs_noise_plot() systematically ran the simulation at multiple noise intensities, collecting QBER values and plotting them to visualize how noise degrades the fidelity of key generation in the MDI-QKD protocol.
 
