@@ -36,14 +36,14 @@ The code for this project is contained within Quantum_Image_Edge_Detection.ipynb
 ## Results Overview & Known Issues
 
 *   **Qualitative Results:** QHED successfully identified prominent edges, visually comparable to classical methods (Figures 1-3 in the paper/poster). Some blockiness was observed due to the patch-based approach.
-    ![Camera Comparison Example](camera_comparison.png)
+    ![Camera Comparison Example](readme_images/camera_comparison.png)
 *   **Quantitative Results (PSNR):** PSNR values generally increased with larger patch sizes (more qubits), indicating improved similarity to classical outputs (Figure 5 in paper/poster).
-    ![PSNR vs Qubits Plot](psnr_qubits.png)
+    ![PSNR vs Qubits Plot](readme_images/psnr_qubits.png)
 *   **Complexity:**
     *   QPIE offers exponential qubit compression.
     *   The core QHED logic is theoretically efficient.
     *   However, simulated full circuit depth and gate counts (using general Qiskit `initialize` and `unitary`) scaled exponentially with qubits per patch, a current practical limitation (Figure 6 in paper/poster).
-    ![Circuit Scaling Plot](qhed_circuit_scaling.png)`
+    ![Circuit Scaling Plot](readme_images/qhed_circuit_scaling.png)`
 *   **Known Issues:** The primary "issue" is the gap between theoretical quantum speedups and the practical overhead observed in simulations using general-purpose quantum operations, especially for state preparation. The patch-based method, while necessary for simulation, can also introduce boundary artifacts in the final image.
 ---
 ## Credits
