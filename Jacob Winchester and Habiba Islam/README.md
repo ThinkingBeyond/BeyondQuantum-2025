@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-THE MEASUREMENT PROBLEM
+#DECOHERENCE AND THE PREFERRED BASIS PROBLEM
 
 ***Provide a description of your project including*** 
 
@@ -14,7 +14,8 @@ we found disagreement leading us to our research question.
 
 ## Research Question
 ### Does decoherence as a mechanism solve the preferred basis problem in the many worlds interpretation?
-
+To research this question we selected two papers with opposite opinions on the subject. We then compared them in a theoretical context pointing out flaws in the arguments and reasoning. To solidify our
+comparison we then applied the comparisons to concrete experiments.
 
 1. motivating your research question
 2. stating your research question
