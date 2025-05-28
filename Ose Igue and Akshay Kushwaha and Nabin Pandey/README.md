@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Solving Traveling Salesman Problem using VQE
 
 ***Provide a description of your project including*** 
 
@@ -30,7 +30,9 @@
 
 ## Research Question
 
-State your research question here and elaborate on it.
+In order to reinforce the foundations of fundamental Graph Theory, let's briefly introduce the Königsberg Bridge Problem posed by Leonard Euler in mid-1700s in the bustling city of Königsberg, Prussia. Euler posed an interesting investigation in regard to the wide array of bridges in Königsberg connecting the main central island to the rest of the city above water canals. Euler's investigation revolves around the interesting general question regarding the possibility of a pedestrian crossing all bridges only once to reach a desired destination. Through methodically deriving the connection between the amount of Bridges (Edges) and the amount of Regions (Nodes), Euler was able to mathematically prove that it is impossible for a pedestrian to cross all bridges in Königsberg only once. Euler's investigation into the Königsberg's Bridge Problem cascaded into the development of a vast mathematical field which Euler called at the time Geometry of Positions, but in the current times, it is known as Graph Theory. 
+
+To connect the Königsberg's Bridge Problem to the Traveling Salesmen Problem, we can imagine a pedestrian competing in a marathon who is very self-conscious about his marathon time through the race. During this race, the pedestrian will have to cross a variety of bridges and islands and must cross through all islands in order to complete successfully complete the Marathon. The Pedestrian realizes that in order to complete the Marathon in the least amount of time, he will need to figure out the shortest paths between each Island and figure out the ideal configuration of paths so he visits all of the islands and finishes the race in the least amount of time. This is known as the Traveling Salesmen Problem and this is known as a NP-Complete Problem proving its difficulty to solve given Algorithmic Runtime Models. Our aim in regard to the Traveling Salesmen Problem would be to apply Variational Quantum Eigensolvers (VQEs) to more optimally resolve this problem.
 
 ## Motivation
 
