@@ -53,21 +53,13 @@ The ultimate goal for implementation was to ensure that we considered all the 3 
 *Insert B92 protocol and noise simulation*
 *Insert E91 protocol and noise simulation*
 
-
-
 ## Results
+To measure how noise affects the MDI protocol we used Quantum Bit Error Rate (QBER), a performance metric which represents the percentage of incorrect qubits in a secret key. Receiving incorrect bits can allow an eavesdropper to go undetected, so QBER reflects a QKD’s vulnerability. Depolarizing noise, which randomly alters a qubit’s state, simulates realistic channel imperfections. We plotted the effect of increasing depolarizing noise on QBER for MDI, BB84, E91, and B92.
 
 ## Conclusions
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
+- The measurement-device-independent quantum key distribution protocol is one of the most promising ways to remove side-detection channels which can be weak and vulnerable. This is a cutting-edge protocol because it makes quantum key distribution much safer and more applicable in the light of cryptography.
+- In our result for the noise effects on MDI-QKD compared to other protocols, MDI shows a nonlinear QBER trend with sharp fluctuations, similar to entanglement-based protocols like E91 and B92. In contrast, BB84 exhibits a linear increase in QBER as depolarizing noise rises. BB84 involves only Alice and Bob, and depolarizing noise affects qubits uniformly. This allows straightforward error correction methods, such as increasing redundancy based on the measured QBER.
+- MDI, however, introduces a third party measurement and relies on photon indistinguishability. Depolarizing noise disrupts interference visibility, making QBER highly sensitive and unpredictable. Therefore, MDI requires adaptive, block-based error correction strategies that respond to local QBER variations.
 
 ## Future Work
 
