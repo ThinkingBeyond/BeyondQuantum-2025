@@ -20,7 +20,7 @@ Research question:
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+Quantum Key Distribution (QKD) promises theoretically unbreakable encryption based on the laws of quantum mechanics. However, many practical implementations, including the well-known BB84 protocol, are vulnerable to attacks that exploit weaknesses in the measurement devices. These side-channel attacks compromise the security of the key, undermining the core advantage of QKD. While Measurement-Device-Independent QKD (MDI-QKD) was proposed to solve this issue, it introduces its own set of practical challenges, especially under noisy conditions. Therefore, our motivation for this research project was to investigate the effectiveness of MDI-QKD in the presence of noise and compare it to other QKD protocols, with the goal of understanding its limitations and potential for real world applications.
 
 ## Your next subsection
 
@@ -34,7 +34,16 @@ If you want to see some good examples of README files check out:
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Our research highlighted the potential of MDI-QKD in addressing measurement device vulnerabilities, but also revealed its sensitivity to depolarizing noise and the resulting non linear behavior of the Quantum Bit Error Rate (QBER) in QKD protocols that rely on third party measurement, such as the  MDI-QKD or entanglement such as the B92 and E91 protocls. These findings open several directions for further research.
+
+One promising area is the implementation and testing of adaptive error correction strategies tailored to MDI-QKD, such as evaluating the performance of the Cascade protocol or other block based methods under varying noise conditions. These could help stabilize QBER fluctuations and improve protocol robustness.
+
+Additionally, future work could explore the effect of different types of quantum noise, such as phase damping or amplitude damping, and how they compare to depolarizing noise in terms of their impact on secure key generation. Investigating how key generation rates change under these different noise models could also provide insights into the efficiency and scalability of MDI-QKD in practical applications.
+
+We also recommend a deeper analysis of the non linear QBER peaks observed in MDI and entanglement based protocols like E91 and B92. Understanding the pattern and cause of these fluctuations could lead to more resilient and predictable protocol designs.
+
+Further studies could involve simulating potential eavesdropping attacks, such as photon number splitting or Trojan horse attacks, to assess the protocol's security beyond idealized noise models. Finally, expanding the comparison to additional QKD protocols and integrating them into larger quantum communication frameworks could provide a broader understanding of the strengths and trade offs involved in each approach.
+
 
 ## References
 
