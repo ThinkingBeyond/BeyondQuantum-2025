@@ -15,9 +15,12 @@ we found disagreement leading us to our research question.
 To research this question we selected two papers with opposite opinions on the subject. We then compared them in a theoretical context pointing out flaws in the arguments and reasoning. To solidify our
 comparison we then applied the comparisons to concrete experiments.
 
-##Conclusions
+## Conclusions
 After our review we found that the paper in favour of decoherence relied on unjustified assumptions about the system and used flawed reasoning in deducing the system environment split when applying
-decoherence. 
+decoherence. This led to conclude that, at least in the context of arguments given by the papers, that decoherence is not a solution to the preferred basis problem.
+
+## Future Research
+
 
 1. motivating your research question
 2. stating your research question
