@@ -20,7 +20,7 @@ After our review we found that the paper in favour of decoherence relied on unju
 decoherence. This led to conclude that, at least in the context of arguments given by the papers, that decoherence is not a solution to the preferred basis problem.
 
 ## Future Research
-
+To add more depth to the project in the future, we would like to use more papers in our comparisons. This will allow for more perspectives and a more complete picture of the topic.
 
 1. motivating your research question
 2. stating your research question
