@@ -11,7 +11,12 @@ That’s not it- our research further dived deep into the noise effects compared
 
 ## Research Question
 
-Distribution? How are noise effects a limitation of removing these vulnerabilities? 
+Our research question had two main parts: the first one focuses on the MDI-QKD protocol and the second question considers the limitations. As mentioned previously, the purpose of having two parts was to make sure we not only explain how this particular protocol is promising but also look at it from a practical and applicable perspective.
+
+Research question:
+1. How can we remove the vulnerabilities of measurement devices in Quantum Key Distribution?
+2. How are noise effects a limitation of removing these vulnerabilities? 
+
 
 ## Motivation
 
