@@ -1,0 +1,656 @@
+#initialize
+!pip install qiskit
+!pip install qiskit qiskit-aer
+!pip3 install --upgrade pip
+!pip install qiskit==1.3
+!pip install qiskit-aer==0.15
+!pip install pylatexenc==2.10
+!pip install qiskit_ibm_runtime==0.34.0
+!pip install pycryptodome
+import qiskit
+qiskit.__version__
+
+#importing
+import numpy as np
+from qiskit import QuantumCircuit, transpile
+from qiskit_aer import AerSimulator
+import random
+import matplotlib.pyplot as plt
+from qiskit_aer.noise import (
+    NoiseModel,
+    QuantumError,
+    ReadoutError,
+    depolarizing_error,
+    pauli_error,
+    thermal_relaxation_error,
+
+  # BB84 key generation with qubit state display
+def bb84_generate_key(n, show_states=True):
+    backend = AerSimulator()
+    alice_bits = [random.randint(0, 1) for _ in range(n)]
+    alice_bases = [random.choice(['Z', 'X']) for _ in range(n)]
+    bob_bases = [random.choice(['Z', 'X']) for _ in range(n)]
+    bob_results = []
+    shared_key = []
+
+    if show_states:
+        print("BB84 Qubit State Preparation by Alice")
+        print("-" * 50)
+        print("Idx | Bit | Basis | Qubit State")
+        print("-" * 50)
+
+    for i, (bit, a_basis, b_basis) in enumerate(zip(alice_bits, alice_bases, bob_bases)):
+        qc = QuantumCircuit(1, 1)
+
+        # Prepare Alice's qubit
+        if bit == 1:
+            qc.x(0)
+        if a_basis == 'X':
+            qc.h(0)
+
+        # Display state
+        if show_states:
+            if a_basis == 'Z':
+                state = '|0⟩' if bit == 0 else '|1⟩'
+            else:
+                state = '|+⟩' if bit == 0 else '|−⟩'
+            print(f"{i:>3} |  {bit}  |   {a_basis}   |   {state}")
+
+        # Bob's measurement
+        if b_basis == 'X':
+            qc.h(0)
+        qc.measure(0, 0)
+
+        # Run on simulator
+        tqc = transpile(qc, backend)
+        job = backend.run(tqc, shots=1, memory=True)
+        result = job.result()
+        bob_bit = int(result.get_memory()[0])
+        bob_results.append(bob_bit)
+
+        # Sift key if bases match
+        if a_basis == b_basis:
+            shared_key.append(bit)
+
+    return shared_key
+
+# Generate key
+bb84_key = bb84_generate_key(20, show_states=True)
+print("\nFinal BB84 Shared Key (after sifting):", bb84_key)
+
+def simulate_bb84_with_noise(n=1000, noise_intensity=0.05, noise_type="depolarizing"):
+    backend = AerSimulator()
+    noise_model = NoiseModel()
+
+    # Configure noise
+    if noise_type == "depolarizing":
+        error = depolarizing_error(noise_intensity, 1)
+    elif noise_type == "bit-flip":
+        error = pauli_error([('X', noise_intensity), ('I', 1 - noise_intensity)])
+    elif noise_type == "phase-flip":
+        error = pauli_error([('Z', noise_intensity), ('I', 1 - noise_intensity)])
+    else:
+        raise ValueError("Unsupported noise type. Choose from 'depolarizing', 'bit-flip', 'phase-flip'.")
+
+    noise_model.add_all_qubit_quantum_error(error, ['h', 'x', 'measure'])
+
+    # Generate Alice and Bob bases
+    alice_bits = [random.randint(0, 1) for _ in range(n)]
+    alice_bases = [random.choice(['Z', 'X']) for _ in range(n)]
+    bob_bases = [random.choice(['Z', 'X']) for _ in range(n)]
+
+    # Prepare batch circuits
+    circuits = []
+    for bit, a_basis, b_basis in zip(alice_bits, alice_bases, bob_bases):
+        qc = QuantumCircuit(1, 1)
+        if bit == 1:
+            qc.x(0)
+        if a_basis == 'X':
+            qc.h(0)
+        if b_basis == 'X':
+            qc.h(0)
+        qc.measure(0, 0)
+        circuits.append(qc)
+
+    # Transpile as a batch
+    tqcs = transpile(circuits, backend)
+
+    # Run all circuits at once
+    job = backend.run(tqcs, noise_model=noise_model, shots=1, memory=True)
+
+    # Flatten the results
+    results = [int(bit[0]) for i in range(len(circuits)) for bit in job.result().get_memory(i)]
+
+    # Sift the keys
+    sifted_bits = [a for a, ab, bb, b in zip(alice_bits, alice_bases, bob_bases, results) if ab == bb]
+    sifted_results = [b for a, ab, bb, b in zip(alice_bits, alice_bases, bob_bases, results) if ab == bb]
+
+    #Calculate QBER
+    errors = sum([a != b for a, b in zip(sifted_bits, sifted_results)])
+    qber = errors / len(sifted_bits) if sifted_bits else 0
+
+    return qber
+
+# Plot QBER vs Noise Intensity
+noise_levels = np.linspace(0, 0.3, 15)
+qber_values = [simulate_bb84_with_noise(1000, noise, "depolarizing") for noise in noise_levels]
+
+plt.plot(noise_levels, qber_values, marker='o', color='teal')
+plt.title("QBER vs Noise Intensity (BB84 with Depolarizing Noise)")
+plt.xlabel("Noise Intensity")
+plt.ylabel("QBER")
+plt.show()
+               
+def e91_generate_key(n, show_states=True):
+    backend = AerSimulator()
+    shared_key = []
+
+    # Define measurement angles in degrees for each party (3 bases each)
+    alice_angles = [0, 45, 90]
+    bob_angles = [22.5, 67.5, -22.5]
+
+    if show_states:
+        print("E91 Entangled Pair State and Basis Choices")
+        print("-" * 60)
+        print("Idx | Alice Basis (°) | Bob Basis (°) | Expected Correlation")
+        print("-" * 60)
+
+    for i in range(n):
+        # Create entangled Bell pair: (|00⟩ + |11⟩)/√2
+        qc = QuantumCircuit(2, 2)
+        qc.h(0)
+        qc.cx(0, 1)
+
+        # Random basis choices
+        alice_angle = random.choice(alice_angles)
+        bob_angle = random.choice(bob_angles)
+
+        if show_states:
+            correlation = "±1" if abs(alice_angle - bob_angle) in [0, 90] else "~0"
+            print(f"{i:>3} |     {alice_angle:>5}°      |   {bob_angle:>5}°    |     {correlation}")
+
+        # Alice and Bob apply basis rotation
+        qc.ry(-2 * np.deg2rad(alice_angle), 0)
+        qc.ry(-2 * np.deg2rad(bob_angle), 1)
+
+        qc.measure([0, 1], [0, 1])
+
+        # Simulate
+        tqc = transpile(qc, backend)
+        job = backend.run(tqc, shots=1, memory=True)
+        result = job.result()
+        measured_bits = result.get_memory()[0]  # e.g., '01'
+        a_bit, b_bit = int(measured_bits[1]), int(measured_bits[0])  # note order
+
+        # Key is generated when both use compatible bases (e.g., 0° and 22.5°)
+        # For simplicity, we consider 0°/22.5° as compatible
+        if (alice_angle, bob_angle) in [(0, 22.5), (45, 67.5), (90, -22.5)]:
+            # Shared key = Alice's bit XOR Bob's bit (should be anticorrelated)
+            shared_bit = a_bit ^ b_bit
+            shared_key.append(shared_bit)
+
+    return shared_key
+
+e91_key = e91_generate_key(20, show_states=True)
+print("\nFinal E91 Shared Key (after basis filtering):", e91_key)
+
+def simulate_e91_with_noise(n=1000, noise_intensity=0.05, noise_type="depolarizing"):
+    backend = AerSimulator()
+    noise_model = NoiseModel()
+
+    # Configure noise
+    if noise_type == "depolarizing":
+        error = depolarizing_error(noise_intensity, 1)
+    elif noise_type == "bit-flip":
+        error = pauli_error([('X', noise_intensity), ('I', 1 - noise_intensity)])
+    elif noise_type == "phase-flip":
+        error = pauli_error([('Z', noise_intensity), ('I', 1 - noise_intensity)])
+    else:
+        raise ValueError("Unsupported noise type. Choose from 'depolarizing', 'bit-flip', 'phase-flip'.")
+
+    # 1-qubit error for single-qubit gates
+    single_qubit_error = depolarizing_error(noise_intensity, 1)
+    noise_model.add_all_qubit_quantum_error(single_qubit_error, ['u3', 'measure'])
+
+    # 2-qubit error for the cx gate
+    two_qubit_error = depolarizing_error(noise_intensity, 2)
+    noise_model.add_all_qubit_quantum_error(two_qubit_error, ['cx'])
+
+
+    # Define measurement angles in degrees for each party (3 bases each)
+    alice_angles = [0, 45, 90]
+    bob_angles = [22.5, 67.5, -22.5]
+
+    shared_key = []
+    circuits = []
+
+    for _ in range(n):
+        # Create entangled Bell pair: (|00⟩ + |11⟩)/√2
+        qc = QuantumCircuit(2, 2)
+        qc.h(0)
+        qc.cx(0, 1)
+
+        # Random basis choices
+        alice_angle = random.choice(alice_angles)
+        bob_angle = random.choice(bob_angles)
+
+        # Apply basis rotations
+        qc.ry(-2 * np.deg2rad(alice_angle), 0)
+        qc.ry(-2 * np.deg2rad(bob_angle), 1)
+
+        # Measure the qubits
+        qc.measure([0, 1], [0, 1])
+        circuits.append(qc)
+
+    # Transpile as a batch
+    tqcs = transpile(circuits, backend)
+
+    # Run all circuits at once
+    job = backend.run(tqcs, noise_model=noise_model, shots=1, memory=True)
+
+    # Extract results
+    results = [int(bit[0]) for i in range(len(circuits)) for bit in job.result().get_memory(i)]
+
+    # Generate key (only keep compatible basis measurements)
+    for i, (alice_angle, bob_angle) in enumerate(zip(
+            [random.choice(alice_angles) for _ in range(n)],
+            [random.choice(bob_angles) for _ in range(n)])):
+
+        # Key is generated when both use compatible bases
+        if (alice_angle, bob_angle) in [(0, 22.5), (45, 67.5), (90, -22.5)]:
+            shared_key.append(results[i])
+
+    # Calculate QBER
+    errors = sum([bit != 0 for bit in shared_key])  # Expecting anticorrelation
+    qber = errors / len(shared_key) if shared_key else 0
+
+    return qber
+
+# Plot QBER vs Noise Intensity
+noise_levels = np.linspace(0, 0.3, 15)
+qber_values = [simulate_e91_with_noise(1000, noise, "depolarizing") for noise in noise_levels]
+
+plt.plot(noise_levels, qber_values, marker='o', color='teal')
+plt.title("QBER vs Noise Intensity (E91 with Depolarizing Noise)")
+plt.xlabel("Noise Intensity")
+plt.ylabel("QBER")
+plt.show()
+
+import random
+from qiskit import QuantumCircuit, transpile
+from qiskit_aer import AerSimulator
+
+def b92_generate_key(n, show_states=True):
+    backend = AerSimulator()
+    shared_key = []
+    valid_indices = []
+
+    if show_states:
+        print("📡 B92 Qubit State Preparation by Alice")
+        print("-" * 50)
+        print("Idx | Bit | Qubit State Sent")
+        print("-" * 50)
+
+    for i in range(n):
+        bit = random.randint(0, 1)
+        bob_basis = random.choice(['Z', 'X'])
+
+        qc = QuantumCircuit(1, 1)
+
+        # Only one qubit state per bit (not 2 like BB84)
+        if bit == 0:
+            qc.h(0)  # |+⟩ state
+            state = '|+⟩'
+        else:
+            qc.x(0)
+            qc.h(0)  # |−⟩ state
+            state = '|−⟩'
+
+        if show_states:
+            print(f"{i:>3} |  {bit}  |   {state}")
+
+        # Bob's basis rotation
+        if bob_basis == 'X':
+            qc.h(0)
+
+        qc.measure(0, 0)
+        tqc = transpile(qc, backend)
+        job = backend.run(tqc, shots=1, memory=True)
+        result = job.result()
+        bit_result = int(result.get_memory()[0])
+
+        # B92 post-selection: only when Bob gets 0 (detects the qubit)
+        if bit_result == 0:
+            shared_key.append(bit)
+            valid_indices.append(i)
+
+    return shared_key
+
+b92_key = b92_generate_key(20, show_states=True)
+print("\nFinal B92 Shared Key (after sifting):", b92_key)
+
+def simulate_b92_with_noise(n=1000, noise_intensity=0.05, noise_type="depolarizing", show_states=False):
+    backend = AerSimulator()
+    noise_model = NoiseModel()
+
+    # Configure noise
+    if noise_type == "depolarizing":
+        error = depolarizing_error(noise_intensity, 1)
+    elif noise_type == "bit-flip":
+        error = pauli_error([('X', noise_intensity), ('I', 1 - noise_intensity)])
+    elif noise_type == "phase-flip":
+        error = pauli_error([('Z', noise_intensity), ('I', 1 - noise_intensity)])
+    else:
+        raise ValueError("Unsupported noise type. Choose from 'depolarizing', 'bit-flip', 'phase-flip'.")
+
+    noise_model.add_all_qubit_quantum_error(error, ['u3', 'measure'])
+
+    # Prepare batch circuits
+    circuits = []
+    for i in range(n):
+        bit = random.randint(0, 1)
+        bob_basis = random.choice(['Z', 'X'])
+
+        qc = QuantumCircuit(1, 1)
+
+        # Only one qubit state per bit (not 2 like BB84)
+        if bit == 0:
+            qc.h(0)  # |+⟩ state
+        else:
+            qc.x(0)
+            qc.h(0)  # |−⟩ state
+
+        # Bob's basis rotation
+        if bob_basis == 'X':
+            qc.h(0)
+
+        qc.measure(0, 0)
+        circuits.append(qc)
+
+    # Batch transpile for speed
+    tqcs = transpile(circuits, backend)
+
+    # Run all circuits at once
+    job = backend.run(tqcs, noise_model=noise_model, shots=1, memory=True)
+
+    # Flatten the results
+    results = [int(bit[0]) for i in range(len(circuits)) for bit in job.result().get_memory(i)]
+
+    # B92 post-selection: only when Bob gets 0 (detects the qubit)
+    shared_bits = [bit for bit, result in zip([random.randint(0, 1) for _ in range(n)], results) if result == 0]
+
+    # Calculate QBER
+    qber = (n - len(shared_bits)) / n if n > 0 else 0
+
+    return qber
+
+# Plot QBER vs Noise Intensity
+noise_levels = np.linspace(0, 0.3, 15)
+qber_values = [simulate_b92_with_noise(1000, noise, "depolarizing") for noise in noise_levels]
+
+plt.plot(noise_levels, qber_values, marker='o', color='teal')
+plt.title("QBER vs Noise Intensity (B92 with Depolarizing Noise)")
+plt.xlabel("Noise Intensity")
+plt.ylabel("QBER")
+plt.show()
+
+import random
+from qiskit import QuantumCircuit
+from qiskit_aer import AerSimulator
+from qiskit import transpile
+
+def simulate_bell_measurement(alice_bit, alice_basis, bob_bit, bob_basis):
+    qc = QuantumCircuit(2, 2)
+
+    # Alice's bit preparation
+    if alice_bit == 1:
+        qc.x(0)
+    if alice_basis == 'X':
+        qc.h(0)
+
+    # Bob's bit preparation
+    if bob_bit == 1:
+        qc.x(1)
+    if bob_basis == 'X':
+        qc.h(1)
+
+    # Bell state creation
+    qc.cx(0, 1)
+    qc.h(0)
+    qc.measure([0, 1], [0, 1])
+
+    # Simulating the quantum circuit
+    sim = AerSimulator()
+    transpiled_qc = transpile(qc, sim)
+    result = sim.run(transpiled_qc, shots=1).result()
+    counts = result.get_counts()
+
+    return list(counts.keys())[0]  # Return Bell state result (like '00' or '11')
+
+def mdi_qkd_simulation_run(n):
+    alice_bits = [random.randint(0, 1) for _ in range(n)]
+    alice_bases = [random.choice("XZ") for _ in range(n)]
+    bob_bits = [random.randint(0, 1) for _ in range(n)]
+    bob_bases = [random.choice("XZ") for _ in range(n)]
+
+    print("Alice's bits: ", alice_bits)
+    print("Alice's bases:", alice_bases)
+    print("Bob's bits:   ", bob_bits)
+    print("Bob's bases:  ", bob_bases)
+
+    sifted_key = []
+
+    for i in range(n):
+        result = simulate_bell_measurement(
+            alice_bits[i], alice_bases[i],
+            bob_bits[i], bob_bases[i],
+        )
+        print(f"Pair {i+1}: Bell state outcome = {result}")
+
+        if alice_bases[i] == bob_bases[i]:
+            if alice_bits[i] == bob_bits[i]:
+                sifted_key.append(alice_bits[i])
+
+    print("The secret sifted key is:   ", sifted_key)
+    return sifted_key, alice_bits, bob_bits, alice_bases, bob_bases
+
+def calculate_qber(sifted_key, alice_bits, bob_bits, alice_bases, bob_bases):
+    errors = 0
+    count = 0
+    for i in range(len(alice_bits)):
+        if alice_bases[i] == bob_bases[i]:
+            count += 1
+            if alice_bits[i] != bob_bits[i]:
+                errors += 1
+
+    qber = errors / count if count > 0 else 0
+    return qber
+
+# Define a function to run the QBER simulation at different depolarizing noise levels
+def run_qber_vs_noise_plot(noise_levels, n):
+    qber_values = []
+
+    for noise in noise_levels:
+        qber = mdi_qkd_simulation_run(n, noise)
+        qber_values.append(qber)
+
+    # Plotting
+    plt.figure(figsize=(8, 5))
+    plt.plot(noise_levels, qber_values, marker='o', linestyle='-', color='blue')
+    plt.title('QBER vs Depolarizing Noise in MDI-QKD Protocol')
+    plt.xlabel('Depolarizing Noise Probability')
+    plt.ylabel('Quantum Bit Error Rate (QBER)')
+    plt.grid(True)
+    plt.show()
+
+# Run the simulation
+sifted_key, alice_bits, bob_bits, alice_bases, bob_bases = mdi_qkd_simulation_run(10)
+
+# Calculate and print QBER
+qber = calculate_qber(sifted_key, alice_bits, bob_bits, alice_bases, bob_bases)
+print(f"QBER: {qber}")
+
+# Define a function to run the QBER simulation at different depolarizing noise levels
+def run_qber_vs_noise_plot(noise_levels, n):
+    qber_values = []
+
+    for noise in noise_levels:
+        qber = mdi_qkd_simulation_run(n, noise)
+        qber_values.append(qber)
+
+    # Plotting
+    plt.figure(figsize=(8, 5))
+    plt.plot(noise_levels, qber_values, marker='o', linestyle='-', color='blue')
+    plt.title('QBER vs Depolarizing Noise in MDI-QKD Protocol')
+    plt.xlabel('Depolarizing Noise Probability')
+    plt.ylabel('Quantum Bit Error Rate (QBER)')
+    plt.grid(True)
+    plt.show()
+
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+from qiskit import QuantumCircuit, transpile
+from qiskit_aer import AerSimulator
+from qiskit_aer.noise import NoiseModel, depolarizing_error
+
+def simulate_bell_measurement(alice_bit, alice_basis, bob_bit, bob_basis, noise_model=None):
+    qc = QuantumCircuit(2, 2)
+
+    # Alice's bit preparation
+    if alice_bit == 1:
+        qc.x(0)
+    if alice_basis == 'X':
+        qc.h(0)
+
+    # Bob's bit preparation
+    if bob_bit == 1:
+        qc.x(1)
+    if bob_basis == 'X':
+        qc.h(1)
+
+    # Bell state creation
+    qc.cx(0, 1)
+    qc.h(0)
+    qc.measure([0, 1], [0, 1])
+
+    # Simulating the quantum circuit
+    sim = AerSimulator()
+    transpiled_qc = transpile(qc, sim)
+
+    if noise_model:
+        result = sim.run(transpiled_qc, shots=1, noise_model=noise_model).result()
+    else:
+        result = sim.run(transpiled_qc, shots=1).result()
+
+    counts = result.get_counts()
+    return list(counts.keys())[0]  # Return Bell state result (like '00' or '11')
+
+def mdi_qkd_simulation_run(n, noise_intensity=0.0):
+    alice_bits = [random.randint(0, 1) for _ in range(n)]
+    alice_bases = [random.choice("XZ") for _ in range(n)]
+    bob_bits = [random.randint(0, 1) for _ in range(n)]
+    bob_bases = [random.choice("XZ") for _ in range(n)]
+
+    # Create noise model if noise intensity > 0
+    noise_model = None
+    if noise_intensity > 0:
+        noise_model = NoiseModel()
+        # Add depolarizing error to single qubit gates
+        error_1q = depolarizing_error(noise_intensity, 1)
+        noise_model.add_all_qubit_quantum_error(error_1q, ['x', 'h'])
+        # Add depolarizing error to two qubit gates
+        error_2q = depolarizing_error(noise_intensity, 2)
+        noise_model.add_all_qubit_quantum_error(error_2q, ['cx'])
+
+    sifted_key = []
+    bell_results = []
+
+    for i in range(n):
+        result = simulate_bell_measurement(
+            alice_bits[i], alice_bases[i],
+            bob_bits[i], bob_bases[i],
+            noise_model
+        )
+        bell_results.append(result)
+
+        if alice_bases[i] == bob_bases[i]:
+            if alice_bits[i] == bob_bits[i]:
+                sifted_key.append(alice_bits[i])
+
+    return sifted_key, alice_bits, bob_bits, alice_bases, bob_bases, bell_results
+
+def calculate_qber(alice_bits, bob_bits, alice_bases, bob_bases):
+    errors = 0
+    count = 0
+    for i in range(len(alice_bits)):
+        if alice_bases[i] == bob_bases[i]:
+            count += 1
+            if alice_bits[i] != bob_bits[i]:
+                errors += 1
+
+    qber = errors / count if count > 0 else 0
+    return qber
+
+def run_qber_vs_noise_simulation(num_qubits=100, max_noise=0.3, steps=15):
+    noise_levels = np.linspace(0, max_noise, steps)
+    qber_values = []
+    key_rates = []
+
+    for noise in noise_levels:
+        total_qber = 0
+        total_key_len = 0
+        num_runs = 5  # Average over multiple runs for each noise level
+
+        for _ in range(num_runs):
+            sifted_key, alice_bits, bob_bits, alice_bases, bob_bases, _ = mdi_qkd_simulation_run(
+                num_qubits, noise
+            )
+            qber = calculate_qber(alice_bits, bob_bits, alice_bases, bob_bases)
+            total_qber += qber
+            total_key_len += len(sifted_key)
+
+        avg_qber = total_qber / num_runs
+        avg_key_rate = total_key_len / (num_runs * num_qubits)
+
+        qber_values.append(avg_qber)
+        key_rates.append(avg_key_rate)
+        print(f"Noise: {noise:.3f} - QBER: {avg_qber:.3f} - Key Rate: {avg_key_rate:.3f}")
+
+    # Plotting QBER vs Noise
+    plt.figure(figsize=(12, 5))
+
+    plt.subplot(1, 2, 1)
+    plt.plot(noise_levels, qber_values, marker='o', linestyle='-', color='blue')
+    plt.title('QBER vs Depolarizing Noise in MDI-QKD')
+    plt.xlabel('Noise Intensity')
+    plt.ylabel('Quantum Bit Error Rate (QBER)')
+    plt.grid(True)
+
+    plt.subplot(1, 2, 2)
+    plt.plot(noise_levels, key_rates, marker='o', linestyle='-', color='red')
+    plt.title('Key Rate vs Depolarizing Noise in MDI-QKD')
+    plt.xlabel('Noise Intensity')
+    plt.ylabel('Normalized Key Rate')
+    plt.grid(True)
+
+    plt.tight_layout()
+    plt.show()
+
+    return noise_levels, qber_values, key_rates
+
+# Run a single simulation to see the output
+print("Single MDI-QKD simulation without noise:")
+sifted_key, alice_bits, bob_bits, alice_bases, bob_bases, bell_results = mdi_qkd_simulation_run(10)
+qber = calculate_qber(alice_bits, bob_bits, alice_bases, bob_bases)
+print(f"QBER: {qber:.3f}")
+print(f"Sifted key: {sifted_key}")
+
+# Run the noise simulation and plot results
+print("\nRunning noise simulation...")
+noise_levels, qber_values, key_rates = run_qber_vs_noise_simulation(
+    num_qubits=100,  # Number of qubits per run
+    max_noise=0.3,   # Maximum noise level to test
+    steps=15         # Number of points to test
+)
+               
