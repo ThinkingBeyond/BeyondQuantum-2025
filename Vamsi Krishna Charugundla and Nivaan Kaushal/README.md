@@ -8,10 +8,10 @@ Both simulations are executed on an N×N grid, incorporating identical domain bo
 The outcome demonstrates that quantum circuits can successfully capture key fluid dynamics characteristics such as flow diversion around obstacles, symmetry in the velocity field, and smoothed gradients. Comparative centerline velocity profiles show qualitative agreement between the quantum and classical results, validating the quantum approach’s effectiveness in simplified fluid flow modeling.
 
 ## MOTIVATION
-We aimed to explore whether quantum computing especially through the use of quantum entanglement and superposition could provide a scalable alternative. By encoding fluid properties into quantum states and constructing a lattice grid through qubit interactions, we hypothesized that quantum simulations could reproduce realistic flow patterns with fewer computational resources. This was motivated by the increasing computational cost and complexity of classical fluid dynamics simulations, particularly when modeling flow around obstacles or within irregular geometries. Traditional methods require solving complex partial differential equations and often become inefficient as spatial resolution increases.
+Classical fluid dynamics simulations have become increasingly complex and computationally expensive, especially when modeling large or highly detailed systems. This project was motivated by the potential for quantum computing, particularly quantum entanglement and superposition, to offer an alternative that may reduce computational load while maintaining physical accuracy. By investigating how fluid properties can be encoded into quantum states and simulated through qubit interactions, we aim to explore the feasibility of quantum computing for simulating fluid flow and computational fluid dynamics. 
 
 ## Research Question 
-Classical fluid dynamics simulations are computationally intensive, especially when modeling complex interactions near obstacles. This project explores a quantum circuit based framework to simulate simplified fluid behavior using quantum entanglement and superposition on a 2D lattice grid.
+Can quantum computing, using principles such as superposition and entanglement, simulate fluid dynamics on a 2D grid, and how does its performance compare to Classical Methods?
 
 ## Implementation
 ***Quantum Computational Fluid Dynamics Implementation***
