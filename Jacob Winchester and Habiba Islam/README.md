@@ -24,7 +24,8 @@ To add more depth to the project in the future, we would like to use more papers
 potentially discuss other proposed solutions to the preferred basis problem and their strengths and weaknesses in relation to decoherence.
 
 ## References
-1. David Wallace (2024), “Decoherence and Ontology (or: How I learned to stop worrying and love FAPP).”[arXiv:1111.2189](https://arxiv.org/abs/1111.2189)
+1. David Wallace (2024), “Decoherence and Ontology (or: How I learned to stop worrying and love FAPP).” [arXiv:1111.2189](https://arxiv.org/abs/1111.2189)
+2. Hitoshi Inamori (2018), “No quantum process can explain the existence of the preferred basis: decoherence is not universal.” [arXiv:1609.07984](https://arxiv.org/abs/1609.07984)
 
 1. motivating your research question
 2. stating your research question
