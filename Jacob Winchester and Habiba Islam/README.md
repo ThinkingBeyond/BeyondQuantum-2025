@@ -2,8 +2,6 @@
 
 # DECOHERENCE AND THE PREFERRED BASIS PROBLEM
 
-***Provide a description of your project including*** 
-
 ## Motivation
 The measurement problem is one of the biggest foundational issues in Quantum Mechanics. The question of how and when we transition from a quantum to a classical state in the presence
 of a measurement has been present since Quantum Mechanics inception. The many attempts to solve this problem has led to many different schools of thought. One of the most popular of these
@@ -16,6 +14,10 @@ we found disagreement leading us to our research question.
 ### Does decoherence as a mechanism solve the preferred basis problem in the many worlds interpretation?
 To research this question we selected two papers with opposite opinions on the subject. We then compared them in a theoretical context pointing out flaws in the arguments and reasoning. To solidify our
 comparison we then applied the comparisons to concrete experiments.
+
+##Conclusions
+After our review we found that the paper in favour of decoherence relied on unjustified assumptions about the system and used flawed reasoning in deducing the system environment split when applying
+decoherence. 
 
 1. motivating your research question
 2. stating your research question
