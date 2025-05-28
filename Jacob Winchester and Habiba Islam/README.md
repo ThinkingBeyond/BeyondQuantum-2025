@@ -1,8 +1,10 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-DOES DECOHERENCE AS A MECHANISM SOLVE THE PREFERRED BASIS PROBLEM IN THE MANY WORLDS INTERPRETATION?
+THE MEASUREMENT PROBLEM
 
 ***Provide a description of your project including*** 
+
+The measurement problem is on of the biggest 
 
 1. motivating your research question
 2. stating your research question
