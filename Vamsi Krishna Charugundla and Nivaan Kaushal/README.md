@@ -70,8 +70,8 @@ In this project, we developed and compared quantum and classical circuit-based f
     5. Increasing the gridsize for more accurate and insightful results, currently limited by compute power of Quantum Computing.
     
 ## References
-1. Meng, Z., et al. (2024)."Simulating unsteady fluid flows on a superconducting quantum processor."[https://arxiv.org/abs/2404.15878 ] (https://arxiv.org/abs/2404.15878)
-2. Sanavio, C., & Succi, S. (2024)."Quantum Computing for Simulation of Fluid Dynamics."[https://arxiv.org/abs/2404.01302 ] (https://arxiv.org/abs/2404.01302)
+1. Meng, Z., et al. (2024)."Simulating unsteady fluid flows on a superconducting quantum processor." (https://arxiv.org/abs/2404.15878)
+2. Sanavio, C., & Succi, S. (2024)."Quantum Computing for Simulation of Fluid Dynamics." (https://arxiv.org/abs/2404.01302)
 3. Qiskit Tutorials. (https://qiskit.github.io/qiskit-aer/tutorials/index.html)
 4. Sauro Succi et al. (2024). ‘Classical and quantum computational methods for fluid flow simulation: A comparative study.’ (https://www.sciencedirect.com/science/article/abs/pii/S0045793023003730)
 
