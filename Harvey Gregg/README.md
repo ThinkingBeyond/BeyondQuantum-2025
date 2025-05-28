@@ -27,6 +27,26 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 
 ### Classical Hyperparameters
 
+- Number of Visible Nodes: **30**
+- Number of Hidden Nodes: **5, 10, 15, 20, 25**
+- Training Routine: **Persistent CD**
+- Learning Rate: **0.007**
+- Learning Rate Scheduler: **Linear**
+- Batch Size: **1000**
+- Number of Epochs: **10000**
+- Benchmark: **Reconstruction Error**
+
+### Quantum Hyperparameters
+
+- Number of Visible Nodes: **30**
+- Number of Hidden Nodes: **5, 10, 15, 20, 25**
+- Training Routine: **CD**
+- Learning Rate: **0.007**
+- Learning Rate Scheduler: **Linear**
+- Batch Size: **1000**
+- Number of Epochs: **10000**
+- Benchmark: **Reconstruction Error**
+
 ## Results 
 
 ![5 Nodes](./Graphs/5%20Nodes%20Comparison.png)
