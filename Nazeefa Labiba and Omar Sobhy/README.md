@@ -1,64 +1,42 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+### Evaluating QSVM's Scalability: A Comparative Analysis with Classical Support Vector Machines
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
+### Introduction
+SVMs are really useful machine learning algorithm. One of the main drawbacks of this algorithm is that it doesnot work for large scale data . Quantum Machine Learning gives us the advantage of computing large scale data with better efficiency using Kenrnel method. 
 
 ## Research Question
 
-State your research question here and elaborate on it.
+Does QSVM solve the scalability issues of classical SVM ?
 
 ## Motivation
+Solving the scalability issues of SVM can open the doors towards solving bigger real life classification problems. It will give useful insights in the real life bigger datas. It will also become a very important application of Quantum Computation 
 
-Explain your motivation for your chosen research question here.
+## Our Experiment:
 
-## Your next subsection
+To compare the scalability of SVM and QSVM we implemented both classical and quantum SVM in the same dataset. We conducted some thorough literature review to understand the current state of this research
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+The basic understanding of QSVM code was taken form this link:
+- [Implementation of QSVM in Qiskit](https://github.com/Qiskit/platypus/blob/main/notebooks/summer-school/2021/resources/lab-notebooks/lab-3.ipynb )
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+### Table of comparison of different factors from literature review
 
-[ ... ]
+| Paper Title | Approach | Data Size | Features | Feature Map | Scaling Performance | Other Results |
+|-------------|----------|-----------|----------|-------------|---------------------|---------------|
+| Quantum Support Vector Machine for Classification and Regression Problems | Hybrid | 1,000 samples | 10-12 (PCA reduced) | Angle Embedding (RX/RY) | Classical better | Better classification metrics |
+| Quantum Support Vector Machine for Big Data Classification | Hybrid | <500 samples | N/A | Not specified | Classical better | No QSVM advantages |
+| An Enhanced Approach for Predicting Air Pollution Using Quantum Support Vector Machine | Hybrid | 500-2,000 | Multiple indicators | Custom quantum map | Not compared | Better prediction accuracy |
+| Quantum Machine Learning for Finance: Short-Term Stock Price Prediction | Hybrid | Large scale | 20+ | Hardware-efficient | QSVM scaled better | Quantum advantage (>50 qubits) |
+## Future investigations:
+In our study , we saw that classical SVM had better scaling in case of small scale data. Incase of middle and large scale data , the prediction of QSVMs were better. In one of the cases for a very large scale data, QSVM showed better scaling. More experiments on real life very large data datasets should be done for reaching a conclusion in this matter . We used only hybrid approaches in our study. Fully Quantum approaches can give different results
 
-## Future Work
-
-State and explain what follow-up research could be conducted based on your work.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
-
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+- [Quantum Support Vector Machine for Classification and Regression Problems](https://arxiv.org/pdf/2407.09930)  
+- [Quantum Support Vector Machine for Big Data Classification](https://or.niscpr.res.in/index.php/IJPAP/article/view/2306/613)  
+- [An Enhanced Approach for Predicting Air Pollution Using Quantum Support Vector Machine](https://www.researchgate.net/publication/383427878_An_enhanced_approach_for_predicting_air_pollution_using_quantum_support_vector_machine)  
+- [Quantum Machine Learning for Finance: Short-Term Stock Price Prediction](https://arxiv.org/abs/2306.00881)  
 
 ---
 
