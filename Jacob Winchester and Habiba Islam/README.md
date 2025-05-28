@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-#DECOHERENCE AND THE PREFERRED BASIS PROBLEM
+# DECOHERENCE AND THE PREFERRED BASIS PROBLEM
 
 ***Provide a description of your project including*** 
 
