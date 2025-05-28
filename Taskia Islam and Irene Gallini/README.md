@@ -26,26 +26,34 @@ Quantum Key Distribution (QKD) promises theoretically unbreakable encryption bas
 The goal of quantum cryptography is to ensure the secure information gets transmitted to the recipient safely without having it decrypted by an eavesdropper. In classical cryptography, a key is encrypted using complex mathematical problems such as integer multiplication. In modern computers, these can be decrypted much faster, and the sender and recipient would not notice the change in the keys. Therefore, quantum cryptography uses quantum mechanical principles to ensure the key is transmitted securely, and the sender + recipient would notice if an eavesdropper tried decrypting it. 
 
 How is that? Quantum cryptography uses polarized photon states. Photons can oscillate, and polarized photons can oscillate only in one direction, either horizontal, vertical, diagonal or anti-diagonal. The most common protocol in quantum cryptography is BB84. In the BB84 protocol, we have two different parties: a sender of the key and a recipient. Here are the steps in BB84:
-The sender (referred to as Alice in quantum cryptography) would encode the message in bits
-For each bit, Alice would choose a specific basis: vertical, horizontal, diagonal, or anti-diagonal. 
-Alice will send now send the polarized photon states to the recipient (Bob) through an optical fibre which is a primary medium for photon transmission
-Bob would choose a random basis and measure the photon. Bob will record each of the results
-After steps 1-4 are completed, Alice and Bob will publicly share their basis. Because the basis does not contain the key information themselves, publicly sharing the basis will not help anyone else decrypting it.
+1. The sender (referred to as Alice in quantum cryptography) would encode the message in bits
+2. For each bit, Alice would choose a specific basis: vertical, horizontal, diagonal, or anti-diagonal.
+3. Alice will send now send the polarized photon states to the recipient (Bob) through an optical fibre which is a primary medium for photon transmission
+4. Bob would choose a random basis and measure the photon. Bob will record each of the results
+5. After steps 1-4 are completed, Alice and Bob will publicly share their basis. Because the basis does not contain the key information themselves, publicly sharing the basis will not help anyone else decrypting it.
 
 Why is this effective?
 Superposition in quantum mechanics plays a huge role in understanding why QKD works better than classical cryptography. That’s because once the states are measured, if they are measured incorrectly, then the state would collapse into one state, indicating an error that can be noticed by Alice and Bob later on. This is where the Heisenberg Uncertainty Principle comes in.
 Eve does not actually know whether she is right or wrong with the measurements because she has to randomly choose a basis just like Bob, keeping the probability of getting all the bits correct very low. Additionally, due to the no-cloning theorem, photon states can not exactly be copied by the eavesdropper later on.
 
 However, the big issue we face in the BB84 protocol is that the key relies upon a measurement device. This measurement device can be weak and vulnerable, making it susceptible to errors. To solve this problem, we dived deep into the Measurement-Device-Independent Quantum Key Distribution protocol which ensures that the key itself is not altered by the measurement device. The way MDI-QKD works is simple:
-Both Alice and Bob encode choose phase-randomized weak coherent light pulses
-They then encode their own random bits into each pulse using the same states from BB84. These are the same basis from the BB84 protocol
-They implement the decoy state and modulate each pulse using an optical intensity modulator to prevent photon-number-splitting attacks
-Both Alice and Bob send the photon pulses to Charlie, who is a central third party and can be untrusted
-Charlie performs partial Bell State Measurements to see which photon pulses have entanglement-like correlations. Charlie does not have any information about the key itself which is why he can be untrusted.
-He sends the successful partial Bell State Measurements to Alice and Bob. Alice and Bob publicly share their basis and discard the wrong measurements
-Alice and Bob uses QBER to check for errors that Charlie may have made
+1. Both Alice and Bob encode choose phase-randomized weak coherent light pulses
+2. They then encode their own random bits into each pulse using the same states from BB84. These are the same basis from the BB84 protocol
+3. They implement the decoy state and modulate each pulse using an optical intensity modulator to prevent photon-number-splitting attacks
+4. Both Alice and Bob send the photon pulses to Charlie, who is a central third party and can be untrusted
+5. Charlie performs partial Bell State Measurements to see which photon pulses have entanglement-like correlations. Charlie does not have any information about the key itself which is why he can be untrusted.
+6. Charlie sends the successful partial Bell State Measurements to Alice and Bob. Alice and Bob publicly share their basis and discard the wrong measurements
+7. Alice and Bob uses QBER to check for errors that Charlie may have made
 
 ## Methodology and Implementation
+
+The ultimate goal for implementation was to ensure that we considered all the 3 main types of quantum key distribution protocols (which are BB84, B92 and E91) as well as the MDI-QKD protocol, and develop a noise simulation for all of them. With the help of Qiskit on Google Colab, we successfully implemented the prototype and simulation for all of these protocols for easier visualization on the data.
+
+*Insert BB84 protocol and noise simulation*
+*Insert B92 protocol and noise simulation*
+*Insert E91 protocol and noise simulation*
+
+
 
 ## Results
 
