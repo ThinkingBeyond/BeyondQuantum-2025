@@ -41,12 +41,12 @@ Quantum computing has emerged as a promising avenue for potentially accelerating
 While theoretical analyses often suggest potential quantum speedups, the practical performance of these algorithms on current and near-term quantum hardware or simulators is not always immediately apparent due to factors such as qubit count limitations, noise, circuit depth constraints, and simulation overheads. Dynamic Programming, despite its unfavorable theoretical worst-case complexity for large N, is a well-understood and often efficient exact method for small to moderately sized TSP instances on classical hardware.
 
 Therefore, the primary motivation for this experiment is to conduct a direct, empirical comparison between the practical performance of a classical Dynamic Programming solver and a quantum algorithm based on phase encoding and Quantum Phase Estimation for the Traveling Salesman Problem. By executing both approaches on a range of small TSP instances using readily available codebases and simulation tools, we aim to:
-\begin{itemize}
-    \item Gain concrete, hands-on experience with the implementation and execution of a specific quantum optimization algorithm.
-    \item Quantify the runtime performance of the quantum simulation approach relative to an established classical method on scales where both are feasible.
-    \item Identify and highlight the practical overheads and current limitations of the quantum simulation compared to classical computation for this problem.
-    \item Provide empirical data to support discussions on the current feasibility and future potential of quantum phase-based encoding techniques for combinatorial optimization.
-\end{itemize}
+
+Gain concrete, hands-on experience with the implementation and execution of a specific quantum optimization algorithm.
+Quantify the runtime performance of the quantum simulation approach relative to an established classical method on scales where both are feasible.
+Identify and highlight the practical overheads and current limitations of the quantum simulation compared to classical computation for this problem.
+Provide empirical data to support discussions on the current feasibility and future potential of quantum phase-based encoding techniques for combinatorial optimization.
+
 This comparison is crucial for bridging the gap between theoretical quantum speedup claims and the observed performance on existing or simulated quantum systems, offering valuable insight into the current state of quantum computation for practical problem-solving.
 
 ## Your next subsection
@@ -61,17 +61,21 @@ If you want to see some good examples of README files check out:
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Future work can explore improved ansatz designs to enhance circuit expressibility and convergence. Testing noise mitigation techniques will be crucial as we scale to larger TSP instances on NISQ devices. Hybrid quantum-classical methods could also offer better scalability by combining quantum optimization with classical heuristics. Additionally, benchmarking VQE against algorithms like QAOA and analyzing different initialization strategies can provide deeper insights and improve generalizability across diverse TSP problems.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+Here’s your list of references reformatted into the requested markdown style:
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+1. Farhi, E., Goldstone, J., & Gutmann, S. (2014). *A Quantum Approximate Optimization Algorithm*. [arXiv:1411.4028](https://arxiv.org/abs/1411.4028)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+2. Peruzzo, A., McClean, J., Shadbolt, P., Yung, M. H., Zhou, X. Q., Love, P. J., ... & O'Brien, J. L. (2014). *A variational eigenvalue solver on a photonic quantum processor*. *Nature Communications*, 5, 4213. [Nature](https://www.nature.com/articles/ncomms5213)
+
+3. Zhou, L., Wang, S. T., Choi, S., Pichler, H., & Lukin, M. D. (2020). *Quantum Approximate Optimization Algorithm: Performance, Mechanism, and Implementation on Near-Term Devices*. *Physical Review X*, 10(2), 021067. [APS](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.021067)
+
+4. Lucas, A. (2014). *Ising formulations of many NP problems*. *Frontiers in Physics*, 2, 5. [Frontiers](https://www.frontiersin.org/articles/10.3389/fphy.2014.00005/full)
+
+5. Gilliam, A., Shaydulin, R., Alexeev, Y., & Dumitrescu, E. F. (2021). *Optimizing Quantum Circuits for Combinatorial Problems on NISQ Architectures*. *Quantum Information Processing*, 20(3), 1–27. [Springer](https://link.springer.com/article/10.1007/s11128-020-02961-1)
 
 ---
 
