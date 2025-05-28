@@ -3,8 +3,8 @@
 # QUANTUM INFORMATION THEORY AND COMPLEXEITY
 
 ## Research Question
+***How does the entanglement entropy scale with the number of qubits in Grover’s algorithm, and how does this scaling influence the classical simulation cost using matrix product states (MPS)?***
 
-State your research question here and elaborate on it.
 
 ## Project Introduction
 **Our project, "Entanglement Scaling in Grover's Algorithm: Implications for Matrix Product State Simulation," conducted by Lucas Rhode and Kishan Bhowal under Manuel Rudolph's mentorship, investigates entanglement in Grover's search algorithm to assess its classical simulation using Matrix Product States (MPS). We simulated Grover's algorithm for 4 to 12 qubits, measuring bipartite entanglement entropy and bond dimension. Findings show low entanglement (below 1 ebit) and a constant bond dimension of 2, enabling efficient MPS simulations compared to high-entanglement algorithms like QAOA or Ising models.** 
@@ -52,75 +52,49 @@ Our results, as presented in the document, reveal the entanglement characteristi
 
 
 3. **MPS Simulation Time**: Simulation time increased from $0.0135$ seconds ($4$ qubits) to $49$ seconds ($12$ qubits), reflecting manageable scaling due to the low, constant $χ_{max}$.
+   <img width="998" alt="Screenshot 2025-05-28 at 7 01 55 AM" src="https://github.com/user-attachments/assets/80460fe5-eb68-4f7a-a451-c4e81e6dec82" />
 
+# Table
 
+| n-Qubits            | Iterations $S_{max}$|(ebits) $χ_{max}$     | (actual) $χ_{max}$  |   Theory $(2^S)$  |   MPS time  $(s)$    |
+|---------------------|-----------|------------- |------------|-------------|-----------------|
+|         4           |     3     |    0.4250    |    2.0     |     1.3     |     0.1353      | 
+|         6           |     6     |    0.6905    |    2.0     |     1.6     |     0.6882      |
+|         8           |     13    |    0.8337    |    2.0     |     1.8     |     5.3440      |
+|         10          |     25    |    0.9124    |    2.0     |     1.9     |    22.0588      |
+|         12          |     50    |    0.9558    |    2.0     |     1.9     |   151.3528      |
+    
+
+    
 **Discussion**: The low entanglement $(S_{peak} < 1 ebit)$ and constant $χ_{max} = 2$ highlight that Grover's algorithm is highly amenable to MPS simulations, unlike algorithms with higher entanglement that require exponentially larger bond dimensions. This efficiency makes MPS a powerful tool for simulating Grover’s circuits, offering insights into resource requirements for classical simulation of quantum algorithms.
 
 ## Conclusions
 
 Our study on "Entanglement Scaling in Grover's Algorithm: Implications for Matrix Product State Simulation" leads to the following conclusions:
 
-1. **Low Entanglement in Grover's Algorithm**: Grover's algorithm exhibits remarkably low bipartite entanglement, with peak entanglement entropy (S_peak) remaining below 1 ebit for systems up to $12$ qubits (ranging from $0.425$ ebits for $4$ qubits to $0.956$ ebits for $12$ qubits). This is significantly lower than other quantum algorithms like $QAOA$ (~2.8 ebits for $p=1$ Max-Cut) or Ising model dynamics (linear entanglement growth).
+1. **Low Entanglement in Grover's Algorithm**: Grover's algorithm exhibits remarkably low bipartite entanglement, with peak entanglement entropy $(S_{peak})$ remaining below 1 ebit for systems up to $12$ qubits (ranging from $0.425$ ebits for $4$ qubits to $0.956$ ebits for $12$ qubits). This is significantly lower than other quantum algorithms like $QAOA$ (~2.8 ebits for $p=1$ Max-Cut) or Ising model dynamics (linear entanglement growth).
 
-2. **Efficient MPS Simulations**: The low entanglement translates to a consistently low bond dimension $(χ_{max} = 2)$ across all tested qubit counts ($4$ to $12$), as observed in MPS simulations. The theoretical $χ_{max} (2^S_{peak})$ also remained small (~1.3 to 1.9). This enables highly efficient MPS simulations, with simulation times scaling manageably ($0.0135$ seconds for $4$ qubits to $49$ seconds for $12$ qubits).
+2. **Efficient MPS Simulations**: The low entanglement translates to a consistently low bond dimension $(χ_{max} = 2)$ across all tested qubit counts ($4$ to $12$), as observed in MPS simulations. The theoretical $χ_{max} (2^{S_{peak}})$ also remained small (~1.3 to 1.9). This enables highly efficient MPS simulations, with simulation times scaling manageably ($0.0135$ seconds for $4$ qubits to $49$ seconds for $12$ qubits).
 
 3. **Practical Implications**: The minimal entanglement and stable bond dimension indicate that MPS is an exceptionally effective method for classically simulating Grover's algorithm, particularly when compared to algorithms requiring larger bond dimensions due to higher entanglement. This efficiency is valuable for benchmarking quantum algorithms and understanding classical simulation resource requirements.
 
 4. **Theoretical Insight**: The findings enhance our understanding of entanglement scaling in Grover’s algorithm, highlighting its unique characteristic of maintaining low entanglement, which is advantageous for classical simulation strategies.
 
 In summary, Grover's algorithm’s low entanglement makes it ideally suited for MPS-based classical simulations, offering both practical and theoretical insights into optimizing quantum algorithm simulations.
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
-
-## Motivation
-
-Explain your motivation for your chosen research question here.
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+We can follow up this research work with tests for different algorithms other than Grover's . This can help us understand the effeiciency or the real quantum advantage achieved in different quantum algorithms and it will substantiate the benefits quantum computers can provide at large. The cost of operating a Quantum algorithm must be significantly less than that of its classical counter-part , this project can help us realise if quantum computers are all hype or they do have some substantial benefits and what they are.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+1. *Quantum Computation and Quantum Information* , By Michael A. Nielsen, Isaac L. Chuang https://www.google.co.in/books/edition/Quantum_Computation_and_Quantum_Informat/65FqEKQOfP8C?hl=en
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+2. *Quantum Entanglement* Ryszard Horodecki , Pawel Horodecki , Michal Horodecki and Karol Horodecki
+   https://arxiv.org/abs/quant-ph/0702225v2
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+3. *IBM Quantum Learning* https://learning.quantum.ibm.com/
+4. 
 
 ---
 
