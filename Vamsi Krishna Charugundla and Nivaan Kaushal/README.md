@@ -18,11 +18,11 @@ Classical fluid dynamics simulations are computationally intensive, especially w
 ***Quantum computational fulid dynamics***
 To implementing code we need to  all required packages .here below is the package file to install all packages at once .
 - packages file :['requriment.txt']()
-after above step completed then implementing this below colab notebook for Quantum CFD
-In this notebook we did all setup to quantum circuit framework for quantum cfd
+--after above step completed then implementing this below colab notebook for Quantum CFD
+--In this notebook we did all setup to quantum circuit framework for quantum cfd
 - Notebook: [`QCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
-  next we implement this  below classical CFD colab notebook
-  In this below notebook we setup a framework for  classical cfd .
+  --next we implement this  below classical CFD colab notebook
+ -- In this below notebook we setup a framework for  classical cfd .
 - Notebook: [`CCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
 ## Results 
