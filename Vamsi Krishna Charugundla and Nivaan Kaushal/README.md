@@ -14,6 +14,28 @@ Classical fluid dynamics simulations have become increasingly complex and comput
 Can quantum computing, using principles such as superposition and entanglement, simulate fluid dynamics on a 2D grid, and how does its performance compare to Classical Methods?
 
 ## Implementation
+
+***Phase 1: Domain Setup***
+- Define an N×N grid as the spatial domain.
+- Create a circular obstacle mask
+- Define the fluid region by excluding the obstacle.
+- Select inflow source points
+  
+***Phase 2: Quantum Circuit Construction***
+- Initialize a circuit with N² qubits.
+- Apply Hadamard gates to source qubits to inject amplitude.
+- Use CNOT gates to entangle fluid neighbors 
+- Apply Ry(π/6) rotations to fluid qubits for directional flow.
+  
+***Phase 3: Simulation & Data Processing***
+- Simulate the circuit on qasm_simulator.
+- Run 4096 shots; collect measurement outcomes.
+- Map results to 2D grid positions and normalize by max fluid value.
+  
+***Phase 4: Visualization***
+- Smooth data with filters
+- Visualize using nearest and bicubic interpolation 
+
 ***Quantum Computational Fluid Dynamics Implementation***
 - Notebook: [`QCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
