@@ -34,7 +34,20 @@ State your research question here and elaborate on it.
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+The Traveling Salesman Problem (TSP) stands as a quintessential example of a combinatorial optimization problem whose exact solution becomes prohibitively expensive for classical computers as the number of cities increases. Classical algorithms designed to find the optimal tour, such as Dynamic Programming, suffer from exponential time complexity, rendering them impractical for instances involving more than a few dozen cities. This computational bottleneck necessitates the exploration of alternative paradigms.
+
+Quantum computing has emerged as a promising avenue for potentially accelerating the solution of certain computational problems, including optimization. Various quantum algorithms and heuristics are being developed and investigated for their applicability to NP-hard problems like TSP. The approach outlined in [10], which proposes encoding TSP distances into the phases of quantum states and utilizing the Quantum Phase Estimation algorithm to extract path costs, represents a specific technique leveraging fundamental quantum properties.
+
+While theoretical analyses often suggest potential quantum speedups, the practical performance of these algorithms on current and near-term quantum hardware or simulators is not always immediately apparent due to factors such as qubit count limitations, noise, circuit depth constraints, and simulation overheads. Dynamic Programming, despite its unfavorable theoretical worst-case complexity for large N, is a well-understood and often efficient exact method for small to moderately sized TSP instances on classical hardware.
+
+Therefore, the primary motivation for this experiment is to conduct a direct, empirical comparison between the practical performance of a classical Dynamic Programming solver and a quantum algorithm based on phase encoding and Quantum Phase Estimation for the Traveling Salesman Problem. By executing both approaches on a range of small TSP instances using readily available codebases and simulation tools, we aim to:
+\begin{itemize}
+    \item Gain concrete, hands-on experience with the implementation and execution of a specific quantum optimization algorithm.
+    \item Quantify the runtime performance of the quantum simulation approach relative to an established classical method on scales where both are feasible.
+    \item Identify and highlight the practical overheads and current limitations of the quantum simulation compared to classical computation for this problem.
+    \item Provide empirical data to support discussions on the current feasibility and future potential of quantum phase-based encoding techniques for combinatorial optimization.
+\end{itemize}
+This comparison is crucial for bridging the gap between theoretical quantum speedup claims and the observed performance on existing or simulated quantum systems, offering valuable insight into the current state of quantum computation for practical problem-solving.
 
 ## Your next subsection
 
