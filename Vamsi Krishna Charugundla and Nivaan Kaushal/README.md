@@ -27,8 +27,14 @@ Classical fluid dynamics simulations are computationally intensive, especially w
 - Notebook: [`CCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
 ## Results 
-This below results are of Quantum CFD for adjacent Neighbours in the grid .
+This below results are of Quantum CFD for ***adjacent Neighbours*** in the grid .
+![Adjacent Neighbours](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/fbfa48a74b8fad7e07071f49c0bdaeb1111e8c2f/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/adjacent_neighbours.png)
+For ***adjacent neighbours and Diagonal Neighbours***
+![Adjacent Neighbours and Diagonal Neighbours ](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/4a398fda03b3c2b2ffa646478347565fbb2794b9/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/adjacent%2Bdiagonal_neighbours.png)
 
+This is compartive result on Quantum CFD and classical CFD on one factor i.e velocity
+
+![comparison Q and C ](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/4a398fda03b3c2b2ffa646478347565fbb2794b9/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/comparison.png)
 
 
 ## Conclusions
