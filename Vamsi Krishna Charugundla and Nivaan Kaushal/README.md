@@ -16,6 +16,7 @@ Classical fluid dynamics simulations are computationally intensive, especially w
 ## Implementation
 ***Quantum Computational Fluid Dynamics Implementation***
 - Notebook: [`QCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
+
 ***Classic Computational Fluid Dynamics Implementation***
 - Notebook: [`CCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
