@@ -40,7 +40,7 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 
 ### Performance comparison graph for Toffoli gates-based versus discrete Fourier transform-based modular multiplication
 
-![Modular Exponentiation Comparison](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/modexp_comparison/modexp_comparison.svg)
+![Modular Exponentiation Comparison](https://raw.githubusercontent.com/ThinkingBeyond/BeyondQuantum-2025/refs/heads/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/modexp_comparison/modexp_comparison.svg?token=GHSAT0AAAAAADEV5NKIEDDIBBI6TIPFLGJQ2BXGF3Q)
 
 ### Circuit complexity for an $L$-bit integer $L = \lceil \log_2 N \rceil$
 
@@ -53,7 +53,7 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 ## Conclusions
 
 - **Mathematical analysis**: The **discrete Fourier transform**-based modular multiplication achieves a qubit and gate complexity reduction
-- **Empirical analysis**: The significant **speedup factor** depicted significant issues in the implementation of Toffoli gates-based modular exponentiation on the existing hardware
+- **Empirical analysis**: The **speedup factor** revealed significant challenges in the implementation of Toffoli gates-based modular exponentiation on the existing hardware
 - **Scalability**: The discrete Fourier transform-based modular multiplication offers promising results
 
 ## Future Work
