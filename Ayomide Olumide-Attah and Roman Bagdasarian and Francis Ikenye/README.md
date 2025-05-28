@@ -1,64 +1,79 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Quantum Methods for Modular Exponentiation in Shor's Algorithm
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
+## Repository Structure
+``` text
+.
+├── discrete-Fourier-transform/
+│   ├── discrete-fourier-transform.ipynb     # Discrete Fourier transform modular multiplication
+│   ├── metadata.txt                         # Example circuit metadata
+│   └── statevector.txt                      # Example circuit statevector
+├── modexp_comparison/
+│   ├── modexp_comparison.ipynb              # Modular exponentiation comparison analysis
+└── README.md
+```
 
 ## Research Question
 
-State your research question here and elaborate on it.
+How to implement the quantum modular exponentiation component in Shor's algorithm for near-term quantum hardware?
+
+This project investigates and evaluates two distinct approaches:
+- **Discrete Fourier transform-based modular multiplication**
+- **Toffoli gates-based modular exponentiation**
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+**Shor's algorithm** for the prime factorisation delivers an *exponential* speedup over the best-known classical algorithms, fundamentally threatening current cryptographic security.
 
-## Your next subsection
+However, the **modular exponentiation operation** is the **runtime bottleneck** in practical implementations, demanding substantial quantum resources.
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+The motivation is to reduce the total number of qubits, lower gate complexity, and minimise circuit depth for near-term quantum hardware.
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+## Implementation
 
-[ ... ]
+**Discrete Fourier transform-based modular multiplication**
+- Notebook: [`discrete-fourier-transform.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/discrete-Fourier-transform/discrete-fourier-transform.ipynb)
+- Quantum circuit is entirely implemented in terms of the standard quantum circuit for the discrete Fourier transform and its variants based on a relation between the modular multiplication operator and generalizations of discrete Fourier transforms
+
+## Results
+
+Performance comparison graph for Toffoli gates-based versus discrete Fourier transform-based modular multiplication
+
+![Modular Exponentiation Comparison](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/modexp_comparison/modexp_comparison.svg)
+
+Resource cost for an $L$-bit integer $L = \lceil \log_2 N \rceil$
+
+| Implementation             | Qubits   | Gates (Mod)     | Depth (Mod) | Gates (Circuit) | Depth (Circuit) |
+|----------------------------|----------|-----------------|-------------|-----------------|-----------------|
+| Toffoli gates              | $2L + 2$ | $O(L^2 \log L)$ | $O(L^2)$    | $O(L^3 \log L)$ | $O(L^3)$        |
+| Discrete Fourier transform | $2L$     | $O(L^2)$        | $O(L^2)$    | $O(L^3)$        | $O(L^3)$        |
+
+## Conclusions
+
+- **Mathematical analysis**: The **discrete Fourier transform**-based modular multiplication achieves a qubit and gate complexity reduction
+- **Empirical analysis**: The significant **speedup factor** depicted significant issues in the implementation of Toffoli gates-based modular exponentiation on the existing hardware
+- **Scalability**: The discrete Fourier transform-based modular multiplication offers promising results
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+### Industry Applications
+- Deploy implementations on **physical quantum hardware**
+- Integrate fault-tolerant **error correction** schemes
+- Cross-platform benchmark in **quantum software frameworks**
+
+### Academic Extensions
+- Extend to **integer factorisation** via Quantum Annealing or hybrid classical-quantum methods
+- Develop an **educational article** presenting analysis and conclusions
+- Evaluate resource requirements for factoring industry-standard 2048-bit RSA integers on noisy qubits (Gidney, 2025)
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
-
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+- P. W. Shor. “Algorithms for quantum computation: discrete logarithms and factoring.” In *Proceedings of the 35th Annual Symposium on Foundations of Computer Science*, Santa Fe, NM, USA: IEEE Computer Society Press, 1994, pp. 124–134. [IEEE Explore](https://ieeexplore.ieee.org/document/365700)
+- P. W. Shor. “Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer.” *SIAM Journal on Computing*, vol. 26, no. 5, pp. 1484–1509, Oct. 1997. [arXiv:quant-ph/9508027](https://arxiv.org/abs/quant-ph/9508027)
+- Thomas Häner, Martin Roetteler, and Krysta M. Svore. “Factoring using 2n+2 qubits with Toffoli based modular multiplication.” *Quantum Information & Computation*, vol. 17, no. 7–8, pp. 673–684, Jun. 01, 2017. [arXiv:1611.07995](https://arxiv.org/abs/1611.07995)
+- A. M. Patoary, A. Vikram, and V. Galitski. “A discrete Fourier transform based quantum circuit for modular multiplication in Shor’s algorithm.” Mar. 20, 2025. [arXiv:2503.10008](https://arxiv.org/abs/2503.10008)
+- Craig Gidney. “Creating bigger controlled nots from single qubit, Toffoli, and CNOT gates, without workspace.” StackExchange Q&A, 2015. [cs.stackexchange.com](http://cs.stackexchange.com/questions/40933/)
 
 ---
 
