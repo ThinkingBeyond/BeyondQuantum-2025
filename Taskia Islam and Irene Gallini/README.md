@@ -76,13 +76,19 @@ Further studies could involve simulating potential eavesdropping attacks, such a
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+1. Khanna, A., Majumder, S., Jain, A., & Singh, D. K. (2023). Quantum BER estimation modelling and analysis for satellite‐based quantum key distribution scenarios. IET Quantum Communication, 5(2), 157–163. https://doi.org/10.1049/qtc2.12081
+2. Lo, Hoi-Kwong, et al. “Decoy State Quantum Key Distribution.” Physical Review Letters, vol. 94, no. 23, 16 June 2005, https://doi.org/10.1103/physrevlett.94.230504. Accessed 8 Mar. 2021.
+3. Ogburn, Monique, et al. “Homomorphic Encryption.” Procedia Computer Science, vol. 20, 1 Jan. 2013, pp. 502–509, www.sciencedirect.com/science/article/pii/S1877050913011101, https://doi.org/10.1016/j.procs.2013.09.310.
+4. Sharma, V., Thapliyal, K., Pathak, A., & Banerjee, S. (2016). A comparative study of protocols for secure quantum communication under noisy environment: Single-qubit-based protocols versus entangled-state-based protocols. Quantum Information Processing, 15(11), 4681–4710. https://doi.org/10.1007/s11128-016-1396-7
+5. Tang, Z. (2016). Measurement-Device-Independent Quantum Cryptography [PhD Thesis, University of Toronto]. In Unive. https://utoronto.scholaris.ca/server/api/core/bitstreams/2fb1bcab-bbbc-44d4-9534-ab632db104a9/content
+6. Xu, F., Curty, M., Qi, B., & Lo, H. (2013). Practical aspects of measurement-device-independent quantum key distribution. New Journal of Physics, 15(11), 113007. https://doi.org/10.1088/1367-2630/15/11/113007
+7. GeeksforGeeks. “Advanced Encryption Standard (AES).” GeeksforGeeks, 16 July 2024, www.geeksforgeeks.org/advanced-encryption-standard-aes/.
+8. Wang, Weilong, et al. “Measurement-Device-Independent Quantum Key Distribution with Leaky Sources.” Scientific Reports, vol. 11, no. 1, 18 Jan. 2021, https://doi.org/10.1038/s41598-021-81003-2.
+9. Rocha, V, et al. An Overview on Homomorphic Encryption Algorithms an Overview on Homomorphic Encryption Algorithms. 2018.
+10. Tan, Si-Hui, et al. “A Quantum Approach to Homomorphic Encryption.” Scientific Reports, vol. 6, no. 1, 23 Sept. 2016, p. 33467, www.nature.com/articles/srep33467, https://doi.org/10.1038/srep33467.
+11. Schranz, Ágoston, and Eszter Udvary. “Quantum Bit Error Rate Analysis of the Polarization Based BB84 Protocol in the Presence of Channel Errors.” Proceedings of the 7th International Conference on Photonics, Optics and Laser Technology, 2019, pdfs.semanticscholar.org/32a5/d9338c4e0c02e3ed33e7a6afe8347b594457.pdf, https://doi.org/10.5220/0007384101810189.
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
 
 ---
 
