@@ -38,11 +38,11 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 
 ## Results
 
-Performance comparison graph for Toffoli gates-based versus discrete Fourier transform-based modular multiplication
+### Performance comparison graph for Toffoli gates-based versus discrete Fourier transform-based modular multiplication
 
 ![Modular Exponentiation Comparison](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/modexp_comparison/modexp_comparison.svg)
 
-Resource cost for an $L$-bit integer $L = \lceil \log_2 N \rceil$
+### Resource cost for an $L$-bit integer $L = \lceil \log_2 N \rceil$
 
 | Implementation             | Qubits   | Gates (Mod)     | Depth (Mod) | Gates (Circuit) | Depth (Circuit) |
 |----------------------------|----------|-----------------|-------------|-----------------|-----------------|
