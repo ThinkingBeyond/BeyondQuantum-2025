@@ -47,12 +47,10 @@ Our results, as presented in the document, reveal the entanglement characteristi
 
 1. **Peak Entanglement Entropy $(S_{peak})$**: The bipartite entanglement entropy for a half-cut of the system grew mildly with qubit number, from $0.425$ ebits ($4$ qubits) to $0.956$ ebits ($12$ qubits), staying below 1 ebit. This indicates Grover's algorithm generates surprisingly low entanglement compared to algorithms like $QAOA$ $(~2.8 ebits for p=1 Max-Cut)$ or Ising model dynamics (linear entanglement growth).<img width="995" alt="Screenshot 2025-05-27 at 1 49 46 PM" src="https://github.com/user-attachments/assets/7939c17d-ff0a-4086-b92e-087de07afcfb" />
 
-2. **Maximum Bond Dimension $(χ_{max})$**: The actual peak bond dimension, extracted from MPS simulations, remained constant at 2 across all tested qubit counts (4 to 12). The theoretical $χ_{max}$, calculated as $\( 2^{S_\text{peak}} \)$, ranged from ~1.3 (4 qubits) to $~1.9$ ($12$ qubits). This low and stable bond dimension underscores the efficiency of MPS for simulating Grover's algorithm.
-<img width="995" alt="Screenshot 2025-05-27 at 3 03 01 PM" src="https://github.com/user-attachments/assets/c0095d05-6595-4e96-ba49-5de4a52204ac" />
+2. **Maximum Bond Dimension $(χ_{max})$**: The actual peak bond dimension, extracted from MPS simulations, remained constant at 2 across all tested qubit counts (4 to 12). The theoretical $χ_{max}$, calculated as $\( 2^{S_\text{peak}} \)$, ranged from ~1.3 (4 qubits) to $~1.9$ ($12$ qubits). This low and stable bond dimension underscores the efficiency of MPS for simulating Grover's algorithm.<img width="995" alt="Screenshot 2025-05-27 at 3 03 01 PM" src="https://github.com/user-attachments/assets/c0095d05-6595-4e96-ba49-5de4a52204ac" />
 
 
-3. **MPS Simulation Time**: Simulation time increased from $0.0135$ seconds ($4$ qubits) to $49$ seconds ($12$ qubits), reflecting manageable scaling due to the low, constant $χ_{max}$.
-   <img width="998" alt="Screenshot 2025-05-28 at 7 01 55 AM" src="https://github.com/user-attachments/assets/80460fe5-eb68-4f7a-a451-c4e81e6dec82" />
+3. **MPS Simulation Time**: Simulation time increased from $0.0135$ seconds ($4$ qubits) to $49$ seconds ($12$ qubits), reflecting manageable scaling due to the low, constant $χ_{max}$.<img width="998" alt="Screenshot 2025-05-28 at 7 01 55 AM" src="https://github.com/user-attachments/assets/80460fe5-eb68-4f7a-a451-c4e81e6dec82" />
 
 # Table
 
@@ -98,5 +96,5 @@ We can follow up this research work with tests for different algorithms other th
 
 ---
 
-> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
+> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).[View only poster on Canva](https://www.canva.com/design/DAGoNhExnn8/urFVDI1sOlgAeHoil7k9Yw/edit)
 
