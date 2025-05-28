@@ -24,7 +24,7 @@ To add more depth to the project in the future, we would like to use more papers
 potentially discuss other proposed solutions to the preferred basis problem and their strengths and weaknesses in relation to decoherence.
 
 ## References
-1. David Wallace (2024), “Decoherence and Ontology (or: How I learned to stop worrying and love FAPP).”[](https://arxiv.org/abs/1111.2189)
+1. David Wallace (2024), “Decoherence and Ontology (or: How I learned to stop worrying and love FAPP).”[arXiv:1111.2189](https://arxiv.org/abs/1111.2189)
 
 1. motivating your research question
 2. stating your research question
