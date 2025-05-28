@@ -24,7 +24,7 @@ This project investigates and evaluates two distinct approaches:
 
 ## Motivation
 
-**Shor's algorithm** for the prime factorisation delivers an *exponential* speedup over the best-known classical algorithms, fundamentally threatening current cryptographic security.
+**Shor's algorithm** for prime factorisation delivers an *exponential* speedup over the best-known classical algorithms, fundamentally threatening current cryptographic security.
 
 However, the **modular exponentiation operation** is the **runtime bottleneck** in practical implementations, demanding substantial quantum resources.
 
@@ -64,9 +64,9 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 - Cross-platform benchmark in **quantum software frameworks**
 
 ### Academic Extensions
-- Extend to **integer factorisation** via Quantum Annealing or hybrid classical-quantum methods
 - Develop an **educational article** presenting analysis and conclusions
-- Evaluate resource requirements for factoring industry-standard 2048-bit RSA integers on noisy qubits (Gidney, 2025)
+- Extend to **integer factorisation** via Quantum Annealing or hybrid classical-quantum methods
+- Evaluate resource requirements for factoring 2048-bit RSA integers on noisy qubits (Gidney, 2025)
 
 ## References
 
