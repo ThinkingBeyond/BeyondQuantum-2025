@@ -44,10 +44,11 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 
 ### Circuit complexity for an $L$-bit integer $L = \lceil \log_2 N \rceil$
 
-| Implementation             | Qubits   | Gates (Mod)     | Depth (Mod) | Gates (Circuit) | Depth (Circuit) |
+| Implementation             | Qubits   | Modular Exponentiation       || Circuit                          ||
 |----------------------------|----------|-----------------|-------------|-----------------|-----------------|
-| Toffoli gates              | $2L + 2$ | $O(L^2 \log L)$ | $O(L^2)$    | $O(L^3 \log L)$ | $O(L^3)$        |
+|                            |          | Gates           | Depth       | Gates           | Depth           |
 | Discrete Fourier transform | $2L$     | $O(L^2)$        | $O(L^2)$    | $O(L^3)$        | $O(L^3)$        |
+| Toffoli gates              | $2L + 2$ | $O(L^2 \log L)$ | $O(L^2)$    | $O(L^3 \log L)$ | $O(L^3)$        |
 
 ## Conclusions
 
