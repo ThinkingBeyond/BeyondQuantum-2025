@@ -7,7 +7,7 @@ Our project presents a study on quantum fluid dynamics simulations by modeling f
 Both simulations are executed on an N×N grid, incorporating identical domain boundaries, obstacle masking, and flow source placement. The quantum simulation uses gates like Hadamard, CNOT, and Ry(π/6) to simulate directionally biased fluid movement and entanglement between neighboring qubits. Post-processing involves collecting measurements from 4096 quantum circuit executions, normalizing the velocity data, and applying Gaussian filters to smooth the result.
 The outcome demonstrates that quantum circuits can successfully capture key fluid dynamics characteristics such as flow diversion around obstacles, symmetry in the velocity field, and smoothed gradients. Comparative centerline velocity profiles show qualitative agreement between the quantum and classical results, validating the quantum approach’s effectiveness in simplified fluid flow modeling.
 
-## MOTIVATION
+## Motivation
 Classical fluid dynamics simulations have become increasingly complex and computationally expensive, especially when modeling large or highly detailed systems. This project was motivated by the potential for quantum computing, particularly quantum entanglement and superposition, to offer an alternative that may reduce computational load while maintaining physical accuracy. By investigating how fluid properties can be encoded into quantum states and simulated through qubit interactions, we aim to explore the feasibility of quantum computing for simulating fluid flow and computational fluid dynamics. 
 
 ## Research Question 
@@ -59,7 +59,7 @@ This is a comparative result on Quantum CFD and classical CFD on one factor i.e 
 ![comparison Q and C ](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/4a398fda03b3c2b2ffa646478347565fbb2794b9/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/comparison.png)
 
 
-## Conclusions
+## Conclusion
 In this project, we developed and compared quantum and classical circuit-based frameworks for simulating fluid flow on a 2D grid. The quantum approach successfully replicated general flow behavior and demonstrated the feasibility of simulating fluid interactions using quantum states. However, while the quantum model showed potential for scalability in representing complex interactions, it incurred significantly longer computation times than the classical method. These results suggest that although quantum CFD holds theoretical promise, practical implementation will require improvements in quantum hardware and optimization techniques to achieve competitive performance.
 
 ## Future Improvements
