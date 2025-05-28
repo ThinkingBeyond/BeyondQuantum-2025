@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{quantikz}
+\usepackage{pdflscape}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{landscape}
+    
+    \begin{quantikz}[column sep = 0.25cm]
+        \lstick{$\ket{a_0}$} & \qw      & \qw      & \qw     & \qw      & \qw      & \qw      & \qw      & \ctrl{1}  & \qw      & \qw      & \qw      & \qw      & \qw      & \ctrl{1}  & \qw      & \qw      & \qw      & \qw      & \qw      & \qw      & \rstick{$\ket{a_0}$} \qw \\
+        \lstick{$\ket{a_1}$} & \qw      & \qw      & \qw     & \qw      & \qw      & \ctrl{1} & \targ{}  & \ctrl{1}  & \qw      & \qw      & \qw      & \qw      & \qw      & \ctrl{1}  & \targ{}  & \ctrl{1} & \qw      & \qw      & \qw      & \qw      & \rstick{$\ket{a_1}$} \qw \\
+        \lstick{$\ket{g_0}$} & \qw      & \qw      & \qw     & \qw      & \ctrl{1} & \targ{}  & \qw      & \targ{}   & \ctrl{1} & \qw      & \qw      & \qw      & \ctrl{1} & \targ{}   & \qw      & \targ{}  & \ctrl{1} & \qw      & \qw      & \qw      & \rstick{$\ket{g_1}$} \qw \\
+        \lstick{$\ket{a_2}$} & \qw      & \qw      & \qw     & \qw      & \ctrl{1} & \qw      & \qw      & \qw       & \ctrl{1} & \qw      & \qw      & \qw      & \ctrl{1} & \qw       & \qw      & \qw      & \ctrl{1} & \qw      & \qw      & \qw      & \rstick{$\ket{a_2}$} \qw \\
+        \lstick{$\ket{g_1}$} & \qw      & \qw      & \qw     & \ctrl{1} & \targ{}  & \qw      & \qw      & \qw       & \targ{}  & \ctrl{1} & \qw      & \ctrl{1} & \targ{}  & \qw       & \qw      & \qw      & \targ{}  & \ctrl{1} & \qw      & \qw      & \rstick{$\ket{g_2}$} \qw \\
+        \lstick{$\ket{a_3}$} & \qw      & \ctrl{1} & \targ{} & \ctrl{1} & \qw      & \qw      & \qw      & \qw       & \qw      & \ctrl{1} & \qw      & \ctrl{1} & \qw      & \qw       & \qw      & \qw      & \qw      & \ctrl{1} & \targ{}  & \ctrl{1} & \rstick{$\ket{a_3}$} \qw \\
+        \lstick{$\ket{g_2}$} & \ctrl{1} & \targ{}  & \qw     & \targ{}  & \qw      & \qw      & \qw      & \qw       & \qw      & \targ{}  & \ctrl{1} & \targ{}  & \qw      & \qw       & \qw      & \qw      & \qw      & \targ{}  & \qw      & \targ{}  & \rstick{$\ket{g_3}$} \qw \\
+        \lstick{$\ket{0}$}   & \targ{}  & \qw      & \qw     & \qw      & \qw      & \qw      & \qw      & \qw       & \qw      & \qw      & \targ{}  & \qw      & \qw      & \qw       & \qw      & \qw      & \qw      & \qw      & \qw      & \rstick{$\ket{(a+11)_4}$} \qw
+    \end{quantikz}
+
+\end{landscape}
+
+\end{document}
