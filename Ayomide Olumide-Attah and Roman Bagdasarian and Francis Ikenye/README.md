@@ -36,6 +36,10 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 - Notebook: [`discrete-fourier-transform.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/discrete-Fourier-transform/discrete-fourier-transform.ipynb)
 - Quantum circuit is entirely implemented in terms of the standard quantum circuit for the discrete Fourier transform and its variants based on a relation between the modular multiplication operator and generalizations of discrete Fourier transforms
 
+**Toffoli gates-based modular exponentiation**
+- Notebook: [`toffoli-gates.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/toffoli-gates/toffoli-gates.ipynb)
+- 
+
 ## Results
 
 ### Performance comparison graph for Toffoli gates-based versus discrete Fourier transform-based modular multiplication
