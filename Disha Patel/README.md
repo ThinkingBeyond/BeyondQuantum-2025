@@ -96,9 +96,9 @@ Continue working through the points listed above with the help of sensibly named
 
 ![Graph 2](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/security_analysis.png)
 
-![Graph 1](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/download%20(3).png)
+![Graph 1](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/key_length.png)
 
-![Graph 1](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/download.png)
+![Graph 1](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/framework.png)
 
 ## Conclusion
 
