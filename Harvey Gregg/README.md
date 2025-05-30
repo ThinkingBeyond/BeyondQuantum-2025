@@ -62,7 +62,7 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 
 For both **classical** and **hybrid** models, the performances on our dataset converges after **25** hidden nodes, suggesting that is a sufficient number for approximating how well each distribution can approximate losses in a credit portfolio. Furthermore, as shown by the graphs, the hybrid models with **10, 15, 20** and **25** outperform their respective classical models when considering the **reconstruction error**. This provides some evidence to form the conclusion that the hybrid model is more effective than the classical one, and could therefore help to benefit the industry in methods detailed above.
 
-However, it is important to note that **inefficiencies** will exist in both the implementations of the **classical** and **quantum** model, and I have only tracked one **benchmark** throughout training, which may measure some specific strength of the hybrid model, whilst covering up its **worser performances** on other models.
+However, it is important to note that **inefficiencies** will exist in both the implementations of the **classical** and **quantum** model, and I have only tracked one **benchmark** throughout training, which may measure some specific strength of the hybrid model, whilst covering up its **worse performances** on other models.
 
 ## Future Work
 
