@@ -6,9 +6,9 @@
 
 ## Research Question
 
-Can a hybrid cryptographic model combining **Quantum Key Distribution (QKD)** and **Post-Quantum Cryptography (PQC)** provide enhanced security against both classical and quantum adversaries?
+Design a hybrid **QKD-PQC** cryptographic system to ensure scalable, quantum-resistant security against evolving threats.
 
-The research question investigates the potential of a hybrid cryptographic framework that integrates Quantum Key Distribution (QKD) with Post-Quantum Cryptography (PQC) to create a robust security model capable of defending against both classical adversaries and quantum adversaries. This question addresses the need to protect system against the evolving threat where quantum computers could potentially break widely used classical cryptographic algorithms like RSA, ECC, etc.
+Given the vulnerability of traditional cryptography to quantum attacks like Shor's algorithm, the practical limitations of QKD (e.g., distance, noise), and the potential risks of PQC to future cryptanalytic advances, a hybrid QKD-PQC approach is needed to combine QKD's information-theoretic security with PQC's quantum resistance for scalable, long-term protection against evolving quantum and classical threats.
 
 ## Motivation
 1. Implementation: Develop a prototype that combines QKD (BB84) for generating a shared secret key and PQC (Kyber512) for quantum-resistant key encapsulation, resulting in a **hybrid AES** key for secure encryption and authentication.
