@@ -5,17 +5,17 @@
 
 ## Research Question
 
-Can a hybrid cryptographic model combining Quantum Key Distribution (QKD) and Post-Quantum Cryptography (PQC) provide enhanced security against both classical and quantum adversaries?
+Can a hybrid cryptographic model combining **Quantum Key Distribution (QKD)** and **Post-Quantum Cryptography (PQC)** provide enhanced security against both classical and quantum adversaries?
 
 The research question investigates the potential of a hybrid cryptographic framework that integrates Quantum Key Distribution (QKD) with Post-Quantum Cryptography (PQC) to create a robust security model capable of defending against both classical adversaries and quantum adversaries. This question addresses the need to protect system against the evolving threat where quantum computers could potentially break widely used classical cryptographic algorithms like RSA, ECC, etc.
 
 ## Motivation
-1. Implementation: Develop a prototype that combines QKD (BB84) for generating a shared secret key and PQC (Kyber512) for quantum-resistant key encapsulation, resulting in a hybrid AES key for secure encryption and authentication.
+1. Implementation: Develop a prototype that combines QKD (BB84) for generating a shared secret key and PQC (Kyber512) for quantum-resistant key encapsulation, resulting in a **hybrid AES** key for secure encryption and authentication.
 2. Security Analysis: a. Verify QKD’s unconditional security for key distribution, ensuring protection against eavesdropping through quantum principles.
                       b. Confirm PQC’s resistance to quantum attacks, such as those enabled by Shor’s or Grover’s algorithms.
                       c. Evaluate the hybrid model’s resilience to classical attacks, including brute-force, side-channel, and cryptanalytic threats.
 3. Performance Evaluation: Assess the efficiency of key generation, computational overhead, and compatibility with existing cryptographic systems.
-4. Validation: Ensure the hybrid system supports secure encryption, decryption, and message authentication, as demonstrated through successful HMAC verification.
+4. Validation: Ensure the hybrid system supports secure encryption, decryption, and message authentication, as demonstrated through successful **HMAC verification**.
 
 
 ## Method and Implementation
@@ -32,7 +32,7 @@ Implemented using Qiskit's AerSimulator (no real quantum hardware required).
 
 2. Kyber512 Post-Quantum Key Encapsulation:
    
-Uses Kyber512, a lattice-based algorithm resistant to quantum attacks.
+Uses Kyber512, a **lattice-based algorithm** resistant to quantum attacks.
 
 Bob generates a key pair; Alice encapsulates a shared secret.
 
@@ -40,7 +40,7 @@ Bob decapsulates the ciphertext to retrieve the same secret.
 
 3. Hybrid Key Derivation:
    
-BB84 key (128-bit) XORed with the first 16 bytes of Kyber512’s secret.
+BB84 key (128-bit) **XORed** with the first 16 bytes of Kyber512’s secret.
 
 The result is hashed (SHA-256), and the first 16 bytes are used as the AES key.
 
@@ -48,7 +48,7 @@ The result is hashed (SHA-256), and the first 16 bytes are used as the AES key.
    
 AES-GCM encrypts the message and ensures integrity via a tag.
 
-HMAC-SHA256 provides an additional authentication layer.
+**HMAC-SHA256** provides an additional authentication layer.
 
 Receiver decrypts and verifies both HMAC and tag to ensure security.
 
@@ -61,7 +61,7 @@ Implementation Details
 
 • Libraries and Dependencies
 
-qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the AerSimulator backend.
+qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the **AerSimulator backend**.
 
 liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsulation.
 
@@ -108,7 +108,9 @@ This hybrid QKD-PQC system lays a solid foundation for secure communication, but
 ## References
 
 Pei Zeng et al. (2024). “Practical Hybrid PQC-QKD Protocols with Enhanced Security and Performance” – arXiv preprint arXiv:2411.01086
+
 G. Garg, A. Garg (2024). “Post-Quantum Cryptography and Quantum Key Distribution: An In-Depth Survey” – SSRN Electronic Journal
+
 Quantum Cryptography Review (2015). “Quantum Cryptography: Key Distribution and Beyond” – Springer
 
 
