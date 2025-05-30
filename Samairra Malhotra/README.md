@@ -1,6 +1,7 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Exoplanet Detection via Kepler Data: A Comparative Study of Quantum and Classical Machine Learning Models
+
 
 ***Provide a description of your project including*** 
 
