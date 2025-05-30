@@ -93,7 +93,7 @@ We can follow up this research work with tests for different algorithms other th
 
 [^3]: *IBM Quantum Learning* https://learning.quantum.ibm.com/
 
-
 ---
 
-> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).[View only poster on Canva](https://www.canva.com/design/DAGoNhExnn8/urFVDI1sOlgAeHoil7k9Yw/edit)
+> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).[View only poster on Canva](https://www.canva.com/design/DAGoNhExnn8/urFVDI1sOlgAeHoil7k9Yw/edit) .
+> [View only Research paper link on overleaf](https://www.overleaf.com/read/qnfvfxzqhsrx#c426f5)
