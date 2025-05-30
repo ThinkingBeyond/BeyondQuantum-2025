@@ -75,4 +75,4 @@ Further research in Quantum Image Processing and Edge Detection could explore:
 ---
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
-> The research paper for this project can be found in the same folder as this README, under the filename `quantum_image_edge_detection.pdf`. 
+> The research paper for this project can be found in the same folder as this README, under the filename `quantum_image_edge_detection.pdf`. In case of any future updates, the paper can also be found [Here](https://www.overleaf.com/read/wkrbsnqbgchq#7c67fc)
