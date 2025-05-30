@@ -46,41 +46,58 @@ The research question investigates the potential of a hybrid cryptographic frame
 
 ## Method and Implementation
 Methodology
-The system operates in the following steps:
-1. BB84 Quantum Key Distribution:
-•	Simulates a quantum protocol where Alice and Bob use random bases (Z/X) to encode and measure qubits.
-•	They retain only bits where their measurement bases match, forming a sifted key.
-•	Implemented using Qiskit's AerSimulator (no real quantum hardware required).
-2. Kyber512 Post-Quantum Key Encapsulation:
-•	Uses Kyber512, a lattice-based algorithm resistant to quantum attacks.
-•	Bob generates a key pair; Alice encapsulates a shared secret.
-•	Bob decapsulates the ciphertext to retrieve the same secret.
-3. Hybrid Key Derivation:
-•	BB84 key (128-bit) XORed with the first 16 bytes of Kyber512’s secret.
-•	The result is hashed (SHA-256), and the first 16 bytes are used as the AES key.
-4. AES-GCM Encryption + HMAC:
-•	AES-GCM encrypts the message and ensures integrity via a tag.
-•	HMAC-SHA256 provides an additional authentication layer.
-•	Receiver decrypts and verifies both HMAC and tag to ensure security.
-5. Verification:
-•	Confirms the decrypted message matches the original and passes integrity checks.
+1. BB84 Quantum Key Distribution
+Simulates a quantum protocol where Alice and Bob use random bases (Z/X) to encode and measure qubits.
 
+They retain only bits where their measurement bases match, forming a sifted key.
+
+Implemented using Qiskit's AerSimulator (no real quantum hardware required).
+
+2. Kyber512 Post-Quantum Key Encapsulation
+Uses Kyber512, a lattice-based algorithm resistant to quantum attacks.
+
+Bob generates a key pair; Alice encapsulates a shared secret.
+
+Bob decapsulates the ciphertext to retrieve the same secret.
+
+3. Hybrid Key Derivation
+BB84 key (128-bit) XORed with the first 16 bytes of Kyber512’s secret.
+
+The result is hashed (SHA-256), and the first 16 bytes are used as the AES key.
+
+4. AES-GCM Encryption + HMAC
+AES-GCM encrypts the message and ensures integrity via a tag.
+
+HMAC-SHA256 provides an additional authentication layer.
+
+Receiver decrypts and verifies both HMAC and tag to ensure security.
+
+5. Verification
+Confirms the decrypted message matches the original and passes integrity checks.
+
+🛠️ Implementation Details
+• Libraries and Dependencies
+qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the AerSimulator backend.
+
+liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsulation.
+
+pycryptodome: Supplies AES-GCM encryption and HMAC-SHA256 for secure message handling.
+
+Additional dependencies include numpy, scipy, and others installed via pip and apt-get for building the environment.
+
+• Code Structure
+Installation: The notebook begins by installing required packages (qiskit, qiskit-aer, pycryptodome, liboqs-python) and their dependencies in a Colab environment.
+
+BB84 Simulation: The bb84_key_exchange function simulates the QKD process, generating a sifted key of approximately 100–150 bits from 300 initial bits due to basis matching.
+
+Key Conversion: The bits_to_bytes function converts the sifted key into bytes for compatibility with cryptographic operations.
+
+Kyber512 Integration: The oqs.KeyEncapsulation class is used to perform key encapsulation and decapsulation, producing a shared secret.
+
+Hybrid Key Generation: The BB84 and Kyber512 keys are combined via XOR, and SHA-256 derives a 16-byte AES key.
+
+Encryption and Verification: AES-GCM encrypts the message, and HMAC-SHA256 ensures authenticity. The decryption and verification steps confirm successful communication.
   	
-Implementation Details
-
-•	Libraries and Dependencies:
-    • qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the AerSimulator backend.
-    • liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsulation.
-    • pycryptodome: Supplies AES-GCM encryption and HMAC-SHA256 for secure message handling.
-    • Additional dependencies include numpy, scipy, and others installed via pip and apt-get for building the environment.
-
-•	Code Structure:
-        o	Installation: The notebook begins by installing required packages (qiskit, qiskit-aer, pycryptodome, liboqs-python) and their dependencies in a Colab environment.
-        o	BB84 Simulation: The bb84_key_exchange function simulates the QKD process, generating a sifted key of approximately 100-150 bits from 300 initial bits due to basis matching.
-        o	Key Conversion: The bits_to_bytes function converts the sifted key into bytes for compatibility with cryptographic operations.
-        o	Kyber512 Integration: The oqs.KeyEncapsulation class is used to perform key encapsulation and decapsulation, producing a shared secret.
-        o	Hybrid Key Generation: The BB84 and Kyber512 keys are combined via XOR, and SHA-256 derives a 16-byte AES key.
-        o	Encryption and Verification: AES-GCM encrypts the message, and HMAC-SHA256 ensures authenticity. The decryption and verification steps confirm successful communication.
 
 ## Result
 The results demonstrate the successful integration of BB84 and Kyber512 to create a secure hybrid key, effectively used for AES-GCM encryption and HMAC authentication. The smaller BB84 key size, combined with Kyber512's robust post-quantum security, ensures both efficiency and future-proofing against quantum threats. The sifting process in BB84 reduces key length but maintains security, while the hybrid approach leverages the strengths of each method, as reflected in the component distribution. This implementation provides a practical proof-of-concept for secure communication in a quantum-threatened future.
