@@ -46,6 +46,8 @@ The research question investigates the potential of a hybrid cryptographic frame
 
 ## Method and Implementation
 Methodology
+
+
 1. BB84 Quantum Key Distribution:
    
 Simulates a quantum protocol where Alice and Bob use random bases (Z/X) to encode and measure qubits.
@@ -81,6 +83,7 @@ Receiver decrypts and verifies both HMAC and tag to ensure security.
 Confirms the decrypted message matches the original and passes integrity checks.
 
 Implementation Details
+
 
 • Libraries and Dependencies
 
