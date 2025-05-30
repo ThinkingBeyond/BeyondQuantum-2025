@@ -14,6 +14,8 @@ we found disagreement leading us to our research question.
 ### Does decoherence as a mechanism solve the preferred basis problem in the many worlds interpretation?
 To research this question we selected two papers with opposite opinions on the subject. For our paper supporting decoherence we selected Wallaces paper[1] because it was the general point of reference for people who viewed that the preferred basis problem was solved in the MWI. We selected Inamori's paper[2] as against due to the fact it made some strong claims and presented its ideas in a very logical way .We then compared them in a theoretical context pointing out flaws in the arguments and reasoning. To solidify our comparison we then applied the comparisons a concrete experiment.
 
+## Methodology
+
 ## Conclusions
 After our review we found that the paper in favour of decoherence relied on unjustified assumptions about the system and used flawed reasoning in deducing the system environment split when applying
 decoherence. This led to conclude that, at least in the context of arguments given by the papers, that decoherence is not a solution to the preferred basis problem.
