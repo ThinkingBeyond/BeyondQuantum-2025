@@ -1,66 +1,118 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
+# Qubit Manipulation in Quantum Circuits -  Solving Grover’s Algorithm for 2- and 3-Qubit Systems.
+---
+The following project is done by purbadri Ray Chaudhuri and Kalash Sanjay Kothari, Mentored by Ms. Madhurima. This project solely explores how the Qubit Manipulation works and how it can be advanced to next stages where we can use circuit Kinniting and Cuting.
 
-***Provide a description of your project including*** 
+---
+## Introduction
 
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
+Over the past few decades, quantum computing has emerged as a groundbreaking paradigm that redefines the boundaries of classical computation. At the core of this revolution lies the qubit (quantum bit), which, unlike its classical counterpart restricted to binary states (0 or 1), can exist in a superposition of both. This property, when combined with entanglement—a quantum phenomenon where the state of one qubit is intrinsically linked to another—and quantum interference, enables quantum systems to process information in ways that are fundamentally more powerful and non-intuitive than classical methods.
 
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
-## Research Question
-
-State your research question here and elaborate on it.
-
-## Motivation
-
-Explain your motivation for your chosen research question here.
-
-## Your next subsection
-
-Continue working through the points listed above with the help of sensibly named subsections. 
-
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
-
-## Future Work
-
-State and explain what follow-up research could be conducted based on your work.
-
-## References
-
-List all your references here. Remember to put links into markdown. For example:
-
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+Quantum computation is carried out by manipulating qubits using sequences of quantum gates—reversible, unitary operations mathematically represented by matrices acting on complex Hilbert spaces. These gates serve as the essential building blocks of quantum circuits, analogous to logic gates in classical systems. However, unlike classical algorithms that follow deterministic logic paths, quantum algorithms evolve through dynamic superpositions and entangled states, demanding precise control over qubit transformations and interactions to harness their computational advantage.
 
 ---
 
-> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
+## Research Question
 
+**How can foundational concepts in qubit manipulation be applied to implement algorithms like Grover’s Algorithm in small quantum systems, and how can these be scaled correctly to use the concepts of circuit Knitting and Cutting with low enough noise**
+
+---
+
+## Motivation
+
+As we approach the physical and theoretical limits of classical computation, quantum computing offers a fundamentally new model based on the physics of quantum mechanics. Grover’s Algorithm provides a rare example of a provable quadratic speedup for unstructured search, illustrating the potential of quantum systems to outperform classical ones. 
+
+Despite theoretical advancements, quantum algorithms face significant implementation barriers due to:
+- Short qubit coherence times
+- Gate infidelity
+- Limited circuit width and depth on current hardware
+
+Thus, this project is motivated by few critical needs:
+1. To *deepen conceptual understanding* of qubit-based computation and how gate operations manipulate quantum states.
+2. To *bridge the gap* between theoretical algorithms and practical quantum computing by building efficient enough code algorithm.
+3. To *Make a ptoper understanding* of how can be techniques such as circuit Knitting be helpful in scaling the Quantum system and Qubit Manipulation
+
+---
+
+## Methodology and Implementation
+
+### 1. Qubit Representation and State Preparation
+- Qubits are described using Dirac notation
+- The state of a Qubit is visualized using the **Bloch Sphere**.
+- Multi-qubit registers are initialized using the Kronecker product of individual qubits:  
+  (|0>^n)
+
+### 2. Quantum Gates and Implementation
+- **Single-Qubit Gates**:
+  - Pauli-X (NOT), Pauli-Y, Pauli-Z
+  - Hadamard (H): Creates equal superpositions
+  - Phase gates: S (π/2 shift), T (π/4 shift)
+  - Rotation gates: Rx(θ), Ry(θ), Rz(θ)
+
+- **Two-Qubit Gates**:
+  - CNOT (Controlled-NOT): Entangling gate
+  - SWAP and Toffoli gates: Used for conditional control logic
+
+- All gates are defined using **unitary matrix transformations** over the complex vector spaces.
+
+### 3. Grover’s Algorithm Construction
+1. **Initialization**: All qubits are placed in a superposition using H gate or the Hadamard gate.
+2. **Oracle Operator**: Implements a phase flip to mark the target state, This operator is unique for different states.
+3. **Diffusion Operator**: Performs amplitude amplification using reflection over the mean.
+4. **Grover Iteration**: Combination of oracle and diffusion operators repeated ⌊π/4√N⌋ times.
+5. **Measurement**: Collapse the state and extract the marked solution with high probability.
+
+### 4. Circuit Knitting and Cutting
+- Introduced as a **resource-aware simulation strategy** for decomposing large circuits.
+- Demonstrated potential for reconstructing large-scale quantum results by stitching together smaller subcircuits.
+- Using these circuit to showcase advanced qubit manipulation
+---
+
+## Results and Analysis
+
+### Simulated Grover's Algorithm on:
+- **2-Qubit System (N=4)**: 1 iteration → 100% target state amplification.
+- **3-Qubit System (N=8)**: 2 iterations → ~93% probability of correct solution.
+
+### 📈 Probability Distribution Table
+
+| Qubit Count | Database Size (N) | Grover Iterations | Target State Probability (in ideal condition) |
+|-------------|-------------------|-------------------|--------------------------|
+| 2 Qubits    | 4                 | 1                 | 100%                     |
+| 3 Qubits    | 8                 | 2                 | ~93%                     |
+
+Visual inspection using Qiskit’s statevector and histogram backends confirmed theoretical predictions.
+
+---
+
+## Conclusion
+
+This project demonstrates that:
+
+- **Precise qubit manipulation** through linear algebraic operations enables complex quantum logic construction.
+- **Grover’s Algorithm** offers a hands-on illustration of quantum advantage for search problems.
+- **Circuit knitting** presents a practical approach for working within hardware constraints and simulating higher-order algorithms in modular form.
+
+These outcomes reinforce the importance of bridging theory with implementation as we move toward fault-tolerant, scalable quantum systems.
+
+---
+
+## Future Work
+
+To build upon this research, future directions include:
+
+1. **Extending to 4–5 Qubit Systems** using advanced circuit knitting methods.
+2. **Quantum Error Correction**: Integrate with surface code to mitigate decoherence during oracle evaluation.
+3. **Implementing of Circuit cutting**: Implementing Circuit cutting on real time software 
+
+---
+
+## References
+
+1. Grover, L. K. (1996). *A fast quantum mechanical algorithm for database search*. [Proceedings of STOC 1996](https://doi.org/10.1145/237814.237866)
+2. Qiskit Textbook. *Learn Quantum Computation using Qiskit*. [https://qiskit.org/learn](https://qiskit.org/learn)
+
+---
+
+> 🧾 The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/)
