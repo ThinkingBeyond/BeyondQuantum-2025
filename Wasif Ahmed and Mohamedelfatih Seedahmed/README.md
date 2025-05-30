@@ -6,7 +6,7 @@ How well can the Quantum Approximate Optimization Algorithm (QAOA) identify the 
 
 ## Motivation
 
-Compressed sensing and sparse signal processing are vital in many modern applications, from MRI imaging to wireless communication. Classical methods often rely on convex relaxation techniques that become computationally expensive for large dimensions. QAOA offers a hybrid quantum-classical approach that can exploit quantum parallelism to explore the solution space more efficiently. Our goal was to investigate whether QAOA can approximate a sparse signal by selecting the best K Fourier coefficients out of a set of N = 20.
+Our goal was to investigate whether QAOA can approximate a sparse signal by selecting the best K Fourier coefficients out of a set of N = 20.
 
 ## Method and Implementation
 
