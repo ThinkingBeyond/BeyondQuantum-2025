@@ -68,8 +68,28 @@ Note: Printing out the Relative error between the Energies of the Classical Appr
 
 To begin with the implementation of the Traveling Salesmen Problem in the Quantum Setting, a weighted directed graph must be generated which could be bi-directional and uni-directional. In a normal standpoint in order to generate a graph instance, we would be utilizing an Adjacency List or an Adjacency Matrix where a index (node) maps to another index (node) with the value at that index being the weight. In our implementation of the Codebase, we utilized the NetworkX libraries which makes generating graphs quicker and simpler to deal with our Quantum Implementation code.
 
-![Image](Research%20Stage%20Graphs%20and%20Visuals/graphNetwork.png)
+<p align="center">
+  <img src="Research%20Stage%20Graphs%20and%20Visuals//graphNetwork.png" alt="Image" width="500"/>
+</p>
 
+Graph Visualization using NetworkX and MatplotLib
+
+- The library utilized in the codebase to generate the graph is used to visually represent the cities (nodes) and the distances (edges) in the Traveling Salesman Problem
+    - Each node represents a city, and each edge represents the path (or distance) between two cities.
+    - The colors argument allows you to specify custom colors for nodes (useful when highlighting visited cities or paths).
+    - pos is the position layout dictionary that determines where each node appears on the plot.
+    - The weights of the edges (distances) are also shown as labels on the graph for clarity.
+ 
+In order to have a guideline to compare the Quantum Implementation and determine its effectiveness, we have implemented the Classical Approach to the Traveling Salesmen Problem using Dynamic Programming to cover and explore all different permutations and routes.
+
+**Brute Force Solution to the Traveling Salesman Problem**
+
+- For our implementation of the Classical Approach to the Traveling Salesmen Problem, we utilized a function to resolve the different permutations with the steps below.
+    - brute_force_tsp(w, N) takes the adjacency matrix w and number of nodes N and tries all possible permutations of cities (excluding the start node 0) to find the optimal route.
+    - For each permutation:
+    - It calculates the total distance traveled if the salesman follows that path and returns to the starting node.
+    - If this distance is less than the previously best-known distance, it updates the best solution and prints it.
+    - Finally, it returns the best distance and corresponding order of nodes visited.
 
 ## Future Work
 
