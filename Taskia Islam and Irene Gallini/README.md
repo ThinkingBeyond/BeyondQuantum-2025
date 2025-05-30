@@ -71,13 +71,13 @@ Our simulations revealed that BB84 exhibited a nearly linear increase in QBER wi
 
 In contrast, the MDI-QKD protocol showed a nonlinear QBER response with sharp peaks. This behavior was similar to that observed in entanglement-based protocols like E91 and B92. MDI-QKD incorporates a third party Bell state measurement, relying on the interference of indistinguishable photons from Alice and Bob. Depolarizing noise degrades interference visibility and photon indistinguishability, leading to a more volatile and unpredictable QBER. These fluctuations make conventional error correction insufficient, necessitating more adaptive approaches such as block based protocols like Cascade that can dynamically respond to local error rates.
 
-![image alt][(https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20B92%20with%20Depolarizing%20Noise.png?raw=true]
+![image alt](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20B92%20with%20Depolarizing%20Noise.png?raw=true)
 
-![image alt][[https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20B92%20with%20Depolarizing%20Noise.png?raw=true)]
+![image alt](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20B92%20with%20Depolarizing%20Noise.png?raw=true)
 
-![image alt][https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20E91%20with%20Depolarizing%20Noise.png?raw=true]
+![image alt](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20E91%20with%20Depolarizing%20Noise.png?raw=true)
 
-![image alt][https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20MDI-QKD%20protocol.png?raw=true]
+![image alt](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Taskia%20Islam%20and%20Irene%20Gallini/QBER%20vs%20Noise%20Intensity%20-%20MDI-QKD%20protocol.png?raw=true)
 
 ## Conclusions
 MDI-QKD is a major step forward in secure quantum communication, as it removes vulnerabilities from detector side channel attacks using a third party Bell state measurement. This makes it one of the most secure and promising QKD protocols available.
