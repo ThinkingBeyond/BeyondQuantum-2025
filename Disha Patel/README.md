@@ -94,7 +94,7 @@ The results demonstrate the successful integration of BB84 and Kyber512 to creat
 Continue working through the points listed above with the help of sensibly named subsections. 
 
 
-![Graph 2](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/download%20(2).png)
+![Graph 2](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/security_analysis.png)
 
 ![Graph 1](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/download%20(3).png)
 
