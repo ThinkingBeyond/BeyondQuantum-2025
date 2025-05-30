@@ -1,60 +1,33 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# State Your Project Title Here With Capitalised Letters as Shown
-
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
-## Research Question
-
-State your research question here and elaborate on it.
+# Can the Stochastic Schrodinger equation be used to model continuous weak position measurement?
 
 ## Motivation
 
-Explain your motivation for your chosen research question here.
+This investigation was motivated by the experiment “Position measurement of levitating nanoparticles using interference with its mirror image” by researchers at the University of Oxford. The researchers were trying to do continuous weak measurement (without collapse) of the position of the nanoparticle as part of a quantum cooling scheme. We wanted to see if this kind of weak measurement is modelled well using a stochastic Schrodinger equation.
 
-## Your next subsection
+## Method of Investigation
+We decided to simulate continuous weak measurement in two ways. The first was by using the stochastic process in QuTiP, in which trajectories are averaged over to form the density matrix of the system, and then finding the purity and plotting purity with time. The second was using a quantum circuit in Qiskit with a noise model to simulate the same. We did an exponential fit to see how the results matched.
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+## Results and conclusion
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
-
-[ ... ]
+We see that the simulations matched closely which led us to conclude that the stochastic model could model continuous measurement well. 
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+Upon this work we could amend the circuit and simulation so that they fit more closely with the experiment conducted by the Oxford researchers. This could then be used to have a deeper dive into decoherence and its effects in these more niche but still cutting-edge scenarios.
+
+## Credits
+Authored by Jashn Agarwal and Jamie Walton
+Mentored by Dr Filip Bar
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+- L. Dania, K Heidigger et al, “Position Measurement of a Levitated Nanoparticle via Interference with Its Mirror Image” (DOI: [10.1103/PhysRevLett.129.013601](https://doi.org/10.1103/PhysRevLett.129.013601))
+- Kurt Jacobs and Daniel Steck, “A Straightforward Introduction to Continuous Quantum Measurement” (arXiv: [quant-ph/0611067](https://arxiv.org/abs/quant-ph/0611067))
+- QuTiP 4.7 Documentation, “Stochastic solver” (QuTiP Documentation)(https://qutip.org/docs/4.7/guide/dynamics/dynamics-stochastic.html))
+
 
 **Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
 1. Create/copy a list into ChatGPT
