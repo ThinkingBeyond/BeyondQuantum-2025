@@ -68,7 +68,6 @@ liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsu
 
 pycryptodome: Supplies AES-GCM encryption and HMAC-SHA256 for secure message handling.
 
-Additional dependencies include numpy, scipy, and others installed via pip and apt-get for building the environment.
 
 • Code Structure
 
@@ -87,8 +86,7 @@ Encryption and Verification: AES-GCM encrypts the message, and HMAC-SHA256 ensur
 
 ## Result
 
-The results demonstrate the successful integration of BB84 and Kyber512 to create a secure hybrid key, effectively used for AES-GCM encryption and HMAC authentication. The smaller BB84 key size, combined with Kyber512's robust post-quantum security, ensures both efficiency and future-proofing against quantum threats. The sifting process in BB84 reduces key length but maintains security, while the hybrid approach leverages the strengths of each method, as reflected in the component distribution. This implementation provides a practical proof-of-concept for secure communication in a quantum-threatened future.
-Continue working through the points listed above with the help of sensibly named subsections. 
+The results demonstrate the successful integration of BB84 and Kyber512 to create a secure hybrid key, effectively used for AES-GCM encryption and HMAC authentication. The smaller BB84 key size, combined with Kyber512's robust post-quantum security, ensures both efficiency and future-proofing against quantum threats. The sifting process in BB84 reduces key length but maintains security while the hybrid approach leverages the strengths of each method as reflected in the component distribution. This implementation provides a practical proof-of-concept for secure communication in a quantum threatened future. 
 
 
 ![Graph 2](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/graphs/security_analysis.png)
