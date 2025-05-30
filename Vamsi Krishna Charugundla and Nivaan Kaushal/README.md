@@ -15,31 +15,31 @@ Can quantum computing, using principles such as superposition and entanglement, 
 
 ## Implementation
 
-***Phase 1: Domain Setup***
+### *Phase 1: Domain Setup*
 - Define an N×N grid as the spatial domain.
 - Create a circular obstacle mask
 - Define the fluid region by excluding the obstacle.
 - Select inflow source points
   
-***Phase 2: Quantum Circuit Construction***
+### *Phase 2: Quantum Circuit Construction*
 - Initialize a circuit with N² qubits.
 - Apply Hadamard gates to source qubits to inject amplitude.
 - Use CNOT gates to entangle fluid neighbors 
 - Apply Ry(π/6) rotations to fluid qubits for directional flow.
   
-***Phase 3: Simulation & Data Processing***
+### *Phase 3: Simulation & Data Processing*
 - Simulate the circuit on qasm_simulator.
 - Run 4096 shots; collect measurement outcomes.
 - Map results to 2D grid positions and normalize by max fluid value.
   
-***Phase 4: Visualization***
+### *Phase 4: Visualization*
 - Smooth data with filters
 - Visualize using nearest and bicubic interpolation 
 
-***Quantum Computational Fluid Dynamics Implementation***
+### *Quantum Computational Fluid Dynamics Implementation*
 - Notebook: [`QCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/75d5e6e019b686684e43b6bcd524f2da2c5d65cf/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/QCFD.ipynb)
 
-***Classic Computational Fluid Dynamics Implementation***
+### *Classic Computational Fluid Dynamics Implementation*
 - Notebook: [`CCFD.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/79bc9a0a6f3918c63035a2657244b7f0f9ba029a/Vamsi%20Krishna%20Charugundla%20and%20Nivaan%20Kaushal/Classical__CFD.ipynb)
 
 ## Results
@@ -63,11 +63,11 @@ This is a comparative result on Quantum CFD and classical CFD on one factor i.e 
 In this project, we developed and compared quantum and classical circuit-based frameworks for simulating fluid flow on a 2D grid. The quantum approach successfully replicated general flow behavior and demonstrated the feasibility of simulating fluid interactions using quantum states. However, while the quantum model showed potential for scalability in representing complex interactions, it incurred significantly longer computation times than the classical method. These results suggest that although quantum CFD holds theoretical promise, practical implementation will require improvements in quantum hardware and optimization techniques to achieve competitive performance.
 
 ## Future Improvements
-    1. Extending the simulation to 3 dimensions.
-    2. Including more mesh types like shapes and airfoils.
-    3. Displaying time step evolution or animations.
-    4. Implementing more quantities such as pressure, density to provide more complete results.
-    5. Increasing the gridsize for more accurate and insightful results, currently limited by compute power of Quantum Computing.
+1. Extending the simulation to 3 dimensions.
+2. Including more mesh types like shapes and airfoils.
+3. Displaying time step evolution or animations.
+4. Implementing more quantities such as pressure, density to provide more complete results.
+5. Increasing the gridsize for more accurate and insightful results, currently limited by compute power of Quantum Computing.
     
 ## References
 1. Meng, Z., et al. (2024)."Simulating unsteady fluid flows on a superconducting quantum processor." (https://arxiv.org/abs/2404.15878)
