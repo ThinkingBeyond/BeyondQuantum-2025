@@ -28,7 +28,7 @@
 
 **Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
-![name](Konigsberg_visual.jpg)`
+![name](Research Stage Graphs and Visuals/Konigsberg_visual.jpg)`
 
 ## Research Question
 
