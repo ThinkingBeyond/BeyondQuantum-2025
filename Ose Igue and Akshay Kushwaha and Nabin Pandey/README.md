@@ -28,6 +28,8 @@
 
 **Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
+![name](Konigsberg_colour37936.jpg)`
+
 ## Research Question
 
 In order to reinforce the foundations of fundamental Graph Theory, let's briefly introduce the Königsberg Bridge Problem posed by Leonard Euler in mid-1700s in the bustling city of Königsberg, Prussia. Euler posed an interesting investigation in regard to the wide array of bridges in Königsberg connecting the main central island to the rest of the city above water canals. Euler's investigation revolves around the interesting general question regarding the possibility of a pedestrian crossing all bridges only once to reach a desired destination. Through methodically deriving the connection between the amount of Bridges (Edges) and the amount of Regions (Nodes), Euler was able to mathematically prove that it is impossible for a pedestrian to cross all bridges in Königsberg only once. Euler's investigation into the Königsberg's Bridge Problem cascaded into the development of a vast mathematical field which Euler called at the time Geometry of Positions, but in the current times, it is known as Graph Theory. 
