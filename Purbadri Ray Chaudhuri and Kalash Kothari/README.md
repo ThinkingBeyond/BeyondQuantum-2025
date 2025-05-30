@@ -85,6 +85,14 @@ Thus, this project is motivated by few critical needs:
 Visual inspection using Qiskit’s statevector and histogram backends confirmed theoretical predictions.
 
 ---
+## Outline of the shared code file
+- Basic Installations
+- **Testing of Grover's algorithm on quantum simulator**:
+    - Testing the circuits for 2-Qubits systems fpr state |01>
+    - Testing the circuits for 3-Qubits systems fpr state |010>
+- **Testing on realtime hardware**: Applying the till fpund data and circuits to real time hardware machine and testing the run
+
+---
 
 ## Conclusion
 
