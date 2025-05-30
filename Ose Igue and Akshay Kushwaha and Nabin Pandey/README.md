@@ -38,7 +38,7 @@ In order to reinforce the foundations of fundamental Graph Theory, let's briefly
 
 To connect the Königsberg's Bridge Problem to the Traveling Salesmen Problem, we can imagine a pedestrian competing in a marathon who is very self-conscious about his marathon time through the race. During this race, the pedestrian will have to cross a variety of bridges and islands and must cross through all islands in order to complete successfully complete the Marathon. The Pedestrian realizes that in order to complete the Marathon in the least amount of time, he will need to figure out the shortest paths between each Island and figure out the ideal configuration of paths so he visits all of the islands and finishes the race in the least amount of time. This is known as the Traveling Salesmen Problem and this is known as a NP-Complete Problem proving its difficulty to solve given Algorithmic Runtime Models. Our aim in regard to the Traveling Salesmen Problem would be to apply Variational Quantum Eigensolvers (VQEs) to more optimally resolve this problem.
 
-## Motivation
+## Motivation for the Project Implementation
 
 The Traveling Salesman Problem (TSP) stands as a quintessential example of a combinatorial optimization problem whose exact solution becomes prohibitively expensive for classical computers as the number of cities increases. Classical algorithms designed to find the optimal tour, such as Dynamic Programming, suffer from exponential time complexity, rendering them impractical for instances involving more than a few dozen cities. This computational bottleneck necessitates the exploration of alternative paradigms.
 
@@ -72,7 +72,8 @@ To begin with the implementation of the Traveling Salesmen Problem in the Quantu
   <img src="Research%20Stage%20Graphs%20and%20Visuals//graphNetwork.png" alt="Image" width="500"/>
 </p>
 
-Graph Visualization using NetworkX and MatplotLib
+<hr>
+**Graph Visualization using NetworkX and MatplotLib**
 
 - The library utilized in the codebase to generate the graph is used to visually represent the cities (nodes) and the distances (edges) in the Traveling Salesman Problem
     - Each node represents a city, and each edge represents the path (or distance) between two cities.
@@ -82,6 +83,8 @@ Graph Visualization using NetworkX and MatplotLib
  
 In order to have a guideline to compare the Quantum Implementation and determine its effectiveness, we have implemented the Classical Approach to the Traveling Salesmen Problem using Dynamic Programming to cover and explore all different permutations and routes.
 
+
+<hr>
 **Brute Force Solution to the Traveling Salesman Problem**
 
 - For our implementation of the Classical Approach to the Traveling Salesmen Problem, we utilized a function to resolve the different permutations with the steps below.
@@ -90,6 +93,15 @@ In order to have a guideline to compare the Quantum Implementation and determine
     - It calculates the total distance traveled if the salesman follows that path and returns to the starting node.
     - If this distance is less than the previously best-known distance, it updates the best solution and prints it.
     - Finally, it returns the best distance and corresponding order of nodes visited.
+ 
+<hr>
+
+- Now to create the Quantum Implementation, we utilized the QUBO Formulation and formatted our Adjacency List into a Quadratic Program where the variables contain within represent:
+    - Binary variables representing whether a city is visited at a specific position.
+    - Objective function that encodes the total distance traveled.
+    - Constraints that enforce a valid Hamiltonian cycle:
+    - Each city is visited exactly once.
+    - Each position in the tour is occupied by exactly one city.
 
 ## Future Work
 
