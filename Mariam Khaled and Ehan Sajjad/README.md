@@ -10,15 +10,12 @@ The Travelling Salesman Problem (TSP) is a well-known NP-hard combinatorial opti
 
 ## Method and Implementation
 Before using QAOA to solve the TSP, we needed to learn how to convert the TSP into a Quadratic Unconstrained Binary Optimisation (QUBO) problem. We learnt about the QUBO formulation, converted the TSP into binary variables and used penalty terms to factor in the constraints, each city must be visited exactly once and each position in the tour must be filled by exactly one city. Then, we used the Ising model to convert our QUBO cost function into a cost Hamiltonian which can be applied to a quantum circuit as a unitary operator. After learning about how QAOA works and the quantum circuit structure, we used the QAOA to solve an asymmetric case of the TSP with 3 cities, shown below.
-<p align="center">
-  <img src="./tsp_graph.png" alt="TSP Graph solved using QAOA" width="500"/>
-</p>
 
 ## Results and Conclusion
 <p align="center">
   <img src="./qaoa_results.png" alt="QAOA Results" width="500"/>
 </p>
-In the end, the QAOA outputted the optimal solution to the TSP, which was confirmed when we gave a classical algorithm the same problem to solve and they both had identical solutions. So, we can conclude that the QAOA can solve the TSP effectively and give accurate approximate solutions to it.
+As shown in the graph, the QAOA outputted the bitstring, and this is converted into the route 0-1-2-0 with total cost of 26. When a classical algorithm was given the same problem, it also outputted the same result. Therefore, we conclude that the Quantum Approximate Optimisation Algorithm is able to give accurate approximate solutions to the Travelling Salesman Problem and solve it effectively.
 
 ## Future Work
 We only tested the QAOA on one specific case of the TSP so a future idea would be to apply it to more cases and see how the performance changes as the number of cities increases. Also, in the QAOA strucutre itself there are many different possible parameters you could change and investigate the effect of that on the accuracy of the solutions. For example, the number of iterations of the cost and mixer layers you apply, changing the initial state of the qubits or comparing different classical optimisation algorithms, which are used to change the parameters for the cost and mixer layers. QAOA can be applied to any combinatorial optimisation problem which can be converted into a QUBO formulation, so there are many different problems which can be tackled and researched into to see if QAOA can solve them.
