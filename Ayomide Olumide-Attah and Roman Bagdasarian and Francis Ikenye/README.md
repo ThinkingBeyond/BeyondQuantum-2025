@@ -11,6 +11,9 @@
 │   └── statevector.txt                      # Example circuit statevector
 ├── modexp_comparison/
 │   ├── modexp_comparison.ipynb              # Modular exponentiation comparison analysis
+|   ├── modexp_comparison.svg
+├── toffoli-gates/
+|   ├── toffoli-gates.ipynb                  # Modular exponentiation (Toffoli gates)
 └── README.md
 ```
 
@@ -38,7 +41,7 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 
 **Toffoli gates-based modular exponentiation**
 - Notebook: [`toffoli-gates.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/toffoli-gates/toffoli-gates.ipynb)
-- 
+- This builds the modular exponentiation gate from n-bit addition circuits, entirely out of Toffoli gates. This purely classical circuit enjoys ease of simulation in a quantum computer, as well as less overhead when applying QEC. One technical innovation is the ability to borrow qubits during computation, thus optimizing qubit count.
 
 ## Results
 
