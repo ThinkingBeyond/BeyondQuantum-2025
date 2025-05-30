@@ -69,10 +69,10 @@ The system operates in the following steps:
 Implementation Details
 
 •	Libraries and Dependencies:
-        o	qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the AerSimulator backend.
-        o	liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsulation.
-        o	pycryptodome: Supplies AES-GCM encryption and HMAC-SHA256 for secure message handling.
-        o	Additional dependencies include numpy, scipy, and others installed via pip and apt-get for building the environment.
+    • qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the AerSimulator backend.
+    • liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsulation.
+    • pycryptodome: Supplies AES-GCM encryption and HMAC-SHA256 for secure message handling.
+    • Additional dependencies include numpy, scipy, and others installed via pip and apt-get for building the environment.
 
 •	Code Structure:
         o	Installation: The notebook begins by installing required packages (qiskit, qiskit-aer, pycryptodome, liboqs-python) and their dependencies in a Colab environment.
