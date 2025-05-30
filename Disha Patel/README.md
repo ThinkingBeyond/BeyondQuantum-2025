@@ -11,15 +11,8 @@ Design a hybrid **QKD-PQC** cryptographic system to ensure scalable, quantum-res
 Given the vulnerability of traditional cryptography to quantum attacks like Shor's algorithm, the practical limitations of QKD (e.g., distance, noise), and the potential risks of PQC to future cryptanalytic advances, a hybrid QKD-PQC approach is needed to combine QKD's information-theoretic security with PQC's quantum resistance for scalable, long-term protection against evolving quantum and classical threats.
 
 ## Motivation
-1. Implementation: Develop a prototype that combines QKD (BB84) for generating a shared secret key and PQC (Kyber512) for quantum-resistant key encapsulation, resulting in a **hybrid AES** key for secure encryption and authentication.
-2. Security Analysis:
-   a. Verify QKD’s unconditional security for key distribution, ensuring protection against eavesdropping through quantum principles.
-   
-   b. Confirm PQC’s resistance to quantum attacks, such as those enabled by Shor’s or Grover’s algorithms.
-   
-   c. Evaluate the hybrid model’s resilience to classical attacks, including brute-force, side-channel, and cryptanalytic threats.
-4. Performance Evaluation: Assess the efficiency of key generation, computational overhead, and compatibility with existing cryptographic systems.
-5. Validation: Ensure the hybrid system supports secure encryption, decryption, and message authentication, as demonstrated through successful **HMAC verification**.
+
+Classical cryptography, like RSA and ECC, is vulnerable to quantum attacks, such as Shor's algorithm, which could decrypt sensitive data for example, compromising bank transactions or government communications on a quantum computer. Post-Quantum Cryptography (PQC), such as Kyber512, provides quantum-resistant algorithms but remains susceptible to future cryptanalytic breakthroughs, potentially exposing systems like blockchain networks. A hybrid QKD-PQC system combines QKD's provably secure key distribution with PQC's scalable encryption, ensuring robust protection for real world applications like secure financial transfers or confidential diplomatic exchanges against both quantum and classical threats.
 
 
 ## Method and Implementation
@@ -114,11 +107,11 @@ This hybrid QKD-PQC system lays a solid foundation for secure communication, but
 
 ## References
 
-Pei Zeng et al. (2024). “Practical Hybrid PQC-QKD Protocols with Enhanced Security and Performance” – arXiv preprint arXiv:2411.01086
+1. Pei Zeng et al. (2024). “Practical Hybrid PQC-QKD Protocols with Enhanced Security and Performance” – arXiv preprint arXiv:2411.01086
 
-G. Garg, A. Garg (2024). “Post-Quantum Cryptography and Quantum Key Distribution: An In-Depth Survey” – SSRN Electronic Journal
+2. G. Garg, A. Garg (2024). “Post-Quantum Cryptography and Quantum Key Distribution: An In-Depth Survey” – SSRN Electronic Journal
 
-Quantum Cryptography Review (2015). “Quantum Cryptography: Key Distribution and Beyond” – Springer
+3. Quantum Cryptography Review (2015). “Quantum Cryptography: Key Distribution and Beyond” – Springer
 
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
