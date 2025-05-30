@@ -3,9 +3,9 @@
 # BeyondQuantum: Introduction to Quantum and Research 2025
 This repo contains the research project submissions for the [BeyondQuantum programme](https://thinkingbeyond.education/beyondquantum/) in 2025. It contains project on *Quantum Computing*, *Quantum Machine Learning* and *Foundations of Quantum Physics*. The accompanying research posters for each project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
 
-The research projects have been completed over the course of six weeks of the BeyondQuantum Research Stage. All authors are either undergraduates in their first- or second year, or secondary school/high school students by the time they have completed their project. They have been working in teams of two and have been supervised by an academic mentor (eiher a PhD student, postddoc, assistant professor or full professor), with whom they have had at least five one-hour progress meetings during the course of the six-week Research Stage. Due to unexpected drop-outs some students ended up working individually or were moved to another team.
+The research projects have been completed over the course of six weeks of the **BeyondQuantum Research Stage**. All authors are either undergraduates in their first- or second year, or secondary school/high school students by the time they have completed their project. They have been working in teams of two and have been supervised by an academic mentor (eiher a PhD student, postddoc, assistant professor or full professor), with whom they have had at least five one-hour progress meetings during the course of the six-week Research Stage. Due to unexpected drop-outs some students ended up working individually or were moved to another team.
 
-All the work is indpendent, individual research conducted by each team. They were only assigned topics and given some literature for each topic. During the six weeks they had to 
+All the work is indpendent, individual research conducted by each team. They were only assigned broad topics and given some literature for each. During the six weeks they had to 
 1. Work out a research question,
 2. Make a research plan,
 3. Conduct the research to answer their question
