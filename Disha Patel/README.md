@@ -60,6 +60,10 @@ Receiver decrypts and verifies both HMAC and tag to ensure security.
 
 Confirms the decrypted message matches the original and passes integrity checks.
 
+Here is the system diagram od the code:
+
+![Graph 4](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Disha%20Patel/system_diagram.png)
+
 Implementation Details
 
 
