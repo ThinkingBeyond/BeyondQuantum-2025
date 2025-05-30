@@ -1,21 +1,21 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-### Evaluating QSVM's Scalability: A Comparative Analysis with Classical Support Vector Machines
+# Evaluating QSVM's Scalability: A Comparative Analysis with Classical Support Vector Machines
 
-### Introduction
-SVMs are really useful machine learning algorithm. One of the main drawbacks of this algorithm is that it doesnot work for large scale data . Quantum Machine Learning gives us the advantage of computing large scale data with better efficiency using Kenrnel method. 
+## Introduction
+SVMs are really useful machine learning algorithms. One of the main drawbacks of this algorithm is that it does not work for large-scale data. Quantum machine learning gives us the advantage of computing large-scale data with better efficiency using the kernel method.
 
 ## Research Question
 
 Does QSVM solve the scalability issues of classical SVM ?
 
 ## Motivation
-Solving the scalability issues of SVM can open the doors towards solving bigger real life classification problems. It will give useful insights in the real life bigger datas. It will also become a very important application of Quantum Computation 
+Resolving the scalability issues of SVM can pave the way for tackling more complex real-life classification problems. It will give useful insights into real-life bigger data. It will also become a very important application of quantum computaton. 
+
 
 ## Our Experiment:
 
-To compare the scalability of SVM and QSVM we implemented both classical and quantum SVM in the same dataset. We conducted some thorough literature review to understand the current state of this research
-
+To compare the scalability of SVM and QSVM, we implemented both classical and quantum SVM in the same dataset. We conducted some thorough literature reviews to understand the current state of this research.
 The basic understanding of QSVM code was taken form this link:
 - [Implementation of QSVM in Qiskit](https://github.com/Qiskit/platypus/blob/main/notebooks/summer-school/2021/resources/lab-notebooks/lab-3.ipynb )
 
