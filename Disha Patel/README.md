@@ -46,33 +46,38 @@ The research question investigates the potential of a hybrid cryptographic frame
 
 ## Method and Implementation
 Methodology
-1. BB84 Quantum Key Distribution
+1. BB84 Quantum Key Distribution:
+   
 Simulates a quantum protocol where Alice and Bob use random bases (Z/X) to encode and measure qubits.
 
 They retain only bits where their measurement bases match, forming a sifted key.
 
 Implemented using Qiskit's AerSimulator (no real quantum hardware required).
 
-2. Kyber512 Post-Quantum Key Encapsulation
+2. Kyber512 Post-Quantum Key Encapsulation:
+   
 Uses Kyber512, a lattice-based algorithm resistant to quantum attacks.
 
 Bob generates a key pair; Alice encapsulates a shared secret.
 
 Bob decapsulates the ciphertext to retrieve the same secret.
 
-3. Hybrid Key Derivation
+3. Hybrid Key Derivation:
+   
 BB84 key (128-bit) XORed with the first 16 bytes of Kyber512’s secret.
 
 The result is hashed (SHA-256), and the first 16 bytes are used as the AES key.
 
-4. AES-GCM Encryption + HMAC
+4. AES-GCM Encryption + HMAC:
+   
 AES-GCM encrypts the message and ensures integrity via a tag.
 
 HMAC-SHA256 provides an additional authentication layer.
 
 Receiver decrypts and verifies both HMAC and tag to ensure security.
 
-5. Verification
+5. Verification:
+
 Confirms the decrypted message matches the original and passes integrity checks.
 
 Implementation Details
