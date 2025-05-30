@@ -3,14 +3,14 @@
 # QUANTUM INFORMATION THEORY AND COMPLEXEITY
 
 ## Research Question
-***How does the entanglement entropy scale with the number of qubits in Grover’s algorithm, and how does this scaling influence the classical simulation cost using matrix product states (MPS)?***
+*How does the entanglement entropy scale with the number of qubits in Grover’s algorithm, and how does this scaling influence the classical simulation cost using matrix product states (MPS)?*
 
 
 ## Project Introduction
-**Our project, "Entanglement Scaling in Grover's Algorithm: Implications for Matrix Product State Simulation," conducted by Lucas Rhode and Kishan Bhowal under Manuel Rudolph's mentorship, investigates entanglement in Grover's search algorithm to assess its classical simulation using Matrix Product States (MPS). We simulated Grover's algorithm for 4 to 12 qubits, measuring bipartite entanglement entropy and bond dimension. Findings show low entanglement (below 1 ebit) and a constant bond dimension of 2, enabling efficient MPS simulations compared to high-entanglement algorithms like QAOA or Ising models.** 
+*Our project, **"Entanglement Scaling in Grover's Algorithm: Implications for Matrix Product State Simulation,"** conducted by Lucas Rhode and Kishan Bhowal under Manuel Rudolph's mentorship, investigates entanglement in Grover's search algorithm to assess its classical simulation using Matrix Product States (MPS). We simulated Grover's algorithm for 4 to 12 qubits, measuring bipartite entanglement entropy and bond dimension. Findings show low entanglement (below 1 ebit) and a constant bond dimension of 2, enabling efficient MPS simulations compared to high-entanglement algorithms like QAOA or Ising models.* 
 
 ## Project Motivation
-**The motivation for our project stemmed from our combined interest in exploring quantum entanglement and its implications for quantum algorithms. After discussions with our mentor, Manuel Rudolph, we selected Grover's search algorithm as the focus of our study, recognizing it as a feasible topic to investigate within the limited time available. By analyzing entanglement scaling in Grover's algorithm, we aimed to understand its impact on the efficiency of classical simulations using Matrix Product States (MPS), providing insights into the resources required for simulating quantum algorithms.**
+*The motivation for our project stemmed from **our combined interest in exploring quantum entanglement and its implications for quantum algorithms.** After discussions with our mentor, Manuel Rudolph, **we selected Grover's search algorithm as the focus of our study, recognizing it as a feasible topic to investigate within the limited time available.** By analyzing entanglement scaling in Grover's algorithm, we aimed to understand its impact on the efficiency of classical simulations using Matrix Product States (MPS), providing insights into the resources required for simulating quantum algorithms.*
 
 ## Methodology and Approach
 To investigate entanglement scaling in Grover's algorithm and its implications for Matrix Product State (MPS) simulations, we employed a systematic approach combining theoretical analysis with numerical simulations. Below is a concise explanation of the method and approach, based on the provided document:
@@ -19,7 +19,7 @@ To investigate entanglement scaling in Grover's algorithm and its implications f
    - We focused on Grover's search algorithm, which finds a marked item in an unsorted database of N items using a quadratic speedup, achieved through repeated applications of an Oracle (phase flip of the target state) and a Diffusion Operator (amplitude amplification).
    - The marked state was chosen as the all-zeros state $(|0⟩^{\otimes n})$ for simplicity and consistency.
    - Simulations were conducted for systems with $n = 4, 6, 8, 10,$ and $12$ qubits to observe trends across different system sizes.
-   - The optimal number of Grover iterations was calculated as R = ${round(\frac{\pi}{4} * √(2^n))}$, ensuring high probability of finding the marked state.
+   - The optimal number of Grover iterations was calculated as R = ${round(\frac{\pi}{4} \cdot √(2^n))}$, ensuring high probability of finding the marked state.
 
 2. **Simulation Framework**:
    - We used Qiskit, an open-source quantum computing framework, and Qiskit Aer’s simulator for both statevector and MPS simulations.
@@ -92,7 +92,7 @@ We can follow up this research work with tests for different algorithms other th
    https://arxiv.org/abs/quant-ph/0702225v2
 
 3. *IBM Quantum Learning* https://learning.quantum.ibm.com/
-4. 
+
 
 ---
 
