@@ -111,30 +111,25 @@ Encryption and Verification: AES-GCM encrypts the message, and HMAC-SHA256 ensur
   	
 
 ## Result
+
 The results demonstrate the successful integration of BB84 and Kyber512 to create a secure hybrid key, effectively used for AES-GCM encryption and HMAC authentication. The smaller BB84 key size, combined with Kyber512's robust post-quantum security, ensures both efficiency and future-proofing against quantum threats. The sifting process in BB84 reduces key length but maintains security, while the hybrid approach leverages the strengths of each method, as reflected in the component distribution. This implementation provides a practical proof-of-concept for secure communication in a quantum-threatened future.
 Continue working through the points listed above with the help of sensibly named subsections. 
+![Graph 1](https://github.com/BeyondQuantum-2025/Disha-Patel/raw/main/graphs/download%20(1).png)
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+## Conclusion
 
-[ ... ]
+This project successfully demonstrates a hybrid cryptographic system that integrates the BB84 Quantum Key Distribution (QKD) protocol with the Kyber512 post-quantum key encapsulation mechanism (KEM) to create a secure, future-proof communication framework. By combining BB84’s information-theoretic security with Kyber512’s resilience against quantum attacks, the system derives a 128-bit AES key used for AES-GCM encryption and HMAC-SHA256 authentication. The results, illustrated through key size comparisons, key length transitions, and component distribution, highlight the efficiency and balanced design of the hybrid model. BB84’s sifted key and Kyber512’s robust 6400-bit key together ensure both compactness and security, while the framework’s composition reflects a strategic blend of quantum, post-quantum, and classical techniques. This implementation provides a practical proof-of-concept for secure communication, effectively bridging current cryptographic practices with the demands of a quantum-threatened future.
 
 ## Future Work
 
-State and explain what follow-up research could be conducted based on your work.
+This hybrid QKD-PQC system lays a solid foundation for secure communication, but there are several opportunities for improvement. First, replacing the simulated BB84 protocol with real quantum hardware (e.g., IBM Quantum) can address practical challenges like noise and photon loss. Adding eavesdropping detection and quantum error correction would enhance security and reliability. Optimizing Kyber512’s large 6400-bit key size or exploring lighter post-quantum algorithms  could improve performance and scalability. Extending the framework to quantum networks, such as quantum repeaters or satellite-based QKD, would enable long-distance secure communication. More advanced key derivation methods, beyond simple XOR, and integration of additional quantum-resistant algorithms could further strengthen security. Finally, aligning with NIST post-quantum standards and deploying the system in real-world applications like secure messaging or financial transactions will ensure practical adoption and interoperability. These advancements can make the system more robust and ready for the quantum era.
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+Pei Zeng et al. (2024). “Practical Hybrid PQC-QKD Protocols with Enhanced Security and Performance” – arXiv preprint arXiv:2411.01086
+G. Garg, A. Garg (2024). “Post-Quantum Cryptography and Quantum Key Distribution: An In-Depth Survey” – SSRN Electronic Journal
+Quantum Cryptography Review (2015). “Quantum Cryptography: Key Distribution and Beyond” – Springer
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
-
----
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
 
