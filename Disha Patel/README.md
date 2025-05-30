@@ -75,8 +75,10 @@ Receiver decrypts and verifies both HMAC and tag to ensure security.
 5. Verification
 Confirms the decrypted message matches the original and passes integrity checks.
 
-🛠️ Implementation Details
+Implementation Details
+
 • Libraries and Dependencies
+
 qiskit and qiskit-aer: Used for simulating the BB84 protocol with quantum circuits and the AerSimulator backend.
 
 liboqs-python: Provides the Kyber512 implementation for post-quantum key encapsulation.
@@ -86,6 +88,7 @@ pycryptodome: Supplies AES-GCM encryption and HMAC-SHA256 for secure message han
 Additional dependencies include numpy, scipy, and others installed via pip and apt-get for building the environment.
 
 • Code Structure
+
 Installation: The notebook begins by installing required packages (qiskit, qiskit-aer, pycryptodome, liboqs-python) and their dependencies in a Colab environment.
 
 BB84 Simulation: The bb84_key_exchange function simulates the QKD process, generating a sifted key of approximately 100–150 bits from 300 initial bits due to basis matching.
