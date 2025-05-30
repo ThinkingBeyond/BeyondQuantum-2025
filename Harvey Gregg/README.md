@@ -42,12 +42,12 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 - Number of Visible Nodes: **30**
 - Number of Hidden Nodes: **5, 10, 15, 20, 25**
 - Training Routine: **CD**
-- Learning Rate: **1e-3 --> 1e-6**
-- Learning Rate Scheduler: **Logarithmic**
-- Batch Size: **1000**
-- Number of Epochs: **50000**
+- Learning Rate: **1e-3**
+- Learning Rate Scheduler: **Exponential - 0.99**
+- Batch Size: **300**
+- Number of Epochs: **100**
 - Benchmark: **Reconstruction Error**
-- Number of Gibbs Sampling Steps: **5**
+- Number of Gibbs Sampling Steps: **10**
 
 ## Results 
 
