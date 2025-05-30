@@ -16,7 +16,9 @@ To research this question we selected two papers with opposite opinions on the s
 
 ## Methodology
 For the comparison we first started by listing the main arguments made each author. Once this was complete we applied their arguments to the following **critera**:
-- The comparison must be done in the context of an interpretation/formalism that both the papers apply to. For this Everett's Relative State formalism was chosen because this is formalism Wallace makes his arguments within and Inamori's paper claims that no quantum process can explain the existence of a preferred basis which would apply to processes within Everett's formalism.
+- The comparison must be done in the context of an interpretation/formalism that both the papers apply to. For this Everett's Relative State formalism was chosen because this is formalism Wallace makes his arguments within and Inamori's paper claims that no quantum process can explain the existence of a preferred basis which would apply to processes within Everett's formalism. This provides a background to directly compare the papers.
+- The arguments should be first assessed in isolation before they are fully contrasted and compared to one another. This is to highlight any initial inconsistencies in the arguments made by the authors.
+- The arguments and viewpoints must also be applied to an experimental context. This is another way to directly compare the papers and what they say about reality. This is crucial for a conrete comparison and to clearly expose the flaws in the arguments.
 
 ## Conclusions
 After our review we found that the paper in favour of decoherence relied on unjustified assumptions about the system and used flawed reasoning in deducing the system environment split when applying
