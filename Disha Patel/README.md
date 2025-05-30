@@ -12,7 +12,7 @@ Given the vulnerability of traditional cryptography to quantum attacks like Shor
 
 ## Motivation
 
-Classical cryptography, like RSA and ECC, is vulnerable to quantum attacks, such as Shor's algorithm, which could decrypt sensitive data for example, compromising bank transactions or government communications on a quantum computer. Post-Quantum Cryptography (PQC), such as Kyber512, provides quantum-resistant algorithms but remains susceptible to future cryptanalytic breakthroughs, potentially exposing systems like blockchain networks. A hybrid QKD-PQC system combines QKD's provably secure key distribution with PQC's scalable encryption, ensuring robust protection for real world applications like secure financial transfers or confidential diplomatic exchanges against both quantum and classical threats.
+Classical cryptography, like RSA and ECC, is vulnerable to quantum attacks, such as Shor's algorithm, which could decrypt sensitive data for example, compromising bank transactions or government communications on a quantum computer. Post-Quantum Cryptography (PQC), such as Kyber512, provides quantum-resistant algorithms but remains susceptible to future cryptanalytic breakthroughs, potentially exposing systems like blockchain networks. A hybrid **QKD-PQC** system combines QKD's provably secure key distribution with PQC's scalable encryption, ensuring robust protection for real world applications like secure financial transfers or confidential diplomatic exchanges against both quantum and classical threats.
 
 
 ## Method and Implementation
