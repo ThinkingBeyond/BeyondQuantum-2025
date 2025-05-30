@@ -28,9 +28,11 @@
 
 **Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
 
-![Image](Research%20Stage%20Graphs%20and%20Visuals/Konigsberg_visual.jpg)
-
 ## Research Question
+
+<p align="center">
+  <img src="Research%20Stage%20Graphs%20and%20Visuals/Konigsberg_visual.jpg" alt="Image" width="500"/>
+</p>
 
 In order to reinforce the foundations of fundamental Graph Theory, let's briefly introduce the Königsberg Bridge Problem posed by Leonard Euler in mid-1700s in the bustling city of Königsberg, Prussia. Euler posed an interesting investigation in regard to the wide array of bridges in Königsberg connecting the main central island to the rest of the city above water canals. Euler's investigation revolves around the interesting general question regarding the possibility of a pedestrian crossing all bridges only once to reach a desired destination. Through methodically deriving the connection between the amount of Bridges (Edges) and the amount of Regions (Nodes), Euler was able to mathematically prove that it is impossible for a pedestrian to cross all bridges in Königsberg only once. Euler's investigation into the Königsberg's Bridge Problem cascaded into the development of a vast mathematical field which Euler called at the time Geometry of Positions, but in the current times, it is known as Graph Theory. 
 
@@ -53,15 +55,21 @@ Provide empirical data to support discussions on the current feasibility and fut
 
 This comparison is crucial for bridging the gap between theoretical quantum speedup claims and the observed performance on existing or simulated quantum systems, offering valuable insight into the current state of quantum computation for practical problem-solving.
 
-## Your next subsection
+## Tutorial on How to Install the Necessary Libraries and Run the Project
 
-Continue working through the points listed above with the help of sensibly named subsections. 
+- Steps to install the Libraries
+    - Download the Map_to_Ising Google Collaboratory and open it within Google Chrome.
+    - After Reading the initial Instruction, please **run the first cell** containing the list of libraries and tools needed for the execution of this codebase
+    - Tinker and test the Quantum Approach to the Traveling Salesmen Problem
 
-If you want to see some good examples of README files check out:
-- [Example 1](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/warenya-loulia/README.md)
-- [Example 2](https://github.com/ThinkingBeyond/BeyondAI-2024/blob/main/shaana-karuna/README.md)
+Note: Printing out the Relative error between the Energies of the Classical Approach and the Quantum Approach takes a significant amount of time.
 
-[ ... ]
+## Implementation of the Traveling Salesmen Problem in the Quantum Setting
+
+To begin with the implementation of the Traveling Salesmen Problem in the Quantum Setting, a weighted directed graph must be generated which could be bi-directional and uni-directional. In a normal standpoint in order to generate a graph instance, we would be utilizing an Adjacency List or an Adjacency Matrix where a index (node) maps to another index (node) with the value at that index being the weight. In our implementation of the Codebase, we utilized the NetworkX libraries which makes generating graphs quicker and simpler to deal with our Quantum Implementation code.
+
+![Image](Research%20Stage%20Graphs%20and%20Visuals/graphNetwork.png)
+
 
 ## Future Work
 
