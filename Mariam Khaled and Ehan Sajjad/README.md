@@ -10,10 +10,14 @@ The Travelling Salesman Problem (TSP) is a well-known NP-hard combinatorial opti
 
 ## Method and Implementation
 Before using QAOA to solve the TSP, we needed to learn how to convert the TSP into a Quadratic Unconstrained Binary Optimisation (QUBO) problem. We learnt about the QUBO formulation, converted the TSP into binary variables and used penalty terms to factor in the constraints, each city must be visited exactly once and each position in the tour must be filled by exactly one city. Then, we used the Ising model to convert our QUBO cost function into a cost Hamiltonian which can be applied to a quantum circuit as a unitary operator. After learning about how QAOA works and the quantum circuit structure, we used the QAOA to solve an asymmetric case of the TSP with 3 cities, shown below.
-![TSP Graph solved using QAOA](./tsp_graph.png)
+<p align="center">
+  <img src="./tsp_graph.png" alt="TSP Graph solved using QAOA" width="500"/>
+</p>
 
 ## Results and Conclusion
-![QAOA Results](./qaoa_results.png)
+<p align="center">
+  <img src="./qaoa_results.png" alt="QAOA Results" width="500"/>
+</p>
 In the end, the QAOA outputted the optimal solution to the TSP, which was confirmed when we gave a classical algorithm the same problem to solve and they both had identical solutions. So, we can conclude that the QAOA can solve the TSP effectively and give accurate approximate solutions to it.
 
 ## Future Work
