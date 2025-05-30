@@ -61,7 +61,14 @@ After a thoroughly analyzing both the classical and hybrid quantum-classical mac
 
 ## References
 
-1. NASA Exoplanet Archive [KOI Cumulative Dataset](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative)
-2. Hounsell, Rebekah () https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html
+1. NASA Exoplanet Archive. [KOI Cumulative Dataset](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=cumulative)
+2. Hounsell, R. HowToFindAnExoplanet-UserVersion. [NASA TESS Science Support Center](https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html)
+3. KDAG IIT KGP (2023). Unveiling the Cosmos: Discovering Exoplanets with Machine Learning [Medium](https://kdagiit.medium.com/unveiling-the-cosmos-discovering-exoplanets-with-machine-learning-2b841ed40f85)
+4. Pennylane. AmplitudeEmbedding [Pennylane](https://docs.pennylane.ai/en/stable/code/api/pennylane.AmplitudeEmbedding.html)
+5. Regadío, A. Exoplanet discovery with variational quantum circuits. Quantum Mach. Intell. 7, 11 (2025). [Springer Nature](https://doi.org/10.1007/s42484-024-00229-1)
+6.  Nikoletos, K. (2025). Quantum-ML-Classification-with-PennyLane. [GitHub](https://github.com/Nikoletos-K/Quantum-ML-Classification-with-PennyLane)
+7.  Gottlieb, J. (2023). Finding Exoplanets Using Machine Learning. [Medium](https://medium.com/@joshuadavidgottlieb/finding-exoplanets-using-machine-learning-e9d93b95c182)
+
+   
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
 
