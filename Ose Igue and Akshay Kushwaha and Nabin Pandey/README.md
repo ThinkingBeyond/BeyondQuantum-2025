@@ -2,32 +2,6 @@
 
 # Solving Traveling Salesman Problem using VQE
 
-***Provide a description of your project including*** 
-
-1. motivating your research question
-2. stating your research question
-3. explaining your method and implementation
-4. Briefly mention and discuss your results
-5. Draw your conclusions
-6. State what future investigations 
-7. State your references 
-
-### Further Guidance: Formating
-- Structure this readme using subsections
-- Your job is to 
-    - keep it clear
-    - provide sufficient detail, so what you did is understandable to the reader. This way other researchers and future cohorts of BeyondQuantum will be able to build on your research
-    - List all your references at the end
-- utilise markdown like *italics*, **bold**, numbered and unnumbered lists to make your document easier to read
-- if you refer to links use the respective markdown for links, e.g. `[ThinkingBeyond](https://thinkingbeyond.education/)`
-- If you have graphs and pictures you want to embed in your file use `![name](your_graphic.png)`
-- If you want to present your results in a table use
-    | Header 1            | Header 2  |
-    |---------------------|-----------|
-    | Lorem Ipsum         | 12345     |
-
-**Tip:** Use tools to create markdown tables. For example, Obsidian has a table plugin, that makes creating tables much easier than doing it by hand.
-
 ## Research Question
 
 <p align="center">
@@ -73,6 +47,8 @@ To begin with the implementation of the Traveling Salesmen Problem in the Quantu
 </p>
 
 <hr>
+
+
 **Graph Visualization using NetworkX and MatplotLib**
 
 - The library utilized in the codebase to generate the graph is used to visually represent the cities (nodes) and the distances (edges) in the Traveling Salesman Problem
@@ -85,6 +61,8 @@ In order to have a guideline to compare the Quantum Implementation and determine
 
 
 <hr>
+
+
 **Brute Force Solution to the Traveling Salesman Problem**
 
 - For our implementation of the Classical Approach to the Traveling Salesmen Problem, we utilized a function to resolve the different permutations with the steps below.
@@ -96,14 +74,69 @@ In order to have a guideline to compare the Quantum Implementation and determine
  
 <hr>
 
+**QUBO Formulation and Implementation**
+
 - Now to create the Quantum Implementation, we utilized the QUBO Formulation and formatted our Adjacency List into a Quadratic Program where the variables contain within represent:
     - Binary variables representing whether a city is visited at a specific position.
     - Objective function that encodes the total distance traveled.
     - Constraints that enforce a valid Hamiltonian cycle:
     - Each city is visited exactly once.
     - Each position in the tour is occupied by exactly one city.
+ 
+<hr>
 
-## Future Work
+
+**Convert to Ising Model and Solve VQE**
+
+- The Ising Model comprises of:
+    - A Hamiltonian operator (qubitOp) that describes the energy landscape of the problem.
+    - An offset value that accounts for constant shifts in the energy.
+ 
+We can then use the Ising Model to compare energy landscapes in the next section and be resolved using MininiumEigenOptimizer.
+
+<hr>
+
+**Comparing Classical Approach and Quantum Approach using Relative Error Plots**
+
+In this section, we use a Variational Quantum Eigensolver (VQE) algorithm to solve the TSP. VQE is a hybrid quantum-classical algorithm that can find the minimum eigenvalue of a Hamiltonian, which corresponds to the optimal TSP solution.
+
+- Optimizer and Ansatz:
+
+    - The Simultaneous Perturbation Stochastic Approximation (SPSA) optimizer is used for VQE, with a maximum of 300 iterations (maxiter=300). This optimizer helps in minimizing the energy (Hamiltonian) through a series of iterations.
+The ansatz, a parameterized quantum circuit, is chosen as a TwoLocal circuit with the ry rotation and cz entanglement gates. This is repeated 5 times (reps=5), with a linear entanglement structure.
+VQE Setup:
+
+    - We initialize the VQE with the chosen optimizer (SPSA) and ansatz (ry). The quantum state is prepared by applying the parameterized ansatz, and the energy is minimized iteratively.
+Compute Minimum Eigenvalue:
+
+    - The compute_minimum_eigenvalue(qubitOp) method computes the eigenvalue of the Hamiltonian, which corresponds to the optimal TSP solution.
+The energy (the minimum eigenvalue) is printed out, and the optimization time (result.optimizer_time) is also displayed.
+Sampling and Interpreting the Solution:
+
+    - The most likely state (result.eigenstate) is sampled using tsp.sample_most_likely(), and it is checked for feasibility using qubo.is_feasible(x).
+The solution is interpreted using tsp.interpret(x) to retrieve the node visit order for the TSP path.
+
+    - The optimal path is visualized using draw_tsp_solution(tsp.graph, z, colors, pos).
+ 
+- To compare the Classical Approach and the Quantum Approach, we calculated the relative Error Plot where:
+
+    - Larger values mean the algorithm found a less optimal solution.
+    - The bar chart shows this comparison visually, highlighting which method performs best.
+
+<p align="center">
+  <img src="Research%20Stage%20Graphs%20and%20Visuals/relativeErrrorChart.png" alt="Image" width="500"/>
+</p>
+
+## Future Work and Conclusion
+
+**Conclusion based on Calculated Results**
+
+Based on our visualizations of the relative error plot, we can utilize that the Quantum Approach made from the QUBO Implementation and Ising Model utilizes far less energy compared to the Brute Force Approach and it showcases the sheer power that the Quantum Approach posesses in large instances of the Traveling Salesmen Problem where the Classical Approach may fail or Runtime on. In other words, the distance between the exact result shown in the bar chart and the distance of the Quantum Approach are closer than the distance between the exact result shown in our bar chart and the distance of the Classical Approach suggesting that the Quantum Approach succeeds in utilizing less energy and is far more efficient for large TSP instances.
+
+<hr>
+
+
+**Future Work on the Project**
 
 Future work can explore improved ansatz designs to enhance circuit expressibility and convergence. Testing noise mitigation techniques will be crucial as we scale to larger TSP instances on NISQ devices. Hybrid quantum-classical methods could also offer better scalability by combining quantum optimization with classical heuristics. Additionally, benchmarking VQE against algorithms like QAOA and analyzing different initialization strategies can provide deeper insights and improve generalizability across diverse TSP problems.
 
