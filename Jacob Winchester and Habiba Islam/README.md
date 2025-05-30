@@ -16,7 +16,8 @@ To research this question we selected two papers with opposite opinions on the s
 
 ## Methodology
 For the comparison we first started by listing the main arguments made each author. Once this was complete we applied their arguments to the following critera:
-    - hello
+****
+- hello
 
 ## Conclusions
 After our review we found that the paper in favour of decoherence relied on unjustified assumptions about the system and used flawed reasoning in deducing the system environment split when applying
