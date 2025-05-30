@@ -3,7 +3,7 @@
 # QUANTUM INFORMATION THEORY AND COMPLEXEITY
 
 ## Research Question
-*How does the entanglement entropy scale with the number of qubits in Grover’s algorithm[^1], and how does this scaling influence the classical simulation cost using matrix product states (MPS)?*
+*How does the entanglement entropy[^2] scale with the number of qubits in Grover’s algorithm[^1], and how does this scaling influence the classical simulation cost using matrix product states (MPS)[^3]?*
 
 
 ## Project Introduction
@@ -13,20 +13,20 @@
 *The motivation for our project stemmed from **our combined interest in exploring quantum entanglement and its implications for quantum algorithms.** After discussions with our mentor, Manuel Rudolph, **we selected Grover's search algorithm as the focus of our study, recognizing it as a feasible topic to investigate within the limited time available.** By analyzing entanglement scaling in Grover's algorithm, we aimed to understand its impact on the efficiency of classical simulations using Matrix Product States (MPS), providing insights into the resources required for simulating quantum algorithms.*
 
 ## Methodology and Approach
-To investigate entanglement scaling in Grover's algorithm and its implications for Matrix Product State (MPS) simulations, we employed a systematic approach combining theoretical analysis with numerical simulations. Below is a concise explanation of the method and approach, based on the provided document:
+To investigate entanglement scaling in Grover's algorithm and its implications for Matrix Product State (MPS)[^3] simulations, we employed a systematic approach combining theoretical analysis with numerical simulations. Below is a concise explanation of the method and approach, based on the provided document:
 
 1. **Algorithm Selection and Setup**:
-   - We focused on Grover's search algorithm, which finds a marked item in an unsorted database of N items using a quadratic speedup, achieved through repeated applications of an Oracle (phase flip of the target state) and a Diffusion Operator (amplitude amplification).
+   - We focused on Grover's search algorithm[^1], which finds a marked item in an unsorted database of N items using a quadratic speedup, achieved through repeated applications of an Oracle (phase flip of the target state) and a Diffusion Operator (amplitude amplification).
    - The marked state was chosen as the all-zeros state $(|0⟩^{\otimes n})$ for simplicity and consistency.
    - Simulations were conducted for systems with $n = 4, 6, 8, 10,$ and $12$ qubits to observe trends across different system sizes.
    - The optimal number of Grover iterations was calculated as R = ${round(\frac{\pi}{4} \cdot √(2^n))}$, ensuring high probability of finding the marked state.
 
 2. **Simulation Framework**:
-   - We used Qiskit, an open-source quantum computing framework, and Qiskit Aer’s simulator for both statevector and MPS simulations.
+   - We used Qiskit[^3], an open-source quantum computing framework, and Qiskit Aer’s simulator[^3] for both statevector and MPS simulations[^3].
    - Statevector simulations provided exact quantum states to compute entanglement metrics, while MPS simulations were used to assess simulation efficiency and extract bond dimension data.
 
 3. **Entanglement and Bond Dimension Metrics**:
-   - **Bipartite Entanglement Entropy ($S_1/2$)**: After each Grover iteration, we conceptually divided the n-qubit system into two equal halves and calculated the von Neumann entropy between them to quantify entanglement.
+   - **Bipartite Entanglement Entropy ($S_1/2$)[^2]**: After each Grover iteration, we conceptually divided the n-qubit system into two equal halves and calculated the von Neumann entropy between them to quantify entanglement.
    - **Peak Entanglement Entropy ($S_{peak}$)**: For each $n$, we identified the maximum $S_1/2$ across all iterations.
    - **Peak Bond Dimension ($χ_{max}$)**:
      - **Actual $χ_{max}$**: Extracted from MPS simulation metadata using Qiskit Aer’s $SaveMatrixProductState$ feature, reflecting the bond dimension required by the simulator.
@@ -86,12 +86,12 @@ We can follow up this research work with tests for different algorithms other th
 
 ## References
 
-[^1] : *Quantum Computation and Quantum Information* , By Michael A. Nielsen, Isaac L. Chuang https://www.google.co.in/books/edition/Quantum_Computation_and_Quantum_Informat/65FqEKQOfP8C?hl=en
+[^1]: *Quantum Computation and Quantum Information* , By Michael A. Nielsen, Isaac L. Chuang https://www.google.co.in/books/edition/Quantum_Computation_and_Quantum_Informat/65FqEKQOfP8C?hl=en
 
-2. *Quantum Entanglement* Ryszard Horodecki , Pawel Horodecki , Michal Horodecki and Karol Horodecki
+[^2]: *Quantum Entanglement* Ryszard Horodecki , Pawel Horodecki , Michal Horodecki and Karol Horodecki
    https://arxiv.org/abs/quant-ph/0702225v2
 
-3. *IBM Quantum Learning* https://learning.quantum.ibm.com/
+[^3]: *IBM Quantum Learning* https://learning.quantum.ibm.com/
 
 
 ---
