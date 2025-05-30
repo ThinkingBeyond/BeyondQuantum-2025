@@ -3,7 +3,7 @@
 # QUANTUM INFORMATION THEORY AND COMPLEXEITY
 
 ## Research Question
-*How does the entanglement entropy scale with the number of qubits in Grover’s algorithm, and how does this scaling influence the classical simulation cost using matrix product states (MPS)?*
+*How does the entanglement entropy scale with the number of qubits in Grover’s algorithm[^1], and how does this scaling influence the classical simulation cost using matrix product states (MPS)?*
 
 
 ## Project Introduction
@@ -86,7 +86,7 @@ We can follow up this research work with tests for different algorithms other th
 
 ## References
 
-1. *Quantum Computation and Quantum Information* , By Michael A. Nielsen, Isaac L. Chuang https://www.google.co.in/books/edition/Quantum_Computation_and_Quantum_Informat/65FqEKQOfP8C?hl=en
+[^1] : *Quantum Computation and Quantum Information* , By Michael A. Nielsen, Isaac L. Chuang https://www.google.co.in/books/edition/Quantum_Computation_and_Quantum_Informat/65FqEKQOfP8C?hl=en
 
 2. *Quantum Entanglement* Ryszard Horodecki , Pawel Horodecki , Michal Horodecki and Karol Horodecki
    https://arxiv.org/abs/quant-ph/0702225v2
