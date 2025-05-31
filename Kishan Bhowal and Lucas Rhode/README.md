@@ -7,7 +7,7 @@
 
 
 ## Project Introduction
-*Our project, **"Entanglement Scaling in Grover's Algorithm: Implications for Matrix Product State Simulation,"** conducted by Lucas Rhode and Kishan Bhowal under Manuel Rudolph's mentorship, investigates entanglement in Grover's search algorithm to assess its classical simulation using Matrix Product States (MPS). We simulated Grover's algorithm for 4 to 12 qubits, measuring bipartite entanglement entropy and bond dimension. Findings show low entanglement (below 1 ebit) and a constant bond dimension of 2, enabling efficient MPS simulations compared to high-entanglement algorithms like QAOA or Ising models.* 
+*Our project, **"Entanglement Scaling in Grover's Algorithm: Implications for Matrix Product State Simulation,"**[^3] conducted by Lucas Rhode and Kishan Bhowal under Manuel Rudolph's mentorship, investigates entanglement in Grover's search algorithm to assess its classical simulation using Matrix Product States (MPS). We simulated Grover's algorithm for 4 to 12 qubits, measuring bipartite entanglement entropy and bond dimension. Findings show low entanglement (below 1 ebit) and a constant bond dimension of 2, enabling efficient MPS simulations compared to high-entanglement algorithms like QAOA or Ising models.* 
 
 ## Project Motivation
 *The motivation for our project stemmed from **our combined interest in exploring quantum entanglement and its implications for quantum algorithms.** After discussions with our mentor, Manuel Rudolph, **we selected Grover's search algorithm as the focus of our study, recognizing it as a feasible topic to investigate within the limited time available.** By analyzing entanglement scaling in Grover's algorithm, we aimed to understand its impact on the efficiency of classical simulations using Matrix Product States (MPS), providing insights into the resources required for simulating quantum algorithms.*
@@ -65,6 +65,13 @@ Our results, as presented in the document, reveal the entanglement characteristi
 
     
 **Discussion**: The low entanglement $(S_{peak} < 1 ebit)$ and constant $χ_{max} = 2$ highlight that Grover's algorithm is highly amenable to MPS simulations, unlike algorithms with higher entanglement that require exponentially larger bond dimensions. This efficiency makes MPS a powerful tool for simulating Grover’s circuits, offering insights into resource requirements for classical simulation of quantum algorithms.
+
+### Comparative Analysis: Grover's Algorithm vs. Quantum Fourier Transform
+
+Grover's algorithm and the Quantum Fourier Transform (QFT)[^1] exhibit distinct entanglement characteristics impacting their Matrix Product State (MPS) simulation efficiency. In Grover's algorithm, the circuit depth scales as $\( O(\sqrt{N}) \)$ with the number of oracle applications, yet the entanglement structure remains simple. The peak entanglement entropy across a bipartition grows slowly, often sub-linearly with the number of qubits $\( n \)$, resulting in a modest bond dimension $(\( \chi \))$ that remains constant (e.g., $\( \chi = 2 \)$ for $4$ to $12$ qubits in our study). This enables highly efficient MPS simulations.
+
+Conversely, the **QFT generates long-range entanglement due to its non-local controlled-phase gates**. For a contiguous bipartition after the full QFT circuit, the bond dimension scales exponentially as $\( \chi \sim 2^{\min(k, n-k)} \)$, where $\( k \)$ is the number of qubits on one side of the bipartition. This exponential growth, driven by long-range correlations, contrasts with Grover’s modest entanglement, making QFT simulations far more resource-intensive for MPS methods.
+
 
 ## Conclusions
 
