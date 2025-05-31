@@ -1,1 +1,2 @@
-
+git rm file1.txt
+git commit -m "Lucas Rhode and Kishan Bhowal images.txt"
