@@ -12,14 +12,15 @@ We decided to simulate continuous weak measurement in two ways. The first was by
 ## Results and conclusion
 
 We see that the simulations matched closely which led us to conclude that the stochastic model could model continuous measurement well. 
+![Stochastic simulation result](Jashn Agarwal and Jamie Walton/image_2025-05-31_120816729.png)
+![Qiskit simulation result](Jashn Agarwal and Jamie Walton/image_2025-05-31_120859627.png)
 
 ## Future Work
 
 Upon this work we could amend the circuit and simulation so that they fit more closely with the experiment conducted by the Oxford researchers. This could then be used to have a deeper dive into decoherence and its effects in these more niche but still cutting-edge scenarios.
 
 ## Credits
-Authored by Jashn Agarwal and Jamie Walton
-Mentored by Dr Filip Bar
+Authored by Jashn Agarwal and Jamie Walton. Mentored by Dr Filip Bar
 
 ## References
 
@@ -27,11 +28,7 @@ Mentored by Dr Filip Bar
 - L. Dania, K Heidigger et al, “Position Measurement of a Levitated Nanoparticle via Interference with Its Mirror Image” (DOI: [10.1103/PhysRevLett.129.013601](https://doi.org/10.1103/PhysRevLett.129.013601))
 - Kurt Jacobs and Daniel Steck, “A Straightforward Introduction to Continuous Quantum Measurement” (arXiv: [quant-ph/0611067](https://arxiv.org/abs/quant-ph/0611067))
 - QuTiP 4.7 Documentation, “Stochastic solver” (QuTiP Documentation)(https://qutip.org/docs/4.7/guide/dynamics/dynamics-stochastic.html))
-
-
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+- Stanford Encyclopedia of Philosophy, “The Role of Decoherence in Quantum Mechanics” (https://plato.stanford.edu/entries/qm-decoherence/#SolMeaPro)
 
 ---
 
