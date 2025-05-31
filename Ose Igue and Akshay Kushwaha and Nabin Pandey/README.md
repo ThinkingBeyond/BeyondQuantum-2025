@@ -173,15 +173,13 @@ Future work can explore improved ansatz designs to enhance circuit expressibilit
 
 Here’s your list of references reformatted into the requested markdown style:
 
-1. Farhi, E., Goldstone, J., & Gutmann, S. (2014). *A Quantum Approximate Optimization Algorithm*. [arXiv:1411.4028](https://arxiv.org/abs/1411.4028)
+1. Tilly, J., Chen, H., Cao, S., Picozzi, D., Setia, K., Li, Y., ... & Tennyson, J. (2022). *The Variational Quantum Eigensolver: a review of methods and best practices*. arXiv preprint arXiv:2111.05176.
 
-2. Peruzzo, A., McClean, J., Shadbolt, P., Yung, M. H., Zhou, X. Q., Love, P. J., ... & O'Brien, J. L. (2014). *A variational eigenvalue solver on a photonic quantum processor*. *Nature Communications*, 5, 4213. [Nature](https://www.nature.com/articles/ncomms5213)
+2. IBM Quantum. (n.d.). *Max-Cut and Traveling Salesman Problem*. Qiskit Optimization Tutorials. Retrieved from https://qiskit-community.github.io/qiskit-optimization/tutorials/06_examples_max_cut_and_tsp.html#Max-Cut-problem
 
-3. Zhou, L., Wang, S. T., Choi, S., Pichler, H., & Lukin, M. D. (2020). *Quantum Approximate Optimization Algorithm: Performance, Mechanism, and Implementation on Near-Term Devices*. *Physical Review X*, 10(2), 021067. [APS](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.10.021067)
+3. Applegate, D. L., Bixby, R. E., Chvátal, V., & Cook, W. J. (2006). *The traveling salesman problem: A computational study*. Princeton University Press.
 
-4. Lucas, A. (2014). *Ising formulations of many NP problems*. *Frontiers in Physics*, 2, 5. [Frontiers](https://www.frontiersin.org/articles/10.3389/fphy.2014.00005/full)
-
-5. Gilliam, A., Shaydulin, R., Alexeev, Y., & Dumitrescu, E. F. (2021). *Optimizing Quantum Circuits for Combinatorial Problems on NISQ Architectures*. *Quantum Information Processing*, 20(3), 1–27. [Springer](https://link.springer.com/article/10.1007/s11128-020-02961-1)
+4. Harishaseebat92. (n.d.). *Quantum Inspired Optimization: QOSF Cohort 10 Documentation* [PDF]. GitHub. Retrieved from https://github.com/harishaseebat92/Quantum_Inspired_Optimization/blob/main/Documentation/QOSF_coh10_doc.pdf
 
 ---
 
