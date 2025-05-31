@@ -4,7 +4,31 @@
 
 ## Repository Hierachy
 
-```bash BeyondQuantum-2025/ └── Ose Igue and Akshay Kushwaha and Nabin Pandey/ ├── README.md ├── Research Stage Graphs and Visuals/ │ ├── Konigsberg_visual.jpg │ ├── bitStrings.png │ ├── graphNetwork.png │ └── relativeErrrorChart.png └── TSP Research Stage/ ├── Classsical Approach to TSP/ │ ├── Classical approach - insights.docx │ ├── TSP Iterative - Classical Implementation.ipynb │ ├── TSP Recursive - Classical Implementation.ipynb │ └── TSP___Classical_Approach.pdf └── Quantum Approach to TSP/ ├── Hard Code QUBO Implementation/ │ ├── QUBO_Implementation_of_Traveling_Salesman_Problem_Using_Variational_Quantum_Eigensolvers_documentation.pdf │ └── QUBO_Implementation_of_Traveling_Salesmen_Problem_Final.ipynb └── QUBO Implementation with Libraries/ ├── Map_to_Ising.ipynb └── Map_to_Ising_Second_Iteration.ipynb ```
+```bash
+.
+└── BeyondQuantum-2025/
+    └── Ose Igue and Akshay Kushwaha and Nabin Pandey/
+        ├── README.md                                 # Project overview and repo structure
+        ├── Research Stage Graphs and Visuals/        # Visuals from the research phase
+        │   ├── Konigsberg_visual.jpg                 # Königsberg bridge visual
+        │   ├── bitStrings.png                        # Bit string representation chart
+        │   ├── graphNetwork.png                      # Graph network structure
+        │   └── relativeErrrorChart.png               # Relative error chart
+        └── TSP Research Stage/                       # Traveling Salesman Problem research
+            ├── Classsical Approach to TSP/           # Classical TSP methods
+            │   ├── Classical approach - insights.docx     # Written analysis
+            │   ├── TSP Iterative - Classical Implementation.ipynb   # Iterative TSP notebook
+            │   ├── TSP Recursive - Classical Implementation.ipynb   # Recursive TSP notebook
+            │   └── TSP___Classical_Approach.pdf       # Summary of classical approach
+            └── Quantum Approach to TSP/              # Quantum-based TSP solutions
+                ├── Hard Code QUBO Implementation/
+                │   ├── QUBO_Implementation_of_Traveling_Salesman_Problem_Using_Variational_Quantum_Eigensolvers_documentation.pdf  # VQE method documentation
+                │   └── QUBO_Implementation_of_Traveling_Salesmen_Problem_Final.ipynb   # Final QUBO notebook (manual)
+                └── QUBO Implementation with Libraries/
+                    ├── Map_to_Ising.ipynb            # QUBO to Ising mapping (1st version)
+                    └── Map_to_Ising_Second_Iteration.ipynb  # Improved QUBO to Ising mapping
+```
+
 
 
 ## Research Question
