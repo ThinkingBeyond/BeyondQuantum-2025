@@ -55,7 +55,6 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 ![10 Nodes](./Graphs/10%20Nodes%20Comparison.png)
 ![15 Nodes](./Graphs/15%20Nodes%20Comparison.png)
 ![20 Nodes](./Graphs/20%20Nodes%20Comparison.png)
-![25 Nodes](./Graphs/25%20Nodes%20Comparison.png)
 ![Quantum Nodes](./Graphs/Quantum%20Model%20Comparison.png)
 ![Classical Nodes](./Graphs/Classical%20Model%20Comparison.png)
 ## Conclusions
