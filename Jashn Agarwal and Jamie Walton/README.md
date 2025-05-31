@@ -12,8 +12,13 @@ We decided to simulate continuous weak measurement in two ways. The first was by
 ## Results and conclusion
 
 We see that the simulations matched closely which led us to conclude that the stochastic model could model continuous measurement well. 
-![Stochastic simulation result](Jashn Agarwal and Jamie Walton/image_2025-05-31_120816729.png)
-![Qiskit simulation result](Jashn Agarwal and Jamie Walton/image_2025-05-31_120859627.png)
+<p align="center">
+  <img src="./image_2025-05-31_120816729.png" alt="Stochastic simulation result" width="500"/>
+</p>
+<p align="center">
+  <img src="./image_2025-05-31_120859627.png" alt="Qiskit simulation result" width="500"/>
+</p>
+
 
 ## Future Work
 
