@@ -2,6 +2,30 @@
 
 # Solving Traveling Salesman Problem using VQE
 
+## Repository Hierachy
+
+BeyondQuantum-2025/Ose Igue and Akshay Kushwaha and Nabin Pandey/
+├── README.md
+├── Research Stage Graphs and Visuals/
+│   ├── Konigsberg_visual.jpg
+│   ├── bitStrings.png
+│   ├── graphNetwork.png
+│   └── relativeErrrorChart.png
+└── TSP Research Stage/
+    ├── Classsical Approach to TSP/
+    │   ├── Classical approach - insights.docx
+    │   ├── TSP Iterative - Classical Implementation.ipynb
+    │   ├── TSP Recursive - Classical Implementation.ipynb
+    │   └── TSP___Classical_Approach.pdf
+    └── Quantum Approach to TSP/
+        ├── Hard Code QUBO Implementation/
+        │   ├── QUBO_Implementation_of_Traveling_Salesman_Problem_Using_Variational_Quantum_Eigensolvers_documentation.pdf
+        │   └── QUBO_Implementation_of_Traveling_Salesmen_Problem_Final.ipynb
+        └── QUBO Implementation with Libraries/
+            ├── Map_to_Ising.ipynb
+            └── Map_to_Ising_Second_Iteration.ipynb
+
+
 ## Research Question
 
 <p align="center">
