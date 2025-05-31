@@ -1,6 +1,6 @@
 ![BeyondQuantum Banner for Research Projects](../BeyondQuantum_Banner_Research_Projects_2025.png)
 
-# Can the Stochastic Schrodinger equation be used to model continuous weak position measurement?
+# Can the Stochastic Schrodinger Equation be Used to Model Decoherence in Continuous Weak Position Measurement?
 
 ## Motivation
 
