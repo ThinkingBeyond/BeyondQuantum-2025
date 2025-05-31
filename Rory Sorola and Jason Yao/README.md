@@ -18,7 +18,6 @@ Our research question is how different ansatze for the initial parameterized gue
 
 The variational quantum linear solver is a relatively novel approach of finding (or approximating) solutions to a linear system of equations, based on the idea of the variational quantum eigensolver for ground state energies. An efficient execution of the VQLS could be a relatively simple way of demonstrating the idea of quantum advantage, so by finding how our choice of ansatz affects the performance of the algorithm, we can optimize our execution of it. In our experiment, we also conduct other trials to test the limits of this algorithm, in hopes to see both how we can improve on it and how noise and other factors of modern, limited quantum computers restrict the algorithm’s usage.
 
-
 ## Methodology
 
 We use Qiskit's framework for quantum circuits, and Qiskit's circuit library to import the ansatze implemented in the code (EfficientSU2, TwoLocal, PauliTwoDesign, RealAmplitudes). We implement the VQLS algorithm as outlined above, finding the cost function to be minimized as 1 - the fidelity between the Ax($\theta$) and b states, found by saving both as statevectors on the Aer simulator. The cost function is then minimized using the COBYLA optimizer. We generate several graphs of the cost function being minimized as a function of time for the different ansatze with controlled values for the A matrix, b vector, and $\theta$ parameters. We also run the algorithm and compare how the the algorithm performs as the ansatz scales up, by increasing the size of the system (number of qubits), as well as the reps of the ansatz. 
@@ -43,6 +42,21 @@ Outline:
 
 The second notebook, titled "vqls_experiment2.ipynb" runs the algorithm many times for each ansatze and examines only the final outputs for each trial. For each of the tested ansatz, the algorithm is run 100 times normally and 100 times with a constant noise model. The final fidelities, total iterations until convergence, and total time taken were recorded for each trial and plotted. The ansatze tested were: EfficientSU2, PauliTwoDesign (with 2 reps), PauliTwoDesign (with 5 reps), TwoLocal, and RealAmplitudes. Two-qubit systems were tested for all trials. The plots made were scatter plots for final fidelity vs. number of iterations and time taken vs. number of iterations for each ansatz, both for no-noise and noisy trials.
 
+## Results and Conclusions
+
+Upon the completion of both notebooks, our various experiments saw a significant reduction in cost throughout all trials. However, the implementation of various characteristics caused each trial to exhibit unique trends and overall result in cost reduction. For example...
+- Trials utilizing 2-qubit ansatze achieved greater cost reduction in fewer iterations than trials utilizing 4-qubit ansatze did
+  - 2-qubit ansatze trials had reduced cost to >0.01 at iteration ~60, while only 2 of the 3 4-qubit ansatze trials achieved this at iteration ~800, and one only found a minimum cost of ~0.25 at iteration 1000
+  - Both experiments showed similar variance and change in cost over a set amount of iterations despite the difference in cost reduction
+- In the experiment with the ansatz RealAmplitudes...
+  - Trials utilizing real coefficients achieved lower costs in fewer iterations than trials utilizing complex coefficients
+  - Trials conducted with varying reps showcased how the number of reps utilized in the circuit impacted the performance of the trial, as each instance of the ansatz with a certain number of reps was unique
+- In the experiment with the ansatz EfficientSU2...
+  - Trials using various reps with complex coefficients showed a greater amount of iterations taken to converge cost
+  - The final fidelity reached by these high reps trials showed the necessity of multiple reps in larger systems
+    - In the 4-qubit ansatz experiment, the trials with 1 and 2 reps did not have costs that converged to 0, while the trials with more reps converged to low costs, with costs converging to the lowest values for trials with a high number of reps
+
+The implementation of these varying characteristics made the most significant impact on the reduction of cost. While the type of ansatz used in each trial led to a non-negligible difference in the resulting cost of each trial, external variables like the number of qubits or reps contributed to the most significant difference across trials. 
 
 ## Future Work
 
@@ -50,13 +64,15 @@ Our work, so far, only implements the algorithm using the Aer simulator to "eval
 
 ## References
 
-List all your references here. Remember to put links into markdown. For example:
+Cerezo, M., Arrasmith, A., Babbush, R., Benjamin, S. C., Endo, S., Fujii, K., McClean, J. R., Mitarai, K., Yuan, X., Cincio, L., & Coles, P. J. (2021). Variational quantum algorithms. Nature Reviews Physics, 3(9), 625–644. https://doi.org/10.1038/s42254-021-00348-9
 
-1.  Einstein, A. (1905). *On the Electrodynamics of Moving Bodies*. Annalen der Physik, 17, 891-921. [Internet Archive](https://archive.org/details/einstein-1905-relativity)
+Tilly, J., Chen, H., Cao, S., Picozzi, D., Setia, K., Li, Y., Grant, E., Wossnig, L., Rungger, I., Booth, G. H., & Tennyson, J. (2022, August 25). The variational Quantum Eigensolver: A review of methods and best practices. arXiv.org. https://doi.org/10.48550/arXiv.2111.05176
 
-**Tip**: *If you have you references in BibTex, Google Scholar or Zotero*
-1. Create/copy a list into ChatGPT
-2. Ask it to turn it into an unsorted list in markdown
+Bravo-Prieto, C., LaRose, R., Cerezo, M., Subasi, Y., Cincio, L., & Coles, P. J. (2023). Variational Quantum Linear Solver. Quantum, 7, 1188. https://doi.org/10.22331/q-2023-11-22-1188 
+
+Patil, H., Wang, Y., & Krstić, P. S. (2022). Variational quantum linear solver with a dynamic ansatz. Physical Review A, 105(1). https://doi.org/10.1103/physreva.105.012423
+
+Qiskit-Community. (n.d.). Qiskit Textbook - Variational Quantum Linear Solver. GitHub. https://github.com/qiskit-community/qiskit-textbook/blob/main/content/ch-paper-implementations/vqls.ipynb
 
 ---
 
