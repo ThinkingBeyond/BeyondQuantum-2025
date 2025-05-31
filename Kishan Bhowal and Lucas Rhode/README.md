@@ -102,5 +102,5 @@ We can follow up this research work with tests for different algorithms other th
 
 ---
 
-> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).[View only poster on Canva](https://www.canva.com/design/DAGoNhExnn8/urFVDI1sOlgAeHoil7k9Yw/edit) .
+> The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).[View only poster on Canva](https://www.canva.com/design/DAGoNhExnn8/7D7CK-kXT9rxqF514JIogg/view?utm_content=DAGoNhExnn8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h4548454325) .
 > [View only Research paper link on overleaf](https://www.overleaf.com/read/qnfvfxzqhsrx#c426f5)
