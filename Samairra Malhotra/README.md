@@ -16,6 +16,8 @@ The main method used by Kepler to detect exoplanets is the transit method. Exopl
 
 I have utilized the Lightkurve Python module to analyze light curves obtained by the satellites. After preprocessing the data, I worked with the transit light curve of a confirmed exoplanet, Pi Mensae. Given its initially uneven and complex structure, which made interpreting it hard, I applied further manipulation to smooth and clarify the signal (removing long term trends using a Savitzky–Golay filter, removing outliers using simple sigma clipping, removing infinite or NaN values, folding the data at a particular period (period=6.27, epoch_time=1325.504), and finally Reducing the time resolution of the array and taking the average value in each bin.), ultimately producing a more interpretable final graph. [(HowToFindAnExoplanet)](https://heasarc.gsfc.nasa.gov/docs/tess/HowToFindAnExoplanet-UserVersion.html)
 
+![pimensae](https://github.com/user-attachments/assets/66066fce-90fc-4e68-b386-63edcdac03e1)
+
 ### _Why?_
 
 Missions like Kepler and TESS observe hundreds of thousands of stars, generating terabytes of data which is quite noisy, with irregularities caused by instruments, starspots, or cosmic rays. Machine learning handles this scale far more efficiently than manual analysis or simple rule-based filters. Also, ML models don't need explicit equations to detect transit shapes—they learn from examples. Machine learning classifiers (like the ones used in my research) can learn to distinguish between real planets and imposters using labeled training data.
@@ -35,6 +37,8 @@ Now on the preprocessed data, I trained four ML algorithms, which include: Logis
 I then evaluated these models based on accuracy, precision, F1-score, and recall metrics. After analyzing the performance metrics, it was concluded that the Gradient Boosting Classifier was the best choice.
 
 To evaluate my model further, I visualized a confusion matrix of the Gradient Boosting Classifier as a heatmap, to show how many samples were correctly vs. incorrectly classified. The confusion matrix breaks down the predictions into correct and incorrect categories, helping one go beyond accuracy to evaluate how the model behaves per class.
+![cml](https://github.com/user-attachments/assets/e4e82fcc-c584-4266-afa3-08fdd41bc255)
+
 
 ## Quantum Machine Learning Model
 
@@ -46,7 +50,11 @@ After this, I encoded classical data into a quantum state, allowing it to be tra
 
 To avoid a shape mismatch error during training, I converted the NumPy arrays to PyTorch tensors and wrapped them into a TensorDataset for use with DataLoader. I then trained for 25 epochs using mini-batch gradient descent (batch size = 8). And for each batch, I first cleared previous gradients, then passed inputs through the hybrid model, computed binary cross-entropy loss between predictions and labels, performed backpropagation to compute gradients across both classical and quantum parameters and updated the model using the Adam optimizer with a learning rate of 0.01. After this, I logged the epoch-wise total loss, observing its decrease over time to monitor convergence.
 
+![epoch](https://github.com/user-attachments/assets/fa35e766-9f8f-4244-bdbe-3b3dc82544e2)
+
 Lastly, I evaluated my model based on accuracy, precision, F1-score, and recall metrics. And furthermore, visualized a confusion matrix as a heatmap to show how many confirmed exoplanets and candidates were correctly identified by the model and how many were not.
+![qml](https://github.com/user-attachments/assets/ae9fa8e2-36ad-4635-9736-134c47ca4e87)
+
 
 ## Comparison between the performance metrics of the classical and quantum ML models
 
