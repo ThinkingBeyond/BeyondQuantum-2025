@@ -33,7 +33,7 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 - Learning Rate: **7e-3**
 - Learning Rate Scheduler: **Linear**
 - Batch Size: **1000**
-- Number of Epochs: **10000**
+- Number of Epochs: **2000**
 - Benchmark: **Reconstruction Error**
 - Number of Gibbs Sampling Steps: **2**
 
