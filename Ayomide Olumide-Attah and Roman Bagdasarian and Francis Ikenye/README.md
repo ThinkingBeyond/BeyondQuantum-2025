@@ -6,14 +6,14 @@
 ``` text
 .
 ├── discrete-Fourier-transform/
-│   ├── discrete-fourier-transform.ipynb     # Discrete Fourier transform modular multiplication
+│   ├── discrete-fourier-transform.ipynb     # Discrete Fourier transform modular multiplication notebook
 │   ├── metadata.txt                         # Example circuit metadata
 │   └── statevector.txt                      # Example circuit statevector
 ├── modexp_comparison/
-│   ├── modexp_comparison.ipynb              # Modular exponentiation comparison analysis
+│   ├── modexp_comparison.ipynb              # Modular exponentiation comparison graph
 |   ├── modexp_comparison.svg
 ├── toffoli-gates/
-|   ├── toffoli-gates.ipynb                  # Modular exponentiation (Toffoli gates)
+|   ├── toffoli-gates.ipynb                  # Toffoli gates-based modular exponentiation notebook
 └── README.md
 ```
 
