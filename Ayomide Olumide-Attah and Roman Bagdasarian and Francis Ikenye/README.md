@@ -37,11 +37,11 @@ The motivation is to reduce the total number of qubits, lower gate complexity, a
 
 **Discrete Fourier transform-based modular multiplication**
 - Notebook: [`discrete-fourier-transform.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/discrete-Fourier-transform/discrete-fourier-transform.ipynb)
-- Quantum circuit is entirely implemented in terms of the standard quantum circuit for the discrete Fourier transform and its variants based on a relation between the modular multiplication operator and generalizations of discrete Fourier transforms
+- Quantum circuit is entirely implemented in terms of the standard quantum circuit for the discrete Fourier transform and its variants based on a relation between the modular multiplication operator and generalizations of discrete Fourier transforms.
 
 **Toffoli gates-based modular exponentiation**
 - Notebook: [`toffoli-gates.ipynb`](https://github.com/ThinkingBeyond/BeyondQuantum-2025/blob/main/Ayomide%20Olumide-Attah%20and%20Roman%20Bagdasarian%20and%20Francis%20Ikenye/toffoli-gates/toffoli-gates.ipynb)
-- This builds the modular exponentiation gate from n-bit addition circuits, entirely out of Toffoli gates. This purely classical circuit enjoys ease of simulation in a quantum computer, as well as less overhead when applying QEC. One technical innovation is the ability to borrow qubits during computation, thus optimizing qubit count.
+- This builds the modular exponentiation gate from `n`-bit addition circuits, entirely out of Toffoli gates. This purely classical circuit enjoys ease of simulation in a quantum computer, as well as less overhead when quantum error correction is applied. One technical innovation is the ability to borrow qubits during computation, thus optimizing qubit count.
 
 ## Results
 
