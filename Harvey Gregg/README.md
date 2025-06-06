@@ -28,7 +28,7 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 ### Classical Hyperparameters
 
 - Number of Visible Nodes: **30**
-- Number of Hidden Nodes: **5, 10, 15, 20, 25**
+- Number of Hidden Nodes: **5, 10, 15, 20,**
 - Training Routine: **Persistent CD**
 - Learning Rate: **7e-3**
 - Learning Rate Scheduler: **Linear**
@@ -40,7 +40,7 @@ Our implementation follows this logic, controlled by several hyperparameters whi
 ### Quantum Hyperparameters
 
 - Number of Visible Nodes: **30**
-- Number of Hidden Nodes: **5, 10, 15, 20, 25**
+- Number of Hidden Nodes: **5, 10, 15, 20**
 - Training Routine: **CD**
 - Learning Rate: **1e-3**
 - Learning Rate Scheduler: **Exponential - 0.99**
@@ -70,9 +70,6 @@ Due to **limitations** in the project timeline, the simplified **classical-quant
 Another different area for **future research** involves analysing how well the models performs when modelling **distributions** with a varying number of companies. This hasn't been possible within our research project due to the **proprietary** nature of the dataset with more companies. Furthermore, the results within our code could be improved by utilising the **Persistent Contrastive Divergence** routine other the regular CD training. This routine keeps the value of the visible nodes **across parameter updates** to improve the training protocol as it provides a **better approximation** of the sampled distribution. Furthermore, we achieve multiple parameter updates with each training sample, decreasing the quantity of required data for successful training.
 
 ## References
-
-List all your references here. Remember to put links into markdown. For example:
-
 1.  Genovese G., Nikeghbali A., Serra N., & Visentin G. (2022). Universal approximation of credit portfolio losses using Restricted Boltzmann Machines. arXiv preprint arXiv:2202.11060. Internet Archive [https://arxiv.org/abs/2202.11060]
 2.  Amin, M. H., Andriyash, E., Rolfe, J., Kulchytskyy, B., & Melko, R. (2016). Quantum Boltzmann Machine. arXiv preprint arXiv:1601.02036. Internet Archive [https://arxiv.org/abs/1601.02036]
 3.  Lyakhova Ya. S., Polyakov E. A., & Rubtsov A. N. (2021). Effectively Trainable Semi-Quantum Restricted Boltzmann Machine. arXiv preprint arXiv:2001.08997v4. Internet Archive [https://arxiv.org/abs/2001.08997] 
