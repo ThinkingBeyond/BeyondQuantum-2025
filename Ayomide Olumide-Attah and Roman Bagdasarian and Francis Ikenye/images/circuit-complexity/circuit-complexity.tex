@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{multirow}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{document}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+            \multirow{2}{*}{Implementation} & \multirow{2}{*}{\textbf{Qubits}} & \multicolumn{2}{c|}{\textbf{Modular Exponentiation}} & \multicolumn{2}{c|}{\textbf{Circuit}} \\
+        \cline{3-6}
+           & & Gates & Depth & Gates & Depth \\
+        \hline
+            \textbf{Discrete Fourier transform} & $2L$ & $O(L^2)$ & $O(L^2)$ & $O(L^3)$ & $O(L^3)$ \\
+        \hline
+            \textbf{Toffoli gates} & $2L + 2$ & $O(L^2 \log L)$ & $O(L^2)$ & $O(L^3 \log L)$ & $O(L^3)$ \\
+        \hline
+    \end{tabular}
+    \caption{Circuit complexity for an $L$-bit integer $L = \lceil \log_2 N \rceil$}
+\end{table}
+
+\end{document}
