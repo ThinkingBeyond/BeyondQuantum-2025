@@ -79,9 +79,15 @@ After a thoroughly analyzing both the classical and hybrid quantum-classical mac
 
 
 ## Research Poster
+<p align="center">
+  <a href="EXOPLANET_DETECTION.pdf">
+    <img src="EXOPLANET_DETECTION.png" width="900">
+  </a>
+</p>
+
+<p align="center">
+  Click the poster to view full size (PDF)
+</p>
 
 > The research poster for this project can be found in the [BeyondQuantum Proceedings 2025](https://thinkingbeyond.education/beyondquantum_proceedings_2025/).
-> Or download directly here:
->    [Download Poster (PDF)](EXOPLANET DETECTION.pdf)
-
 
